@@ -1,0 +1,15 @@
+name: Content progress
+
+on:
+  workflow_call:
+
+jobs:
+  progress:
+    name: Content progress
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Count unfinished pages
+        run: bash scripts/content-progress.sh

@@ -1,0 +1,50 @@
+name: Deploy
+
+on:
+  workflow_call:
+
+env:
+  NO_MKDOCS_2_WARNING: 1
+  SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+
+jobs:
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    environment:
+      name: docs
+      url: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Fetch gh-pages branch
+        run: git fetch origin gh-pages --depth=1 || true
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --locked
+
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Deploy latest
+        run: |
+          uv run mike deploy --push latest
+          uv run mike set-default --push latest
+
+      - name: Write summary
+        run: |
+          echo "### Docs deployed" >> "$GITHUB_STEP_SUMMARY"
+          echo "Version \`latest\` from \`${GITHUB_SHA::7}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "- English: $SITE_URL/latest/" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Magyar: $SITE_URL/latest/hu/" >> "$GITHUB_STEP_SUMMARY"
