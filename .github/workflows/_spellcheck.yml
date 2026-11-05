@@ -1,0 +1,36 @@
+name: Spelling
+
+on:
+  workflow_call:
+
+jobs:
+  spellcheck:
+    name: Spell check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Check spelling
+        run: |
+          set +e
+          npx --yes -p cspell@9 -p @cspell/dict-hu-hu cspell --config cspell.ci.json "docs/**/*.md" --no-progress --no-summary > cspell.log 2>&1
+          issues=$(grep -c 'Unknown word' cspell.log)
+          cat cspell.log
+          {
+            echo "### Spelling"
+            echo ""
+            if [ "$issues" -eq 0 ]; then
+              echo "No unknown words found."
+            else
+              echo "$issues unknown words found."
+              echo ""
+              echo "<details><summary>Show list</summary>"
+              echo ""
+              echo '```'
+              cat cspell.log
+              echo '```'
+              echo "</details>"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+          exit 0

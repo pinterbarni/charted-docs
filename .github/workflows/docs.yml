@@ -27,3 +27,7 @@ jobs:
   progress:
     name: Progress
     uses: ./.github/workflows/_progress.yml
+
+  spellcheck:
+    name: Spelling
+    uses: ./.github/workflows/_spellcheck.yml

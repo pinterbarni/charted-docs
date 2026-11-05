@@ -1,0 +1,18 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "fontawesome",
+    "mkdocs",
+    "pinterbarni",
+    "pymdownx",
+    "superfences",
+    "venv",
+    "Zensical",
+    "pois",
+    "poi",
+    "retrack"
+  ],
+  "ignorePaths": [".venv/**", "site/**", "uv.lock"],
+  "overrides": [{ "filename": "**/*.hu.md", "language": "hu,en" }]
+}
