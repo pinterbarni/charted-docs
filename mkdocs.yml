@@ -77,3 +77,55 @@ nav:
       - Browsing and sharing hikes: user-guide/browsing-and-sharing.md
       - Social features: user-guide/social-features.md
       - Settings and localization: user-guide/settings-and-localization.md
+  - Developer guide:
+      - developer-guide/index.md
+      - Design:
+          - developer-guide/design/index.md
+          - UI/UX design: developer-guide/design/ui-ux.md
+          - Gathering requirements: developer-guide/design/requirements.md
+          - Choosing technologies: developer-guide/design/technology-choice.md
+          - Data model design: developer-guide/design/data-model.md
+      - System architecture:
+          - developer-guide/architecture/index.md
+          - Infrastructure: developer-guide/architecture/infrastructure.md
+          - Backend and BFF: developer-guide/architecture/backend-and-bff.md
+          - Mobile app: developer-guide/architecture/mobile-app.md
+          - Development methodology: developer-guide/architecture/methodology.md
+      - Architectural decisions: developer-guide/architectural-decisions.md
+      - Backend:
+          - developer-guide/backend/index.md
+          - Technology stack: developer-guide/backend/tech-stack.md
+          - Module structure: developer-guide/backend/modules.md
+          - Database model: developer-guide/backend/database.md
+          - Authentication: developer-guide/backend/authentication.md
+          - API endpoints: developer-guide/backend/api-endpoints.md
+          - Gamification: developer-guide/backend/gamification.md
+          - Proxy modules: developer-guide/backend/proxy-modules.md
+          - Code quality: developer-guide/backend/code-quality.md
+      - Mobile app:
+          - developer-guide/mobile/index.md
+          - Technology stack: developer-guide/mobile/tech-stack.md
+          - EAS and development: developer-guide/mobile/eas.md
+          - Navigation: developer-guide/mobile/navigation.md
+          - Map integration: developer-guide/mobile/maps.md
+          - Route handling: developer-guide/mobile/routes.md
+          - Recording and GPS: developer-guide/mobile/tracking.md
+          - State management: developer-guide/mobile/state-management.md
+          - Offline features: developer-guide/mobile/offline.md
+          - Design system: developer-guide/mobile/design-system.md
+          - Localization: developer-guide/mobile/localization.md
+      - Deployment and operations:
+          - developer-guide/deployment/index.md
+          - Development environment: developer-guide/deployment/dev-environment.md
+          - Docker and infrastructure: developer-guide/deployment/docker.md
+          - CI/CD pipeline: developer-guide/deployment/ci-cd.md
+          - Configuration: developer-guide/deployment/configuration.md
+      - Test cases:
+          - developer-guide/test-cases/index.md
+          - Authentication: developer-guide/test-cases/authentication.md
+          - Permissions: developer-guide/test-cases/permissions.md
+          - Profile: developer-guide/test-cases/profile.md
+          - Social features: developer-guide/test-cases/social.md
+          - Routes and core: developer-guide/test-cases/routes.md
+          - Settings: developer-guide/test-cases/settings.md
+          - Offline operation: developer-guide/test-cases/offline.md

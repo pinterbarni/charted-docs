@@ -1,0 +1,7 @@
+---
+todo: true
+---
+
+# Állapotkezelés
+
+TODO
