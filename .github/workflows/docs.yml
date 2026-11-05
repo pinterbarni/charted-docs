@@ -6,82 +6,24 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: docs-deploy
   cancel-in-progress: false
 
-env:
-  NO_MKDOCS_2_WARNING: 1
-
 jobs:
   build:
-    name: Build (strict)
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v5
-
-      - name: Set up uv
-        uses: astral-sh/setup-uv@v7
-        with:
-          enable-cache: true
-
-      - name: Install dependencies
-        run: uv sync --locked
-
-      - name: Build site
-        run: uv run mkdocs build --strict
-
-  progress:
-    name: Content progress
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v5
-
-      - name: Count unfinished pages
-        run: bash scripts/content-progress.sh
+    name: Build
+    uses: ./.github/workflows/_build.yml
 
   deploy:
-    name: Deploy to GitHub Pages
+    name: Deploy
     needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: docs
-      url: https://pinterbarni.github.io/charted-docs/
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
+    uses: ./.github/workflows/_deploy.yml
+    permissions:
+      contents: write
 
-      - name: Fetch gh-pages branch
-        run: git fetch origin gh-pages --depth=1 || true
-
-      - name: Set up uv
-        uses: astral-sh/setup-uv@v7
-        with:
-          enable-cache: true
-
-      - name: Install dependencies
-        run: uv sync --locked
-
-      - name: Configure git identity
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-      - name: Deploy latest
-        run: |
-          uv run mike deploy --push latest
-          uv run mike set-default --push latest
-
-      - name: Write summary
-        run: |
-          echo "### Docs deployed" >> "$GITHUB_STEP_SUMMARY"
-          echo "Version \`latest\` from \`${GITHUB_SHA::7}\`" >> "$GITHUB_STEP_SUMMARY"
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "- English: https://pinterbarni.github.io/charted-docs/latest/" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Magyar: https://pinterbarni.github.io/charted-docs/latest/hu/" >> "$GITHUB_STEP_SUMMARY"
+  progress:
+    name: Progress
+    uses: ./.github/workflows/_progress.yml

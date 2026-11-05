@@ -1,0 +1,26 @@
+name: Build
+
+on:
+  workflow_call:
+
+env:
+  NO_MKDOCS_2_WARNING: 1
+
+jobs:
+  build:
+    name: Build (strict)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --locked
+
+      - name: Build site
+        run: uv run mkdocs build --strict
