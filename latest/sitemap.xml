@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://pinterbarni.github.io/charted-docs/latest/</loc>
+        <lastmod>2026-11-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/"/>
+        <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/"/>
+    </url>
+    <url>
+        <loc>https://pinterbarni.github.io/charted-docs/latest/hu/</loc>
+        <lastmod>2026-11-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest"/>
+    </url>
+</urlset>
