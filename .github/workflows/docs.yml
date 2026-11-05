@@ -34,6 +34,16 @@ jobs:
       - name: Build site
         run: uv run mkdocs build --strict
 
+  progress:
+    name: Content progress
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Count unfinished pages
+        run: bash scripts/content-progress.sh
+
   deploy:
     name: Deploy to GitHub Pages
     needs: build
