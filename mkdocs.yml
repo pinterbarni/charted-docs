@@ -62,3 +62,18 @@ nav:
       - Scope and limitations: introduction/scope-and-limitations.md
       - Technologies used: introduction/technologies.md
       - Structure of the thesis: introduction/thesis-structure.md
+  - User guide:
+      - user-guide/index.md
+      - System requirements: user-guide/system-requirements.md
+      - Registration and sign-in: user-guide/sign-up-and-sign-in.md
+      - Profile and settings: user-guide/profile-and-settings.md
+      - Planning a hiking route: user-guide/route-planning.md
+      - Starting route planning: user-guide/start-route-planning.md
+      - Rotating and tilting the map: user-guide/map-rotation-and-tilt.md
+      - Placing points (POIs): user-guide/placing-pois.md
+      - Saving a hike draft: user-guide/saving-drafts.md
+      - Reloading a route (retrack): user-guide/retrack.md
+      - Recording and saving hikes: user-guide/recording-hikes.md
+      - Browsing and sharing hikes: user-guide/browsing-and-sharing.md
+      - Social features: user-guide/social-features.md
+      - Settings and localization: user-guide/settings-and-localization.md
