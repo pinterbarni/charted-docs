@@ -129,3 +129,8 @@ nav:
           - Routes and core: developer-guide/test-cases/routes.md
           - Settings: developer-guide/test-cases/settings.md
           - Offline operation: developer-guide/test-cases/offline.md
+  - Summary:
+      - summary/index.md
+      - Challenges and solutions: summary/challenges.md
+      - V2 opportunities: summary/future-work.md
+      - Closing thoughts: summary/closing-thoughts.md
