@@ -43,6 +43,71 @@ plugins:
           name: Magyar
           build: true
           copyright: Készítette <a href="https://github.com/pinterbarni">pinterbarni</a>
+          nav_translations:
+            Home: Kezdőlap
+            Introduction: Bevezetés
+            The Charted app: A Charted alkalmazás
+            Goals and motivation: Cél és motiváció
+            Scope and limitations: Hatókör és korlátok
+            Technologies used: Felhasznált technológiák
+            Structure of the thesis: A dolgozat szerkezete
+            User guide: Felhasználói dokumentáció
+            System requirements: Rendszerkövetelmények
+            Registration and sign-in: Regisztráció és bejelentkezés
+            Profile and settings: Profil és beállítások
+            Planning a hiking route: Túraútvonal tervezése
+            Starting route planning: Útvonal tervezés indítása
+            Rotating and tilting the map: Térkép forgatása, döntése
+            Placing points (POIs): Pontok (POI-k) elhelyezése
+            Saving a hike draft: Túra tervezet mentése
+            Reloading a route (retrack): Útvonal visszatöltése
+            Recording and saving hikes: Túra rögzítése és mentése
+            Browsing and sharing hikes: Túrák böngészése és megosztása
+            Social features: Közösségi funkciók
+            Settings and localization: Beállítások és lokalizáció
+            Developer guide: Fejlesztői dokumentáció
+            Design: Tervezés
+            UI/UX design: UI/UX tervezés
+            Gathering requirements: Követelmények
+            Choosing technologies: Technológiaválasztás
+            Data model design: Adatmodell tervezése
+            System architecture: Rendszerarchitektúra
+            Infrastructure: Infrastruktúra
+            Backend and BFF: Backend és BFF
+            Mobile app: Mobil alkalmazás
+            Development methodology: Fejlesztési módszertan
+            Architectural decisions: Architekturális döntések
+            Technology stack: Technológiai stack
+            Module structure: Modulstruktúra
+            Database model: Adatbázis modell
+            Authentication: Autentikáció
+            API endpoints: API végpontok
+            Gamification: Gamifikáció
+            Proxy modules: Proxy modulok
+            Code quality: Kódminőség
+            EAS and development: EAS és fejlesztés
+            Navigation: Navigáció
+            Map integration: Térképintegráció
+            Route handling: Útvonalkezelés
+            Recording and GPS: Túrarögzítés és GPS
+            State management: Állapotkezelés
+            Offline features: Offline funkciók
+            Design system: Design rendszer
+            Localization: Lokalizáció
+            Deployment and operations: Telepítés és üzemeltetés
+            Development environment: Fejlesztői környezet
+            Docker and infrastructure: Docker és infrastruktúra
+            Configuration: Konfiguráció
+            Test cases: Tesztesetek
+            Permissions: Jogosultságok
+            Profile: Profil
+            Routes and core: Túraútvonal és core funkciók
+            Settings: Beállítások
+            Offline operation: Offline működés
+            Summary: Összefoglalás
+            Challenges and solutions: Nehézségek és megoldások
+            V2 opportunities: V2 fejlesztési lehetőségek
+            Closing thoughts: Záró gondolatok
 
 extra:
   generator: false
@@ -52,3 +117,85 @@ extra:
   version:
     provider: mike
     default: latest
+
+nav:
+  - Home: index.md
+  - Introduction:
+      - introduction/index.md
+      - The Charted app: introduction/charted-app.md
+      - Goals and motivation: introduction/goals-and-motivation.md
+      - Scope and limitations: introduction/scope-and-limitations.md
+      - Technologies used: introduction/technologies.md
+      - Structure of the thesis: introduction/thesis-structure.md
+  - User guide:
+      - user-guide/index.md
+      - System requirements: user-guide/system-requirements.md
+      - Registration and sign-in: user-guide/sign-up-and-sign-in.md
+      - Profile and settings: user-guide/profile-and-settings.md
+      - Planning a hiking route: user-guide/route-planning.md
+      - Starting route planning: user-guide/start-route-planning.md
+      - Rotating and tilting the map: user-guide/map-rotation-and-tilt.md
+      - Placing points (POIs): user-guide/placing-pois.md
+      - Saving a hike draft: user-guide/saving-drafts.md
+      - Reloading a route (retrack): user-guide/retrack.md
+      - Recording and saving hikes: user-guide/recording-hikes.md
+      - Browsing and sharing hikes: user-guide/browsing-and-sharing.md
+      - Social features: user-guide/social-features.md
+      - Settings and localization: user-guide/settings-and-localization.md
+  - Developer guide:
+      - developer-guide/index.md
+      - Design:
+          - developer-guide/design/index.md
+          - UI/UX design: developer-guide/design/ui-ux.md
+          - Gathering requirements: developer-guide/design/requirements.md
+          - Choosing technologies: developer-guide/design/technology-choice.md
+          - Data model design: developer-guide/design/data-model.md
+      - System architecture:
+          - developer-guide/architecture/index.md
+          - Infrastructure: developer-guide/architecture/infrastructure.md
+          - Backend and BFF: developer-guide/architecture/backend-and-bff.md
+          - Mobile app: developer-guide/architecture/mobile-app.md
+          - Development methodology: developer-guide/architecture/methodology.md
+      - Architectural decisions: developer-guide/architectural-decisions.md
+      - Backend:
+          - developer-guide/backend/index.md
+          - Technology stack: developer-guide/backend/tech-stack.md
+          - Module structure: developer-guide/backend/modules.md
+          - Database model: developer-guide/backend/database.md
+          - Authentication: developer-guide/backend/authentication.md
+          - API endpoints: developer-guide/backend/api-endpoints.md
+          - Gamification: developer-guide/backend/gamification.md
+          - Proxy modules: developer-guide/backend/proxy-modules.md
+          - Code quality: developer-guide/backend/code-quality.md
+      - Mobile app:
+          - developer-guide/mobile/index.md
+          - Technology stack: developer-guide/mobile/tech-stack.md
+          - EAS and development: developer-guide/mobile/eas.md
+          - Navigation: developer-guide/mobile/navigation.md
+          - Map integration: developer-guide/mobile/maps.md
+          - Route handling: developer-guide/mobile/routes.md
+          - Recording and GPS: developer-guide/mobile/tracking.md
+          - State management: developer-guide/mobile/state-management.md
+          - Offline features: developer-guide/mobile/offline.md
+          - Design system: developer-guide/mobile/design-system.md
+          - Localization: developer-guide/mobile/localization.md
+      - Deployment and operations:
+          - developer-guide/deployment/index.md
+          - Development environment: developer-guide/deployment/dev-environment.md
+          - Docker and infrastructure: developer-guide/deployment/docker.md
+          - CI/CD pipeline: developer-guide/deployment/ci-cd.md
+          - Configuration: developer-guide/deployment/configuration.md
+      - Test cases:
+          - developer-guide/test-cases/index.md
+          - Authentication: developer-guide/test-cases/authentication.md
+          - Permissions: developer-guide/test-cases/permissions.md
+          - Profile: developer-guide/test-cases/profile.md
+          - Social features: developer-guide/test-cases/social.md
+          - Routes and core: developer-guide/test-cases/routes.md
+          - Settings: developer-guide/test-cases/settings.md
+          - Offline operation: developer-guide/test-cases/offline.md
+  - Summary:
+      - summary/index.md
+      - Challenges and solutions: summary/challenges.md
+      - V2 opportunities: summary/future-work.md
+      - Closing thoughts: summary/closing-thoughts.md
