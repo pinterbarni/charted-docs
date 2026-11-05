@@ -49,3 +49,6 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/pinterbarni
+  version:
+    provider: mike
+    default: latest
