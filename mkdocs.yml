@@ -43,6 +43,71 @@ plugins:
           name: Magyar
           build: true
           copyright: Készítette <a href="https://github.com/pinterbarni">pinterbarni</a>
+          nav_translations:
+            Home: Kezdőlap
+            Introduction: Bevezetés
+            The Charted app: A Charted alkalmazás
+            Goals and motivation: Cél és motiváció
+            Scope and limitations: Hatókör és korlátok
+            Technologies used: Felhasznált technológiák
+            Structure of the thesis: A dolgozat szerkezete
+            User guide: Felhasználói dokumentáció
+            System requirements: Rendszerkövetelmények
+            Registration and sign-in: Regisztráció és bejelentkezés
+            Profile and settings: Profil és beállítások
+            Planning a hiking route: Túraútvonal tervezése
+            Starting route planning: Útvonal tervezés indítása
+            Rotating and tilting the map: Térkép forgatása, döntése
+            Placing points (POIs): Pontok (POI-k) elhelyezése
+            Saving a hike draft: Túra tervezet mentése
+            Reloading a route (retrack): Útvonal visszatöltése
+            Recording and saving hikes: Túra rögzítése és mentése
+            Browsing and sharing hikes: Túrák böngészése és megosztása
+            Social features: Közösségi funkciók
+            Settings and localization: Beállítások és lokalizáció
+            Developer guide: Fejlesztői dokumentáció
+            Design: Tervezés
+            UI/UX design: UI/UX tervezés
+            Gathering requirements: Követelmények
+            Choosing technologies: Technológiaválasztás
+            Data model design: Adatmodell tervezése
+            System architecture: Rendszerarchitektúra
+            Infrastructure: Infrastruktúra
+            Backend and BFF: Backend és BFF
+            Mobile app: Mobil alkalmazás
+            Development methodology: Fejlesztési módszertan
+            Architectural decisions: Architekturális döntések
+            Technology stack: Technológiai stack
+            Module structure: Modulstruktúra
+            Database model: Adatbázis modell
+            Authentication: Autentikáció
+            API endpoints: API végpontok
+            Gamification: Gamifikáció
+            Proxy modules: Proxy modulok
+            Code quality: Kódminőség
+            EAS and development: EAS és fejlesztés
+            Navigation: Navigáció
+            Map integration: Térképintegráció
+            Route handling: Útvonalkezelés
+            Recording and GPS: Túrarögzítés és GPS
+            State management: Állapotkezelés
+            Offline features: Offline funkciók
+            Design system: Design rendszer
+            Localization: Lokalizáció
+            Deployment and operations: Telepítés és üzemeltetés
+            Development environment: Fejlesztői környezet
+            Docker and infrastructure: Docker és infrastruktúra
+            Configuration: Konfiguráció
+            Test cases: Tesztesetek
+            Permissions: Jogosultságok
+            Profile: Profil
+            Routes and core: Túraútvonal és core funkciók
+            Settings: Beállítások
+            Offline operation: Offline működés
+            Summary: Összefoglalás
+            Challenges and solutions: Nehézségek és megoldások
+            V2 opportunities: V2 fejlesztési lehetőségek
+            Closing thoughts: Záró gondolatok
 
 extra:
   generator: false
