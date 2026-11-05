@@ -52,3 +52,13 @@ extra:
   version:
     provider: mike
     default: latest
+
+nav:
+  - Home: index.md
+  - Introduction:
+      - introduction/index.md
+      - The Charted app: introduction/charted-app.md
+      - Goals and motivation: introduction/goals-and-motivation.md
+      - Scope and limitations: introduction/scope-and-limitations.md
+      - Technologies used: introduction/technologies.md
+      - Structure of the thesis: introduction/thesis-structure.md
