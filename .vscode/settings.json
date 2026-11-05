@@ -1,0 +1,52 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#fffdb3",
+    "activityBar.activeBorder": "#15202b",
+    "activityBar.background": "#fffdb3",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#00bfba",
+    "activityBarBadge.foreground": "#15202b",
+    "activityBarTop.activeBackground": "#fffdb3",
+    "activityBarTop.activeBorder": "#15202b",
+    "activityBarTop.background": "#fffdb3",
+    "activityBarTop.foreground": "#15202b",
+    "activityBarTop.inactiveForeground": "#15202b99",
+    "commandCenter.border": "#15202b99",
+    "commandCenter.foreground": "#15202b",
+    "sash.hoverBorder": "#fffdb3",
+    "statusBar.background": "#fffb80",
+    "statusBar.debuggingBackground": "#fffb80",
+    "statusBar.debuggingForeground": "#15202b",
+    "statusBar.foreground": "#15202b",
+    "statusBar.inactiveBackground": "#fffb80",
+    "statusBarItem.hoverBackground": "#fff94d",
+    "statusBarItem.remoteBackground": "#00bfb9",
+    "statusBarItem.remoteForeground": "#15202b",
+    "titleBar.activeBackground": "#fffb80",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#fffb8099",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "#fffb80",
+  "yaml.schemas": {
+    "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml"
+  },
+  "yaml.customTags": [
+    "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format",
+    "!ENV scalar",
+    "!ENV sequence"
+  ],
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
+  "cSpell.words": [
+    "fontawesome",
+    "mkdocs",
+    "pinterbarni",
+    "pymdownx",
+    "superfences",
+    "venv",
+    "Zensical"
+  ]
+}

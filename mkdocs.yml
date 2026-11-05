@@ -1,0 +1,34 @@
+site_name: Charted Docs
+site_url: https://pinterbarni.github.io/charted-docs/
+repo_url: https://github.com/pinterbarni/charted-docs
+copyright: Created by <a href="https://github.com/pinterbarni">pinterbarni</a>
+
+theme:
+  name: material
+  language: en
+  palette:
+    primary: indigo
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/pinterbarni
