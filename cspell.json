@@ -11,7 +11,22 @@
     "Zensical",
     "pois",
     "poi",
-    "retrack"
+    "pyproject",
+    "retrack",
+    "Authentikáció",
+    "felállítása",
+    "tervezése",
+    "Jogosultságok",
+    "böngészése",
+    "megosztása",
+    "forgatása",
+    "rögzítése",
+    "mentése",
+    "visszatöltése",
+    "tervezése",
+    "mentése",
+    "bejelentkezés",
+    "indítása"
   ],
   "ignorePaths": [".venv/**", "site/**", "uv.lock"],
   "overrides": [{ "filename": "**/*.hu.md", "language": "hu,en" }]
