@@ -27,7 +27,7 @@ My BSc thesis on Charted, a self-hosted social hiking app, published as a biling
     - [Build (strict)](#build-strict)
     - [Links](#links)
     - [Deploy to GitHub Pages](#deploy-to-github-pages)
-    - [Content progress](#content-progress)
+    - [Content and Descriptions](#content-and-descriptions)
     - [Spelling](#spelling)
   - [Branching and commits](#branching-and-commits)
   - [Built with](#built-with)
@@ -82,7 +82,14 @@ charted-docs/
 │   ├── developer-guide/         design, architecture, backend, mobile, deployment, test cases
 │   └── summary/
 ├── scripts/
-│   └── content-progress.sh      counts unfinished pages per language
+│   ├── lib/
+│   │   ├── config.sh            shared values: languages and placeholder markers
+│   │   ├── front-matter.sh      reads page front matter
+│   │   ├── format.sh            percentage and progress bar formatting
+│   │   └── report.sh            per-language counting and CI summary output
+│   ├── content-progress.sh      counts pages still marked todo per language
+│   ├── description-progress.sh  counts pages without a real description per language
+│   └── progress.sh              runs every report, for local use
 ├── cspell.json                  spell check words and the Hungarian override
 ├── cspell.ci.json               CI spell check config with the Hungarian dictionary
 ├── mkdocs.yml
@@ -111,10 +118,10 @@ Run the same strict build that CI runs. It fails on broken links, missing nav fi
 uv run mkdocs build --strict
 ```
 
-Show how many pages are finished per language:
+Show the progress reports for every language, content and descriptions together. `progress.sh` is meant for local use; CI runs each report as its own job:
 
 ```bash
-bash scripts/content-progress.sh
+bash scripts/progress.sh
 ```
 
 Preview the deployed versions with the version selector, served from the `gh-pages` branch:
@@ -135,6 +142,7 @@ Create both language files with front matter marking the page as unfinished:
 ```markdown
 ---
 todo: true
+description: TODO
 ---
 
 # Page title
@@ -146,7 +154,7 @@ Then add the page to the `nav` in `mkdocs.yml` (without the language suffix, for
 
 ### Finishing a page
 
-Remove the `todo: true` line from the front matter. The content progress counter only looks at that flag, so the visible TODO text and anything else in the page body never affect it.
+Remove the `todo: true` line from the front matter, and replace `description: TODO` with a one-line summary of the page. The description appears on the section index cards, in search results and in link previews. The progress reports only look at the front matter, so the visible TODO text and anything else in the page body never affect them.
 
 ### Spell checking
 
@@ -172,9 +180,9 @@ Runs after Build. It builds the site, serves it under the same path GitHub Pages
 
 Runs after Build. It deploys the site as `latest` with mike, sets it as the default version and writes the live URLs into the run summary. The job is linked to the `docs` environment, so the live URL also appears in the repository's Deployments.
 
-### Content progress
+### Content and Descriptions
 
-Runs in parallel with Build and never blocks anything. It writes a table of finished pages per language, with a progress bar, into the run summary.
+Two report-only jobs that run in parallel with Build and never block anything. Content counts pages still marked `todo: true`, and Descriptions counts pages whose description is missing, empty or still `TODO`.
 
 ### Spelling
 

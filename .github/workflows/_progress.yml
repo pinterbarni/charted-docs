@@ -1,15 +1,24 @@
-name: Content progress
+name: Progress
 
 on:
   workflow_call:
+    inputs:
+      script:
+        description: Progress script in scripts/ to run
+        required: true
+        type: string
+      title:
+        description: Job name shown in the workflow graph
+        required: true
+        type: string
 
 jobs:
-  progress:
-    name: Content progress
+  report:
+    name: ${{ inputs.title }}
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v5
 
-      - name: Count unfinished pages
-        run: bash scripts/content-progress.sh
+      - name: Report progress
+        run: bash "scripts/${{ inputs.script }}"

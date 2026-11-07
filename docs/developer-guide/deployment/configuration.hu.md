@@ -1,6 +1,6 @@
 ---
 todo: true
-description: TODO: fill description
+description: TODO
 ---
 
 # Környezeti változók és konfiguráció
