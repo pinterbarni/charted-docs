@@ -1,0 +1,17 @@
+name: ShellCheck
+
+on:
+  workflow_call:
+
+jobs:
+  shellcheck:
+    name: ShellCheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Lint shell scripts
+        run: |
+          shellcheck --version
+          shellcheck -x scripts/*.sh scripts/lib/*.sh
