@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block announce %}
+  {%- if i18n_page_locale == "en" -%}
+    The English translation is in progress, the complete thesis is available in <a href="{{ base_url }}/hu/{{ page.url }}">Hungarian</a>. This is the living version of the thesis; the submitted text is version 1.0.0.
+  {%- elif i18n_page_locale == "hu" -%}
+    Ez a szakdolgozat webes, folyamatosan javított változata. A beadott szöveg az 1.0.0-s verzióban olvasható.
+  {%- endif -%}
+{% endblock %}
+
+{% block outdated %}
+  {%- if i18n_page_locale == "hu" -%}
+    A beadott szakdolgozat szövegét olvasod. A javított, friss változat <a href="{{ '../' ~ base_url }}">itt érhető el</a>.
+  {%- else -%}
+    You're reading the thesis as submitted. The corrected, current version is <a href="{{ '../' ~ base_url }}">available here</a>.
+  {%- endif -%}
+{% endblock %}
