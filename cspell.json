@@ -26,7 +26,8 @@
     "tervezése",
     "mentése",
     "bejelentkezés",
-    "indítása"
+    "indítása",
+    "twemoji"
   ],
   "ignorePaths": [".venv/**", "site/**", "uv.lock"],
   "overrides": [{ "filename": "**/*.hu.md", "language": "hu,en" }]
