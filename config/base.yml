@@ -12,6 +12,7 @@ theme:
     - navigation.tabs
     - navigation.sections
     - navigation.indexes
+    - navigation.instant.preview
     - toc.follow
     - search.suggest
 
