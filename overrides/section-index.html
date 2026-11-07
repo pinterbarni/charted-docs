@@ -8,11 +8,18 @@
         {% for item in page.parent.children %}
           {% if item.is_section %}
             {% set target = item.children | selectattr("is_page") | first %}
-            {% if target %}
-              <li><a href="{{ target.url | url }}">{{ item.title }}</a></li>
-            {% endif %}
           {% elif item.is_page and item.url != page.url %}
-            <li><a href="{{ item.url | url }}">{{ item.title }}</a></li>
+            {% set target = item %}
+          {% else %}
+            {% set target = none %}
+          {% endif %}
+          {% if target %}
+            <li>
+              <p><a href="{{ target.url | url }}"><strong>{{ item.title }}</strong></a></p>
+              {% if target.meta and target.meta.description %}
+                <p>{{ target.meta.description }}</p>
+              {% endif %}
+            </li>
           {% endif %}
         {% endfor %}
       </ul>
