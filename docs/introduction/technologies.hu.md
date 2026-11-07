@@ -1,4 +1,5 @@
 ---
+title: Felhasznált technológiák
 todo: true
 description: TODO
 ---

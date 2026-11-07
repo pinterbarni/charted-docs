@@ -1,4 +1,5 @@
 ---
+title: Code quality
 todo: true
 description: TODO
 ---

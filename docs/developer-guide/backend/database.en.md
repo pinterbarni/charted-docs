@@ -1,4 +1,5 @@
 ---
+title: Database model
 todo: true
 description: TODO
 ---

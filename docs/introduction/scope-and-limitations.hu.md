@@ -1,4 +1,5 @@
 ---
+title: Hatókör és korlátok
 todo: true
 description: TODO
 ---

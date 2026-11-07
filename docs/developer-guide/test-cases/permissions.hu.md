@@ -1,4 +1,5 @@
 ---
+title: Jogosultságok
 todo: true
 description: TODO
 ---

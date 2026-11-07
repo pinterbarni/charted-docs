@@ -1,4 +1,5 @@
 ---
+title: Túrarögzítés és GPS
 todo: true
 description: TODO
 ---

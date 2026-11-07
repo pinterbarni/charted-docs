@@ -1,4 +1,5 @@
 ---
+title: Gamifikáció
 todo: true
 description: TODO
 ---

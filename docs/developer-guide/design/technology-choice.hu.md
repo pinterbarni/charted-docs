@@ -1,4 +1,5 @@
 ---
+title: Technológiaválasztás
 todo: true
 description: TODO
 ---

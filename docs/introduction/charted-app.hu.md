@@ -1,4 +1,5 @@
 ---
+title: A Charted alkalmazás
 todo: true
 description: TODO
 ---

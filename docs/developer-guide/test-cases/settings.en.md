@@ -1,4 +1,5 @@
 ---
+title: Settings
 todo: true
 description: TODO
 ---
