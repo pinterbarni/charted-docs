@@ -1,4 +1,5 @@
 ---
+title: Követelmények
 todo: true
 description: TODO
 ---

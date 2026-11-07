@@ -1,4 +1,5 @@
 ---
+title: Cél és motiváció
 todo: true
 description: TODO
 ---

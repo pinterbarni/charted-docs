@@ -1,4 +1,5 @@
 ---
+title: Adatbázis modell
 todo: true
 description: TODO
 ---

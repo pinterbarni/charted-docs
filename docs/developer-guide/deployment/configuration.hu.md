@@ -1,4 +1,5 @@
 ---
+title: Konfiguráció
 todo: true
 description: TODO
 ---
