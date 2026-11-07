@@ -2,980 +2,980 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/architectural-decisions/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/architectural-decisions/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/architectural-decisions/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/architecture/backend-and-bff/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/architecture/backend-and-bff/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/architecture/backend-and-bff/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/architecture/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/architecture/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/architecture/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/architecture/infrastructure/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/architecture/infrastructure/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/architecture/infrastructure/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/architecture/methodology/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/architecture/methodology/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/architecture/methodology/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/architecture/mobile-app/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/architecture/mobile-app/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/architecture/mobile-app/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/backend/api-endpoints/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/backend/api-endpoints/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/backend/api-endpoints/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/backend/authentication/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/backend/authentication/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/backend/authentication/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/backend/code-quality/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/backend/code-quality/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/backend/code-quality/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/backend/database/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/backend/database/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/backend/database/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/backend/gamification/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/backend/gamification/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/backend/gamification/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/backend/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/backend/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/backend/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/backend/modules/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/backend/modules/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/backend/modules/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/backend/proxy-modules/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/backend/proxy-modules/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/backend/proxy-modules/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/backend/tech-stack/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/backend/tech-stack/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/backend/tech-stack/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/deployment/ci-cd/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/deployment/ci-cd/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/deployment/ci-cd/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/deployment/configuration/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/deployment/configuration/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/deployment/configuration/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/deployment/dev-environment/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/deployment/dev-environment/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/deployment/dev-environment/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/deployment/docker/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/deployment/docker/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/deployment/docker/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/deployment/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/deployment/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/deployment/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/design/data-model/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/design/data-model/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/design/data-model/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/design/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/design/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/design/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/design/requirements/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/design/requirements/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/design/requirements/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/design/technology-choice/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/design/technology-choice/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/design/technology-choice/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/design/ui-ux/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/design/ui-ux/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/design/ui-ux/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/design-system/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/design-system/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/mobile/design-system/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/eas/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/eas/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/mobile/eas/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/mobile/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/localization/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/localization/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/mobile/localization/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/maps/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/maps/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/mobile/maps/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/navigation/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/navigation/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/mobile/navigation/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/offline/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/offline/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/mobile/offline/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/routes/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/routes/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/mobile/routes/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/state-management/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/state-management/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/mobile/state-management/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/tech-stack/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/tech-stack/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/mobile/tech-stack/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/tracking/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/mobile/tracking/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/mobile/tracking/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/test-cases/authentication/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/test-cases/authentication/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/test-cases/authentication/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/test-cases/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/test-cases/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/test-cases/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/test-cases/offline/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/test-cases/offline/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/test-cases/offline/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/test-cases/permissions/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/test-cases/permissions/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/test-cases/permissions/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/test-cases/profile/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/test-cases/profile/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/test-cases/profile/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/test-cases/routes/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/test-cases/routes/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/test-cases/routes/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/test-cases/settings/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/test-cases/settings/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/test-cases/settings/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/developer-guide/test-cases/social/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/developer-guide/test-cases/social/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/developer-guide/test-cases/social/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/introduction/charted-app/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/introduction/charted-app/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/introduction/charted-app/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/introduction/goals-and-motivation/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/introduction/goals-and-motivation/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/introduction/goals-and-motivation/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/introduction/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/introduction/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/introduction/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/introduction/scope-and-limitations/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/introduction/scope-and-limitations/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/introduction/scope-and-limitations/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/introduction/technologies/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/introduction/technologies/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/introduction/technologies/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/introduction/thesis-structure/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/introduction/thesis-structure/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/introduction/thesis-structure/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/summary/challenges/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/summary/challenges/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/summary/challenges/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/summary/closing-thoughts/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/summary/closing-thoughts/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/summary/closing-thoughts/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/summary/future-work/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/summary/future-work/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/summary/future-work/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/summary/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/summary/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/summary/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/user-guide/browsing-and-sharing/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/user-guide/browsing-and-sharing/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/user-guide/browsing-and-sharing/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/user-guide/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/user-guide/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/user-guide/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/user-guide/map-rotation-and-tilt/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/user-guide/map-rotation-and-tilt/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/user-guide/map-rotation-and-tilt/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/user-guide/placing-pois/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/user-guide/placing-pois/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/user-guide/placing-pois/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/user-guide/profile-and-settings/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/user-guide/profile-and-settings/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/user-guide/profile-and-settings/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/user-guide/recording-hikes/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/user-guide/recording-hikes/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/user-guide/recording-hikes/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/user-guide/retrack/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/user-guide/retrack/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/user-guide/retrack/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/user-guide/route-planning/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/user-guide/route-planning/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/user-guide/route-planning/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/user-guide/saving-drafts/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/user-guide/saving-drafts/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/user-guide/saving-drafts/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/user-guide/settings-and-localization/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/user-guide/settings-and-localization/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/user-guide/settings-and-localization/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/user-guide/sign-up-and-sign-in/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/user-guide/sign-up-and-sign-in/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/user-guide/sign-up-and-sign-in/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/user-guide/social-features/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/user-guide/social-features/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/user-guide/social-features/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/user-guide/start-route-planning/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/user-guide/start-route-planning/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/user-guide/start-route-planning/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/user-guide/system-requirements/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest/user-guide/system-requirements/"/>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latesthu/user-guide/system-requirements/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latest"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/architectural-decisions/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/architectural-decisions/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/architectural-decisions/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/architecture/backend-and-bff/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/architecture/backend-and-bff/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/architecture/backend-and-bff/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/architecture/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/architecture/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/architecture/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/architecture/infrastructure/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/architecture/infrastructure/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/architecture/infrastructure/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/architecture/methodology/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/architecture/methodology/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/architecture/methodology/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/architecture/mobile-app/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/architecture/mobile-app/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/architecture/mobile-app/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/backend/api-endpoints/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/backend/api-endpoints/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/backend/api-endpoints/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/backend/authentication/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/backend/authentication/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/backend/authentication/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/backend/code-quality/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/backend/code-quality/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/backend/code-quality/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/backend/database/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/backend/database/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/backend/database/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/backend/gamification/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/backend/gamification/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/backend/gamification/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/backend/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/backend/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/backend/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/backend/modules/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/backend/modules/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/backend/modules/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/backend/proxy-modules/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/backend/proxy-modules/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/backend/proxy-modules/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/backend/tech-stack/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/backend/tech-stack/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/backend/tech-stack/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/deployment/ci-cd/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/deployment/ci-cd/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/deployment/ci-cd/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/deployment/configuration/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/deployment/configuration/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/deployment/configuration/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/deployment/dev-environment/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/deployment/dev-environment/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/deployment/dev-environment/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/deployment/docker/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/deployment/docker/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/deployment/docker/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/deployment/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/deployment/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/deployment/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/design/data-model/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/design/data-model/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/design/data-model/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/design/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/design/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/design/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/design/requirements/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/design/requirements/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/design/requirements/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/design/technology-choice/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/design/technology-choice/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/design/technology-choice/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/design/ui-ux/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/design/ui-ux/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/design/ui-ux/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/design-system/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/design-system/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/mobile/design-system/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/eas/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/eas/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/mobile/eas/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/mobile/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/localization/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/localization/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/mobile/localization/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/maps/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/maps/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/mobile/maps/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/navigation/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/navigation/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/mobile/navigation/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/offline/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/offline/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/mobile/offline/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/routes/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/routes/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/mobile/routes/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/state-management/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/state-management/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/mobile/state-management/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/tech-stack/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/tech-stack/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/mobile/tech-stack/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/tracking/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/mobile/tracking/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/mobile/tracking/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/test-cases/authentication/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/test-cases/authentication/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/test-cases/authentication/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/test-cases/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/test-cases/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/test-cases/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/test-cases/offline/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/test-cases/offline/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/test-cases/offline/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/test-cases/permissions/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/test-cases/permissions/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/test-cases/permissions/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/test-cases/profile/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/test-cases/profile/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/test-cases/profile/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/test-cases/routes/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/test-cases/routes/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/test-cases/routes/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/test-cases/settings/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/test-cases/settings/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/test-cases/settings/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/test-cases/social/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/developer-guide/test-cases/social/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestdeveloper-guide/test-cases/social/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/introduction/charted-app/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/introduction/charted-app/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestintroduction/charted-app/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/introduction/goals-and-motivation/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/introduction/goals-and-motivation/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestintroduction/goals-and-motivation/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/introduction/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/introduction/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestintroduction/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/introduction/scope-and-limitations/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/introduction/scope-and-limitations/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestintroduction/scope-and-limitations/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/introduction/technologies/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/introduction/technologies/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestintroduction/technologies/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/introduction/thesis-structure/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/introduction/thesis-structure/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestintroduction/thesis-structure/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/summary/challenges/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/summary/challenges/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestsummary/challenges/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/summary/closing-thoughts/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/summary/closing-thoughts/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestsummary/closing-thoughts/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/summary/future-work/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/summary/future-work/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestsummary/future-work/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/summary/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/summary/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestsummary/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/browsing-and-sharing/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/browsing-and-sharing/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestuser-guide/browsing-and-sharing/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestuser-guide/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/map-rotation-and-tilt/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/map-rotation-and-tilt/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestuser-guide/map-rotation-and-tilt/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/placing-pois/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/placing-pois/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestuser-guide/placing-pois/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/profile-and-settings/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/profile-and-settings/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestuser-guide/profile-and-settings/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/recording-hikes/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/recording-hikes/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestuser-guide/recording-hikes/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/retrack/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/retrack/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestuser-guide/retrack/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/route-planning/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/route-planning/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestuser-guide/route-planning/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/saving-drafts/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/saving-drafts/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestuser-guide/saving-drafts/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/settings-and-localization/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/settings-and-localization/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestuser-guide/settings-and-localization/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/sign-up-and-sign-in/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/sign-up-and-sign-in/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestuser-guide/sign-up-and-sign-in/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/social-features/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/social-features/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestuser-guide/social-features/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/start-route-planning/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/start-route-planning/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestuser-guide/start-route-planning/"/>
     </url>
     <url>
         <loc>https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/system-requirements/</loc>
-        <lastmod>2026-11-06</lastmod>
+        <lastmod>2026-11-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="hu" href="https://pinterbarni.github.io/charted-docs/latest/hu/user-guide/system-requirements/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://pinterbarni.github.io/charted-docs/latestuser-guide/system-requirements/"/>
