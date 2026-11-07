@@ -29,6 +29,7 @@ My BSc thesis on Charted, a self-hosted social hiking app, published as a biling
     - [Deploy to GitHub Pages](#deploy-to-github-pages)
     - [Content and Descriptions](#content-and-descriptions)
     - [Spelling](#spelling)
+    - [ShellCheck](#shellcheck)
   - [Branching and commits](#branching-and-commits)
   - [Built with](#built-with)
 
@@ -70,6 +71,7 @@ charted-docs/
 │   ├── _deploy.yml              deploy to GitHub Pages with mike
 │   ├── _links.yml               internal link check
 │   ├── _progress.yml            content progress report
+│   ├── _shellcheck.yml          lints the scripts in scripts/
 │   └── _spellcheck.yml          spell check report
 ├── .vscode/settings.json        editor colors and YAML schema
 ├── config/
@@ -131,6 +133,12 @@ git fetch origin gh-pages
 uv run mike serve
 ```
 
+Lint the scripts the same way CI does (requires [ShellCheck](https://www.shellcheck.net)):
+
+```bash
+shellcheck -x scripts/*.sh scripts/lib/*.sh
+```
+
 To hide the Material end-of-life banner in the terminal, set `NO_MKDOCS_2_WARNING=1`.
 
 ## Writing content
@@ -187,6 +195,10 @@ Two report-only jobs that run in parallel with Build and never block anything. C
 ### Spelling
 
 Runs in parallel with Build and never blocks anything. It checks all pages with cspell and the Hungarian dictionary and lists unknown words in the run summary.
+
+### ShellCheck
+
+Runs in parallel with everything else. It lints every script in `scripts/` with ShellCheck and fails on any finding. Deploy doesn't wait for it, since the scripts only produce reports and never affect the site.
 
 ## Branching and commits
 

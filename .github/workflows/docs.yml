@@ -46,3 +46,7 @@ jobs:
   spellcheck:
     name: Spelling
     uses: ./.github/workflows/_spellcheck.yml
+
+  shellcheck:
+    name: ShellCheck
+    uses: ./.github/workflows/_shellcheck.yml
