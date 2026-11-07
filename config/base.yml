@@ -25,9 +25,13 @@ theme:
         name: Switch to system preference
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.indexes
     - navigation.instant.preview
+    - navigation.path
+    - navigation.top
+    - navigation.footer
     - toc.follow
     - search.suggest
 
