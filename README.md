@@ -145,7 +145,6 @@ Spell check project locally with cspell.
 npx --yes -p cspell@9 -p @cspell/dict-hu-hu cspell --config cspell.ci.json "docs/**/*.md"
 ```
 
-
 To hide the Material end-of-life banner in the terminal, set `NO_MKDOCS_2_WARNING=1`.
 
 ## Writing content
@@ -165,7 +164,7 @@ description: TODO
 TODO
 ```
 
-Then add the page to the `nav` in `mkdocs.yml` (without the language suffix, for example `introduction/charted-app.md`) and its Hungarian label to `nav_translations` in `config/plugins.yml`. The label key must match the English nav label exactly.
+Then add the page to the `nav` in `mkdocs.yml`, without a label and without the language suffix (for example `- introduction/charted-app.md`). The sidebar label comes from the page heading in each language. For a long heading, add a `title:` line to the front matter to set a shorter sidebar label; the heading on the page stays as it is. Only new tabs and groups need a label in the nav, and its Hungarian version in `nav_translations` in `config/plugins.yml`.
 
 ### Finishing a page
 
