@@ -139,6 +139,13 @@ Lint the scripts the same way CI does (requires [ShellCheck](https://www.shellch
 shellcheck -x scripts/*.sh scripts/lib/*.sh
 ```
 
+Spell check project locally with cspell.
+
+```bash
+npx --yes -p cspell@9 -p @cspell/dict-hu-hu cspell --config cspell.ci.json "docs/**/*.md"
+```
+
+
 To hide the Material end-of-life banner in the terminal, set `NO_MKDOCS_2_WARNING=1`.
 
 ## Writing content
