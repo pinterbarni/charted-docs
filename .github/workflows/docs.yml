@@ -17,9 +17,14 @@ jobs:
     name: Build
     uses: ./.github/workflows/_build.yml
 
+  links:
+    name: Links
+    needs: build
+    uses: ./.github/workflows/_links.yml
+
   deploy:
     name: Deploy
-    needs: build
+    needs: [build, links]
     uses: ./.github/workflows/_deploy.yml
     permissions:
       contents: write
