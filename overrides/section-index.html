@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+
+{% block content %}
+  {{ super() }}
+  {% if page.parent %}
+    <div class="grid cards">
+      <ul>
+        {% for item in page.parent.children %}
+          {% if item.is_section %}
+            {% set target = item.children | selectattr("is_page") | first %}
+            {% if target %}
+              <li><a href="{{ target.url | url }}">{{ item.title }}</a></li>
+            {% endif %}
+          {% elif item.is_page and item.url != page.url %}
+            <li><a href="{{ item.url | url }}">{{ item.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+{% endblock %}
