@@ -35,6 +35,7 @@ theme:
     - navigation.footer
     - toc.follow
     - search.suggest
+    - announce.dismiss
 
 markdown_extensions:
   - admonition
