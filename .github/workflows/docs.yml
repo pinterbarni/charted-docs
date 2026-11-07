@@ -29,9 +29,19 @@ jobs:
     permissions:
       contents: write
 
-  progress:
-    name: Progress
+  content:
+    name: Content
     uses: ./.github/workflows/_progress.yml
+    with:
+      script: content-progress.sh
+      title: Content progress
+
+  descriptions:
+    name: Descriptions
+    uses: ./.github/workflows/_progress.yml
+    with:
+      script: description-progress.sh
+      title: Description progress
 
   spellcheck:
     name: Spelling
