@@ -1,0 +1,81 @@
+erDiagram
+    users {
+        uuid id PK
+        string username
+        string display_name
+        string bio
+        string avatar_url
+        float total_distance_m
+        timestamp created_at
+        timestamp updated_at
+    }
+    user_avatars {
+        uuid user_id PK
+        text base64
+        timestamp updated_at
+    }
+    planned_routes {
+        uuid id PK
+        uuid user_id
+        string title
+        jsonb waypoints
+        jsonb valhalla_response
+        jsonb pois
+        timestamp created_at
+        timestamp updated_at
+    }
+    follows {
+        uuid id PK
+        uuid follower_id
+        uuid following_id
+        timestamp created_at
+    }
+    blocks {
+        uuid id PK
+        uuid blocker_id
+        uuid blocked_id
+        timestamp created_at
+    }
+    reports {
+        uuid id PK
+        uuid reporter_id
+        enum target_type
+        uuid target_id
+        string reason
+        string admin_response
+        timestamp created_at
+        timestamp updated_at
+    }
+    trails {
+        uuid id PK
+        uuid user_id
+        string title
+        string description
+        int distance_m
+        string distance_unit
+        float distance_original
+        int duration_s
+        int elevation_gain_m
+        boolean is_shared
+        jsonb track_points
+        jsonb pois
+        timestamp started_at
+        timestamp finished_at
+        timestamp created_at
+        timestamp updated_at
+    }
+    trail_likes {
+        uuid id PK
+        uuid user_id
+        uuid trail_id
+        timestamp created_at
+    }
+
+    users ||--o| user_avatars : has
+    users ||--o{ planned_routes : plans
+    users ||--o{ follows : follows
+    users ||--o{ blocks : blocks
+    users ||--o{ reports : submits
+    users ||--o{ trails : records
+    users ||--o{ trail_likes : likes
+    trails ||--o{ trail_likes : receives

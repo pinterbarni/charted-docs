@@ -1,0 +1,28 @@
+flowchart LR
+    Map[Map Screen]
+    Auth[Auth]
+    Keycloak[Keycloak Browser]
+    Profile[Profile Screen]
+    Blocked[Blocked Screen]
+    Connections[Followers / Following]
+    Search[Search Screen]
+    MoreTrails[More Trails]
+    OtherProfile[Other User Profile]
+    HikeDetails[Hike Details]
+    SavedHike[Saved Hike]
+
+    Auth <--> Keycloak
+    Map <--> Auth
+    Map --> Blocked
+    Map --> Profile
+    Profile --> Auth
+    Profile --> Connections
+    Profile --> Search
+    Profile --> MoreTrails
+    Profile --> HikeDetails
+    Profile --> SavedHike
+    Blocked --> OtherProfile
+    Connections --> OtherProfile
+    Search --> OtherProfile
+    MoreTrails --> HikeDetails
+    MoreTrails --> SavedHike

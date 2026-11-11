@@ -1,0 +1,14 @@
+sequenceDiagram
+    participant App as Mobil App
+    participant KC as Keycloak
+    participant BFF as NestJS BFF
+
+    Note over App,BFF: access_token lejárt
+    App->>BFF: 1. API kérés (lejárt Bearer token)
+    BFF-->>App: 2. 401 Unauthorized
+    App->>KC: 3. Token frissítés (refresh_token)
+    KC->>KC: 4. refresh_token ellenőrzés
+    KC-->>App: 5. új access_token + új refresh_token
+    App->>BFF: 6. API kérés újra (új Bearer token)
+    BFF->>BFF: 7. Token ellenőrzés - érvényes
+    BFF-->>App: 8. JSON válasz
