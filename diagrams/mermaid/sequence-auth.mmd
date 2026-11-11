@@ -1,0 +1,20 @@
+sequenceDiagram
+    participant App as Mobil App
+    participant KC as Keycloak
+    participant BFF as NestJS BFF
+    participant DB as PostgreSQL
+
+    Note over App,DB: 1. Autentikációs folyamat
+    App->>KC: 1. Authorization Code kérés (PKCE)
+    KC-->>App: 2. Authorization Code
+    App->>KC: 3. Token csere (code + code_verifier)
+    KC-->>App: 4. access_token + refresh_token
+
+    Note over App,DB: 2. API kérés
+    App->>BFF: 5. API kérés (Bearer access_token)
+    BFF->>KC: 6. JWKS lekérés (nyilvános kulcs cache-sel)
+    KC-->>BFF: 7. Nyilvános kulcs cachelve
+    BFF->>BFF: 8. Token aláírás és lejárat ellenőrzés
+    BFF->>DB: 9. Üzleti logika végrehajtás
+    DB-->>BFF: 10. Eredmény
+    BFF-->>App: 11. JSON válasz

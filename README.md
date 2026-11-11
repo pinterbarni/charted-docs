@@ -22,6 +22,8 @@ My BSc thesis on Charted, a self-hosted social hiking app, published as a biling
   - [Writing content](#writing-content)
     - [Adding a page](#adding-a-page)
     - [Finishing a page](#finishing-a-page)
+    - [Images](#images)
+    - [Diagrams](#diagrams)
     - [Spell checking](#spell-checking)
   - [CI](#ci)
     - [Build (strict)](#build-strict)
@@ -77,7 +79,11 @@ charted-docs/
 ├── config/
 │   ├── base.yml
 │   └── plugins.yml
+├── diagrams/
+│   ├── plantuml/                PlantUML sources, rendered at build time
+│   └── mermaid/                 Mermaid sources, included into pages at build time
 ├── docs/                        the site content, one .en.md and .hu.md pair per page
+│   ├── assets/images/           all images, in folders mirroring the docs structure
 │   ├── index.*.md               home page
 │   ├── introduction/
 │   ├── user-guide/
@@ -169,6 +175,14 @@ Then add the page to the `nav` in `mkdocs.yml`, without a label and without the 
 ### Finishing a page
 
 Remove the `todo: true` line from the front matter, and replace `description: TODO` with a one-line summary of the page. The description appears on the section index cards, in search results and in link previews. The progress reports only look at the front matter, so the visible TODO text and anything else in the page body never affect them.
+
+### Images
+
+Put images in `docs/assets/images/`, in a folder mirroring the page's location, for example `docs/assets/images/user-guide/` for User guide pages. When a section has several images of one kind, group them in a subfolder, like `user-guide/flows/`. Name files in kebab-case after what they show, and link them relatively from the page, for example `![Bejelentkezési folyamat](../assets/images/user-guide/flows/login.png)`. Both languages share an image unless a language-specific version exists next to it, such as `login.en.png`. Site-wide images like the logo go directly in `docs/assets/images/`.
+
+### Diagrams
+
+Diagram sources live in `diagrams/`, outside the published site, and are rendered when the site is built, so the source is the only copy to edit. Mermaid diagrams go in `diagrams/mermaid/` as `.mmd` files and PlantUML diagrams in `diagrams/plantuml/` as `.puml` files. Diagrams with text in a specific language get one file per language, for example `sequence-auth.hu.mmd` and `sequence-auth.en.mmd`.
 
 ### Spell checking
 
