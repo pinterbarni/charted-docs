@@ -1,0 +1,36 @@
+@startuml production deployment diagram
+left to right direction
+
+cloud "Cloudflare" {
+    component [DNS]
+}
+
+node "Janus Pi" {
+    component [Nginx]
+}
+
+node "Vesta Pi" {
+    node "Docker network: charted-network" {
+        node "NestJS BFF" {
+            component [BFF]
+        }
+        database "PostgreSQL" as PG
+    }
+    component [Martin]
+    component [Valhalla]
+    node "Docker network: keycloak-network" {
+        component [Keycloak]
+        database "Keycloak PostgreSQL :5432" as KCPG
+    }
+}
+
+[Mobile App] --> [DNS]
+[DNS] --> [Nginx]
+[Nginx] --> [Keycloak] : sso.charted.hu
+[Nginx] --> [BFF] : api.charted.hu
+[BFF] --> [Martin]
+[BFF] --> [Valhalla]
+[BFF] --> PG
+[Keycloak] --> [BFF]
+[Keycloak] --> KCPG
+@enduml

@@ -1,0 +1,27 @@
+@startuml development deployment diagram
+top to bottom direction
+
+node "Developer PC" {
+    node "NestJS BFF" {
+        component [BFF]
+    }
+    database "PostgreSQL" as PG
+}
+
+node "Vesta Pi" {
+    component [Martin]
+    component [Valhalla]
+    node "Keycloak network" {
+        component [Keycloak]
+        database "Keycloak PostgreSQL" as KCPG
+    }
+}
+
+[Mobile App] --> [BFF]
+[BFF] --> [Martin]
+[BFF] --> [Valhalla]
+[BFF] --> PG
+[Mobile App] --> [Keycloak]
+[Keycloak] -left-> [BFF]
+[Keycloak] -right-> KCPG
+@enduml
