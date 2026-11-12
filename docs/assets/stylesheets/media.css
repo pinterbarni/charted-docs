@@ -1,0 +1,32 @@
+/* Images in dark mode: the lightbox and PlantUML diagrams. */
+
+/* Image lightbox (glightbox). */
+.glightbox-container .goverlay {
+  background: rgba(9, 31, 1, 0.92); /* neutralGreen 800 */
+}
+
+.gslide-image img {
+  padding: 1rem;
+  border-radius: 0.8rem;
+  background: #fcfdfc; /* neutralGreen 50 */
+}
+
+/* Dark mode: a softer card and slightly dimmed image, so bright images don't glare. */
+[data-md-color-scheme="slate"] .gslide-image img {
+  background: #cbd9c7; /* neutralGreen 300 */
+  filter: brightness(0.85);
+}
+
+/* PlantUML diagrams render as SVG images: black lines on a white background.
+   In dark mode, invert them (hue-rotate turns colors back to their original hues), and blend
+   with "screen", which drops the inverted black background so the page shows through. */
+[data-md-color-scheme="slate"] .md-typeset img[src^="data:image/svg+xml"] {
+  filter: invert(1) hue-rotate(180deg);
+  mix-blend-mode: screen;
+}
+
+/* In the lightbox, blending has nothing to show through, so the inverted diagram sits on a black card. */
+[data-md-color-scheme="slate"] .gslide-image img[src^="data:image/svg+xml"] {
+  filter: invert(1) hue-rotate(180deg);
+  background: #000;
+}

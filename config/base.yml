@@ -77,8 +77,11 @@ extra:
     default: latest
 
 extra_css:
+  - assets/stylesheets/typography.css
+  - assets/stylesheets/palette.css
+  - assets/stylesheets/navigation.css
+  - assets/stylesheets/media.css
   - assets/stylesheets/diagram-zoom.css
-  - assets/stylesheets/theme.css
 
 extra_javascript:
   - assets/javascripts/diagram-zoom.js

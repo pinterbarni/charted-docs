@@ -1,0 +1,57 @@
+/* Brand highlights in navigation: primary green in light mode, lime in dark mode. */
+
+/* Left sidebar: the current chapter's title, e.g. "Bevezetés". */
+.md-nav--primary > .md-nav__list > .md-nav__item--section > .md-nav__link,
+.md-nav--primary > .md-nav__list > .md-nav__item--section > .md-nav__link a {
+  color: var(--md-primary-fg-color);
+}
+
+[data-md-color-scheme="slate"]
+  .md-nav--primary
+  > .md-nav__list
+  > .md-nav__item--section
+  > .md-nav__link,
+[data-md-color-scheme="slate"]
+  .md-nav--primary
+  > .md-nav__list
+  > .md-nav__item--section
+  > .md-nav__link
+  a {
+  color: var(--charted-lime);
+}
+
+/* Card titles on the chapter overview pages and the landing page. */
+.md-typeset .grid.cards strong {
+  color: var(--md-primary-fg-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards strong {
+  color: var(--charted-lime);
+}
+
+/* Card icons, matching the card titles. */
+.md-typeset .grid.cards .twemoji.lg {
+  color: var(--md-primary-fg-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards .twemoji.lg {
+  color: var(--charted-lime);
+}
+
+/* Card header line: center the icon vertically against the title. */
+.md-typeset .grid.cards > ul > li > p:first-child {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+/* Card links ("Tovább a ..." with the arrow) in lime in dark mode. Light mode keeps the normal link color. */
+[data-md-color-scheme="slate"] .md-typeset .grid.cards a {
+  color: var(--charted-lime);
+}
+
+/* Left sidebar: the current page in lime in dark mode. Light mode keeps the primary green. */
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__link--active,
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__link--active:hover {
+  color: var(--charted-lime);
+}
