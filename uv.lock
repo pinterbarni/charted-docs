@@ -138,6 +138,7 @@ dependencies = [
     { name = "mkdocs-glightbox" },
     { name = "mkdocs-material" },
     { name = "mkdocs-static-i18n" },
+    { name = "plantuml-markdown" },
 ]
 
 [package.metadata]
@@ -147,6 +148,7 @@ requires-dist = [
     { name = "mkdocs-glightbox", specifier = ">=0.5.3" },
     { name = "mkdocs-material", specifier = ">=9.8.0" },
     { name = "mkdocs-static-i18n", specifier = ">=1.3.1" },
+    { name = "plantuml-markdown", specifier = ">=3.11.6" },
 ]
 
 [[package]]
@@ -443,6 +445,24 @@ wheels = [
 ]
 
 [[package]]
+name = "plantuml-markdown"
+version = "3.11.6"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "certifi" },
+    { name = "charset-normalizer" },
+    { name = "idna" },
+    { name = "markdown" },
+    { name = "requests" },
+    { name = "six" },
+    { name = "urllib3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c1/f1/40b7dfac528ca8bd6a6751095b7624f4dd15bdd5ed232a4e58ed3d6923c2/plantuml_markdown-3.11.6.tar.gz", hash = "sha256:860a9195d417b5c169145a707fee8cfc1f3bbe6d48acc6c8cf56f0d84f3306ec", size = 33314, upload-time = "2026-11-10T20:21:18.441Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/eb/e0/9606aebfd7d3695399c871a0dd6ec2c0949236b059f01b3c12d87c7795b5/plantuml_markdown-3.11.6-py3-none-any.whl", hash = "sha256:a1729a1b7f15f65ddc918fb570548d97cb14c7eb7dfb9e0b3ed97cac8b9f42b9", size = 20296, upload-time = "2026-11-10T20:21:16.8Z" },
+]
+
+[[package]]
 name = "platformdirs"
 version = "4.14.5"
 source = { registry = "https://pypi.org/simple" }
@@ -589,6 +609,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/fa/cc/a96a6d775526c957ef8b3716c4505c250648906fe663077bc2ddb6427d73/selectolax-1.0.2-cp315-cp315t-win32.whl", hash = "sha256:fcd3a49df7f8761b6a3a82076fe2e4f0d53a5dac63ba2da895aab2b586c78243", size = 1270501, upload-time = "2026-10-22T15:44:56.871Z" },
     { url = "https://files.pythonhosted.org/packages/f1/78/ee70e73103ef7a827982b43bcc009f73718684f919d13bb532b87a4a7312/selectolax-1.0.2-cp315-cp315t-win_amd64.whl", hash = "sha256:ad6b29a2f20c7d46b8306a995268f50c2a63eae40c3c7a05b6a3492d3968117d", size = 1335466, upload-time = "2026-10-22T15:44:58.949Z" },
     { url = "https://files.pythonhosted.org/packages/4c/10/edf323b28d3d3337ba9a43b29e460246109e1ee14cb06ab9e713c9e0c388/selectolax-1.0.2-cp315-cp315t-win_arm64.whl", hash = "sha256:63dbbb0760a2a2b4f581afd186863ef47acecb410df7c937239c51ae853c3cb1", size = 1316364, upload-time = "2026-10-22T15:45:00.415Z" },
+]
+
+[[package]]
+name = "six"
+version = "1.17.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz", hash = "sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81", size = 34031, upload-time = "2024-12-04T17:35:28.174Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl", hash = "sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274", size = 11050, upload-time = "2024-12-04T17:35:26.475Z" },
 ]
 
 [[package]]

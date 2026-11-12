@@ -51,6 +51,8 @@ markdown_extensions:
       check_paths: true
   - toc:
       permalink: true
+  - plantuml_markdown:
+      format: svg
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid

@@ -1,0 +1,26 @@
+name: Set up PlantUML
+description: Installs a pinned PlantUML version and Graphviz, and puts the plantuml command on the PATH.
+
+inputs:
+  version:
+    description: PlantUML release to install
+    default: "1.2025.4"
+
+runs:
+  using: composite
+  steps:
+    - name: Install Graphviz
+      shell: bash
+      run: sudo apt-get install -y --no-install-recommends graphviz
+
+    - name: Install PlantUML
+      shell: bash
+      run: |
+        dir="$RUNNER_TOOL_CACHE/plantuml"
+        mkdir -p "$dir"
+        curl -fsSL -o "$dir/plantuml.jar" \
+          "https://github.com/plantuml/plantuml/releases/download/v${{ inputs.version }}/plantuml-${{ inputs.version }}.jar"
+        printf '#!/bin/sh\nexec java -Djava.awt.headless=true -jar "%s" "$@"\n' "$dir/plantuml.jar" > "$dir/plantuml"
+        chmod +x "$dir/plantuml"
+        echo "$dir" >> "$GITHUB_PATH"
+        "$dir/plantuml" -version | head -1
