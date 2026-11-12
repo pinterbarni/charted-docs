@@ -8,6 +8,8 @@ theme:
   custom_dir: overrides
   language: en
   font: false
+  logo: assets/images/brand/logo.png
+  favicon: assets/images/brand/favicon.png
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
