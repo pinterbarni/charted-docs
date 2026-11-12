@@ -36,11 +36,13 @@ theme:
     - toc.follow
     - search.suggest
     - announce.dismiss
+    - content.footnote.tooltips
 
 markdown_extensions:
   - admonition
   - attr_list
   - md_in_html
+  - footnotes
   - pymdownx.details
   - pymdownx.blocks.caption
   - pymdownx.emoji:
