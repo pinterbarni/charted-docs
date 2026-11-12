@@ -2995,7 +2995,59 @@
 
 
 <h1 id="gamifikacios-logika">Gamifikációs logika<a class="headerlink" href="#gamifikacios-logika" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>A gamifikációs rendszer valós, ikonikus túraútvonalak távolságain alapuló szintrendszert alkalmaz. A felhasználó szintje soha nem kerül tárolásra az adatbázisban, hanem minden alkalommal a <code>totalDistanceM</code> mezőből kerül dinamikusan kiszámításra a <code>computeLevel()</code> függvénnyel. Ez garantálja, hogy a szint mindig konzisztens marad a megtett távolsággal, és nem szükséges külön szinkronizációs logika vagy migrációs szkript szintváltozáskor.</p>
+<p>A <code>totalDistanceM</code> értéke csak növekedhet: túra létrehozásakor automatikusan inkrementálódik, törléskor nem csökken, ez a tervezett viselkedés, üzleti logika.</p>
+<figure id="tab-levels">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Szint</th>
+<th>Referencia útvonal</th>
+<th style="text-align: right;">Küszöbérték (<code>km</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td>Inca Trail (Peru)</td>
+<td style="text-align: right;"><code>43</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td>Tour du Mont Blanc (Alpok)</td>
+<td style="text-align: right;"><code>170</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td>El Camino de Santiago (Spanyolország)</td>
+<td style="text-align: right;"><code>500</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4</strong></td>
+<td>Appalachian Trail fele (USA)</td>
+<td style="text-align: right;"><code>1 200</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>5</strong></td>
+<td>Pacific Crest Trail (USA)</td>
+<td style="text-align: right;"><code>3 500</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>6</strong></td>
+<td>Mount Everest magassága</td>
+<td style="text-align: right;"><code>8 848</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>7</strong></td>
+<td>Föld átmérője</td>
+<td style="text-align: right;"><code>12 742</code></td>
+</tr>
+</tbody>
+</table>
+<figcaption>
+<p><span class="caption-prefix">Table 1.</span> Gamifikációs szintrendszer valós túraútvonalak alapján</p>
+</figcaption>
+</figure>
 
 
 
@@ -3109,7 +3161,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

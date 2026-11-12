@@ -2995,7 +2995,25 @@
 
 
 <h1 id="mobil-alkalmazas-architektura">Mobil alkalmazás architektúra<a class="headerlink" href="#mobil-alkalmazas-architektura" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>A mobilalkalmazás réteges architektúrára épül, ahol az egyes rétegek jól elkülönített felelősségi körökkel rendelkeznek:</p>
+<ul>
+<li><strong><code>Screens</code>:</strong> az expo-router file-alapú útválasztási rendszere által kezelt képernyők.</li>
+<li><strong><code>Hooks</code>:</strong> összetett állapotlogika és oldal-effektek kezelése pl.:<ul>
+<li><code>useBackgroundLocation</code>,</li>
+<li><code>useMapCamera</code>.</li>
+</ul>
+</li>
+<li><strong><code>Services</code>:</strong> BFF-fel való kommunikáció az <code>apiClient</code> HTTP klienesen keresztül.</li>
+<li><strong><code>Stores</code>:</strong> Zustand alapú globális állapotkezelés pl.:<ul>
+<li><code>authStore</code>,</li>
+<li><code>localStore</code>,</li>
+<li><code>settingsStore</code>,</li>
+<li><code>errorStore</code>.</li>
+</ul>
+</li>
+<li><strong><code>Utils</code>:</strong> állapotfüggetlen segédfüggvények (GPX kezelés, mértékegység konverzió stb.).</li>
+<li><strong><code>Components</code>:</strong> újrafelhasználható UI komponenskönyvtár.</li>
+</ul>
 
 
 
@@ -3109,7 +3127,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

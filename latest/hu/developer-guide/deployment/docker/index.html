@@ -2345,6 +2345,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker és infrastruktúra
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2361,6 +2379,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#vesta-szerveren-futo-szolgaltatasok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vesta szerveren futó szolgáltatások
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janus-szerveren-futo-szolgaltatasok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Janus szerveren futó szolgáltatások
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#az-eles-bff-inditasa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Az éles BFF indítása
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2910,6 +2980,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#vesta-szerveren-futo-szolgaltatasok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vesta szerveren futó szolgáltatások
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#janus-szerveren-futo-szolgaltatasok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Janus szerveren futó szolgáltatások
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#az-eles-bff-inditasa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Az éles BFF indítása
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2995,7 +3106,75 @@
 
 
 <h1 id="docker-es-infrastruktura">Docker és infrastruktúra<a class="headerlink" href="#docker-es-infrastruktura" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>Az éles infrastruktúra Docker Compose alapú konténerizációra épül. A szolgáltatások két szerverre vannak elosztva.</p>
+<details class="info">
+<summary>Webes módosítás</summary>
+<p>Az alábbi rész a webes változat jobb használhatósága érdekében módosult a beadott dolgozathoz képest.</p>
+</details>
+<h2 id="vesta-szerveren-futo-szolgaltatasok">Vesta szerveren futó szolgáltatások<a class="headerlink" href="#vesta-szerveren-futo-szolgaltatasok" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Szolgáltatás</th>
+<th>Forrás</th>
+<th>Leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>NestJS</strong> (BFF)</td>
+<td><code>docker-compose.prod.yml</code></td>
+<td>Backend réteg. ARM64 alapú image-ként épül a Dockerfile-ból. A <code>charted-network</code> Docker hálózaton kommunikál a PostgreSQL-lel.</td>
+</tr>
+<tr>
+<td><strong>PostgreSQL</strong></td>
+<td><code>imresamu/postgis:16-3.4</code></td>
+<td>ARM64 natív PostGIS image. A <code>charted-network</code> hálózaton érhető el a BFF számára. Az adatbázis séma az első indításkor a <code>DB_SYNCHRONIZE=true</code> környezeti változóval inicializálható, ezt követően ki kell kapcsolni.</td>
+</tr>
+<tr>
+<td><strong>Keycloak</strong> és <strong>saját PostgreSQL</strong> adatbázisa</td>
+<td></td>
+<td>Külön Docker hálózaton fut (<code>keycloak-network</code>).</td>
+</tr>
+<tr>
+<td><strong>Martin</strong> (tile server)</td>
+<td></td>
+<td>Csempék kiszolgálása közvetlenül a PostGIS adatbázisból.</td>
+</tr>
+<tr>
+<td><strong>Valhalla</strong> (routing engine)</td>
+<td></td>
+<td>Gyalogos útvonaltervezés.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="janus-szerveren-futo-szolgaltatasok">Janus szerveren futó szolgáltatások<a class="headerlink" href="#janus-szerveren-futo-szolgaltatasok" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Szolgáltatás</th>
+<th>Leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>nginx</strong></td>
+<td>Reverse proxy TLS terminációval. A tanúsítványokat Certbot és Let's Encrypt biztosítja. Az <code>api.charted.hu</code> és <code>sso.charted.hu</code> domaineket Tailscale-en keresztül irányítja a Vesta szerverre.</td>
+</tr>
+<tr>
+<td><strong>Tailscale</strong></td>
+<td>Mesh VPN kapcsolat a Vesta szerverrel.</td>
+</tr>
+<tr>
+<td><strong>dnsmasq</strong></td>
+<td>Belső DNS feloldás, amely a <code>charted.hu</code> domaineket a Vesta Tailscale IP-jére irányítja.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="az-eles-bff-inditasa">Az éles BFF indítása<a class="headerlink" href="#az-eles-bff-inditasa" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/srv/bff-charted
+docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.prod.yml<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
+</code></pre></div>
 
 
 
@@ -3109,7 +3288,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

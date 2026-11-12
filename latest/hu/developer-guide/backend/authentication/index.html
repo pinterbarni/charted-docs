@@ -1713,6 +1713,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authentikáció
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1729,6 +1747,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#autentikacios-folyamat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autentikációs folyamat
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#token-frissites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Token frissítés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profil-letrehozasa-elso-bejelentkezeskor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profil létrehozása első bejelentkezéskor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vegpontok-vedelme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Végpontok védelme
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2910,6 +2991,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#autentikacios-folyamat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autentikációs folyamat
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#token-frissites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Token frissítés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profil-letrehozasa-elso-bejelentkezeskor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profil létrehozása első bejelentkezéskor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vegpontok-vedelme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Végpontok védelme
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2995,7 +3128,233 @@
 
 
 <h1 id="authentikacio">Authentikáció<a class="headerlink" href="#authentikacio" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>Az authentikáció Keycloak OIDC providerre épül, PKCE alapú authorization code flow-val. A BFF nem tárol titkos kulcsot: a token validáció JWKS (JSON Web Key Set) alapú, ahol a Keycloak nyilvános kulcsát a BFF lekéri és cache-eli 5 percig, így minden beérkező kérés esetén nem szükséges hálózati hívás a Keycloak felé.</p>
+<details class="info">
+<summary>Webes módosítás</summary>
+<p>Az alábbi rész a webes változat jobb használhatósága érdekében módosult a beadott dolgozathoz képest.</p>
+</details>
+<h2 id="autentikacios-folyamat">Autentikációs folyamat<a class="headerlink" href="#autentikacios-folyamat" title="Permanent link">¶</a></h2>
+<p>Az alábbi diagram és táblázat a bejelentkezéstől az első védett API kérés kiszolgálásáig tartó folyamatot mutatja be.</p>
+<figure id="fig-auth-flow">
+<pre class="mermaid"><code>sequenceDiagram
+    participant App as Mobil App
+    participant KC as Keycloak
+    participant BFF as NestJS BFF
+    participant DB as PostgreSQL
+
+    Note over App,DB: 1. Autentikációs folyamat
+    App-&gt;&gt;KC: 1. Authorization Code kérés (PKCE)
+    KC--&gt;&gt;App: 2. Authorization Code
+    App-&gt;&gt;KC: 3. Token csere (code + code_verifier)
+    KC--&gt;&gt;App: 4. access_token + refresh_token
+
+    Note over App,DB: 2. API kérés
+    App-&gt;&gt;BFF: 5. API kérés (Bearer access_token)
+    BFF-&gt;&gt;KC: 6. JWKS lekérés (nyilvános kulcs cache-sel)
+    KC--&gt;&gt;BFF: 7. Nyilvános kulcs cachelve
+    BFF-&gt;&gt;BFF: 8. Token aláírás és lejárat ellenőrzés
+    BFF-&gt;&gt;DB: 9. Üzleti logika végrehajtás
+    DB--&gt;&gt;BFF: 10. Eredmény
+    BFF--&gt;&gt;App: 11. JSON válasz
+</code></pre>
+<figcaption>
+<p>Az autentikációs folyamat szekvenciadiagramja</p>
+</figcaption>
+</figure>
+<figure id="tab-auth-steps">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Lépés</th>
+<th>Küldő</th>
+<th>Fogadó</th>
+<th>Leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td>App</td>
+<td>Keycloak</td>
+<td>Authorization Code kérés PKCE code_challenge-dzsel</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td>Keycloak</td>
+<td>App</td>
+<td>Authorization Code visszaküldése</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td>App</td>
+<td>Keycloak</td>
+<td>Token csere: code és code_verifier elküldése</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4</strong></td>
+<td>Keycloak</td>
+<td>App</td>
+<td>access_token és refresh_token visszaküldése</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>5</strong></td>
+<td>App</td>
+<td>BFF</td>
+<td>API kérés Bearer access_token-nel</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>6</strong></td>
+<td>BFF</td>
+<td>Keycloak</td>
+<td>JWKS lekérés a nyilvános kulcsért (cache-sel)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>7</strong></td>
+<td>Keycloak</td>
+<td>BFF</td>
+<td>Nyilvános kulcs visszaküldése, BFF cache-eli</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>8</strong></td>
+<td>BFF</td>
+<td>BFF</td>
+<td>Token aláírás és lejárat ellenőrzése RS256-tal</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>9</strong></td>
+<td>BFF</td>
+<td>PostgreSQL</td>
+<td>Üzleti logika végrehajtása</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>10</strong></td>
+<td>PostgreSQL</td>
+<td>BFF</td>
+<td>Eredmény visszaküldése</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>11</strong></td>
+<td>BFF</td>
+<td>App</td>
+<td>JSON válasz</td>
+</tr>
+</tbody>
+</table>
+<figcaption>
+<p><span class="caption-prefix">Table 1.</span> Az autentikációs folyamat lépései</p>
+</figcaption>
+</figure>
+<h2 id="token-frissites">Token frissítés<a class="headerlink" href="#token-frissites" title="Permanent link">¶</a></h2>
+<p>Ha az <code>access_token</code> lejár, az alkalmazás a <code>refresh_token</code> segítségével új tokeneket kér a Keycloaktól, majd megismétli a sikertelen kérést.</p>
+<figure id="fig-token-refresh">
+<pre class="mermaid"><code>sequenceDiagram
+    participant App as Mobil App
+    participant KC as Keycloak
+    participant BFF as NestJS BFF
+
+    Note over App,BFF: access_token lejárt
+    App-&gt;&gt;BFF: 1. API kérés (lejárt Bearer token)
+    BFF--&gt;&gt;App: 2. 401 Unauthorized
+    App-&gt;&gt;KC: 3. Token frissítés (refresh_token)
+    KC-&gt;&gt;KC: 4. refresh_token ellenőrzés
+    KC--&gt;&gt;App: 5. új access_token + új refresh_token
+    App-&gt;&gt;BFF: 6. API kérés újra (új Bearer token)
+    BFF-&gt;&gt;BFF: 7. Token ellenőrzés - érvényes
+    BFF--&gt;&gt;App: 8. JSON válasz
+</code></pre>
+<figcaption>
+<p>A token frissítési folyamat szekvenciadiagramja</p>
+</figcaption>
+</figure>
+<figure id="tab-token-refresh-steps">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Lépés</th>
+<th>Küldő</th>
+<th>Fogadó</th>
+<th>Leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td>App</td>
+<td>BFF</td>
+<td>API kérés lejárt Bearer tokennel</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td>BFF</td>
+<td>App</td>
+<td>401 Unauthorized válasz</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td>App</td>
+<td>Keycloak</td>
+<td>Token frissítés kérése refresh_token-nel</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4</strong></td>
+<td>Keycloak</td>
+<td>Keycloak</td>
+<td>refresh_token érvényességének ellenőrzése</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>5</strong></td>
+<td>Keycloak</td>
+<td>App</td>
+<td>Új access_token és új refresh_token</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>6</strong></td>
+<td>App</td>
+<td>BFF</td>
+<td>API kérés megismétlése az új Bearer tokennel</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>7</strong></td>
+<td>BFF</td>
+<td>BFF</td>
+<td>Új token ellenőrzése, érvényes</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>8</strong></td>
+<td>BFF</td>
+<td>App</td>
+<td>JSON válasz</td>
+</tr>
+</tbody>
+</table>
+<figcaption>
+<p><span class="caption-prefix">Table 2.</span> A token frissítési folyamat lépései</p>
+</figcaption>
+</figure>
+<h2 id="profil-letrehozasa-elso-bejelentkezeskor">Profil létrehozása első bejelentkezéskor<a class="headerlink" href="#profil-letrehozasa-elso-bejelentkezeskor" title="Permanent link">¶</a></h2>
+<p>Sikeres bejelentkezés után az alkalmazás a <code>POST /api/profile/me</code> végponton keresztül létrehozza vagy frissíti a felhasználó profilját (upsert), a Keycloak <code>sub</code> claim-et használva elsődleges kulcsként.</p>
+<figure id="fig-upsert-flow">
+<pre class="mermaid"><code>sequenceDiagram
+participant App as Mobil App
+participant KC as Keycloak
+participant BFF as NestJS BFF
+
+    App-&gt;&gt;KC: Authorization Code kérés (PKCE)
+    KC--&gt;&gt;App: Authorization Code
+    App-&gt;&gt;KC: Token csere (code + code_verifier)
+    KC--&gt;&gt;App: access_token + refresh_token
+    App-&gt;&gt;App: signIn(tokens) - authStore-ba menti
+    App-&gt;&gt;BFF: POST /api/profile/me
+    BFF--&gt;&gt;App: Profile
+</code></pre>
+<figcaption>
+<p>Bejelentkezés utáni profil upsert folyamat szekvenciadiagramja</p>
+</figcaption>
+</figure>
+<h2 id="vegpontok-vedelme">Végpontok védelme<a class="headerlink" href="#vegpontok-vedelme" title="Permanent link">¶</a></h2>
+<p>A globálisan regisztrált <code>JwtAuthGuard</code> minden NestJS végpontot véd alapértelmezés szerint, az <code>APP_GUARD</code> mechanizmuson keresztül. A publikusan elérhető végpontok (pl. health check, tile proxy) a <code>@Public()</code> dekorátorral jelölhetők meg, amelyek bypass-olják az autentikációt. A guard a NestJS <code>Reflector</code> segítségével olvassa ki ezt a metaadatot a route handler és controller szintjéről.</p>
+<p>A token validáció folyamata a következő: a guard kinyeri a Bearer tokent az <code>Authorization</code> fejlécből, dekódolja a token fejlécét a <code>kid</code> (key ID) mező kinyeréséhez, lekéri a megfelelő nyilvános kulcsot a JWKS klienstől (cache-ből, ha lehetséges), majd RS256 algoritmussal ellenőrzi a token aláírását és lejáratát. Sikeres validáció után a dekódolt JWT payload a <code>request['user']</code> mezőbe kerül.</p>
+<p>A <code>@CurrentUser()</code> paraméter dekorátor elérhetővé teszi a dekódolt JWT payloadot (Keycloak <code>sub</code>, <code>email</code>, <code>preferred_username</code> és egyéb claim-ek) a controller metódusokban, anélkül, hogy azt manuálisan kellene kinyerni a request objektumból. Amennyiben a dekorátor publikus végponton kerül használatra, ahol a guard nem futott le, az értéke <code>undefined</code> lesz.</p>
 
 
 
@@ -3109,7 +3468,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

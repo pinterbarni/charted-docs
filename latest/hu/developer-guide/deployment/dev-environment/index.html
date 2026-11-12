@@ -2317,6 +2317,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fejlesztői környezet
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2333,6 +2351,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#elofeltetelek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Előfeltételek
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bff-inditasa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BFF indítása
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobil-inditasa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobil indítása
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2910,6 +2980,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#elofeltetelek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Előfeltételek
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bff-inditasa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BFF indítása
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobil-inditasa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobil indítása
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2995,7 +3106,35 @@
 
 
 <h1 id="fejlesztoi-kornyezet-felallitasa">Fejlesztői környezet felállítása<a class="headerlink" href="#fejlesztoi-kornyezet-felallitasa" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>A fejlesztői környezet két részből áll: a mobilalkalmazásból és a BFF backendből. Mindkettő önállóan indítható, de a teljes funkcionalitáshoz mindkettőre szükség van. A Martin, Valhalla és Keycloak szolgáltatások a Vesta szerveren futnak, és Tailscale-en keresztül érhetők el fejlesztés közben.</p>
+<details class="info">
+<summary>Webes módosítás</summary>
+<p>Az alábbi rész a webes változat jobb használhatósága érdekében módosult a beadott dolgozathoz képest.</p>
+</details>
+<h2 id="elofeltetelek">Előfeltételek<a class="headerlink" href="#elofeltetelek" title="Permanent link">¶</a></h2>
+<p>Telepítendő eszközök:</p>
+<ul>
+<li>Node.js 20 vagy újabb verzió</li>
+<li>npm</li>
+<li>EAS CLI: <code>npm install -g eas-cli</code></li>
+</ul>
+<p>Futtatási környezet és hozzáférés:</p>
+<ul>
+<li>PostgreSQL lokálisan futtatva (pl. Docker Compose-szal a <code>docker-compose.dev.yml</code> segítségével)</li>
+<li>Tailscale kapcsolat a Vesta szerverhez</li>
+</ul>
+<h2 id="bff-inditasa">BFF indítása<a class="headerlink" href="#bff-inditasa" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>bff
+npm<span class="w"> </span>install
+npm<span class="w"> </span>run<span class="w"> </span>start:dev
+</code></pre></div>
+<p>A BFF a <code>.env.development</code> fájlból olvassa a konfigurációt. Az <code>.env.example</code> fájl tartalmazza az összes szükséges változót magyarázattal. A fejlesztői módban a TypeORM <code>synchronize: true</code> beállítással automatikusan létrehozza az adatbázis táblákat.</p>
+<h2 id="mobil-inditasa">Mobil indítása<a class="headerlink" href="#mobil-inditasa" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>charted-mobile
+npm<span class="w"> </span>install
+npx<span class="w"> </span>expo<span class="w"> </span>start<span class="w"> </span>--dev-client<span class="w"> </span>--clear
+</code></pre></div>
+<p>A mobilalkalmazás a <code>.env.development</code> fájlból olvassa az <code>EXPO_PUBLIC_BFF_URL</code> értékét. A MapLibre natív modulok miatt az alkalmazás nem futtatható Expo Go-ban, fejlesztői build szükséges. Az Android emulátort a legtöbb funkcióhoz elegendő, a GPS és háttér-helymeghatározás teszteléséhez fizikai eszköz szükséges. Ha a fizikai eszköz egy Xiaomi, abban az esetben ajánlom az emulátor használatát is.</p>
 
 
 
@@ -3109,7 +3248,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

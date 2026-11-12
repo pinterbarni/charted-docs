@@ -2119,6 +2119,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Állapotkezelés
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2135,6 +2153,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#autentikacio-authstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autentikáció
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helyi-allapot-localstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Helyi állapot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beallitasok-settingsstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beállítások
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hibakezeles-errorstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hibakezelés
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2910,6 +2991,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#autentikacio-authstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autentikáció
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helyi-allapot-localstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Helyi állapot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beallitasok-settingsstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beállítások
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hibakezeles-errorstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hibakezelés
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2995,7 +3128,20 @@
 
 
 <h1 id="allapotkezeles">Állapotkezelés<a class="headerlink" href="#allapotkezeles" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>Az alkalmazás globális állapotkezelése a Zustand könyvtárra épül. A Zustand előnye a Redux-hoz képest számomra a minimális konfiguráció volt.</p>
+<p>Az alkalmazás négy store-ból áll.</p>
+<details class="info">
+<summary>Webes módosítás</summary>
+<p>Az alábbi rész a webes változat jobb használhatósága érdekében módosult a beadott dolgozathoz képest.</p>
+</details>
+<h2 id="autentikacio-authstore">Autentikáció (<code>authStore</code>)<a class="headerlink" href="#autentikacio-authstore" title="Permanent link">¶</a></h2>
+<p>A JWT tokeneket (<code>accessToken</code>, <code>refreshToken</code>, <code>idToken</code>) tárolja az <code>expo-secure-store</code>-ban, és az autentikációs állapotot (<code>Loading</code>, <code>Authenticated</code>, <code>Unauthenticated</code>) kezeli. A <code>hydrate()</code> metódus az alkalmazás indulásakor olvassa ki a tokeneket a SecureStore-ból és állítja be a kezdeti állapotot. Nem használ persist middleware-t, mivel a tokenek már a SecureStore-ban vannak tárolva.</p>
+<h2 id="helyi-allapot-localstore">Helyi állapot (<code>localStore</code>)<a class="headerlink" href="#helyi-allapot-localstore" title="Permanent link">¶</a></h2>
+<p>A GPS metrikákat, a tervezési állapotot, a retrack útvonalat és az engedély állapotát kezeli. Ez a store szándékosan nem perzisztens, helyette session alapú, az alkalmazás bezárásakor elvész. A store közvetlen elérése lehetséges a komponenseken kívülről is a <code>useLocationStore.getState()</code> hívással, amelyet a TaskManager feladatban és az apiClient-ben is alkalmaztam.</p>
+<h2 id="beallitasok-settingsstore">Beállítások (<code>settingsStore</code>)<a class="headerlink" href="#beallitasok-settingsstore" title="Permanent link">¶</a></h2>
+<p>A felhasználói beállításokat tárolja persist middleware-rel: a mértékegységrendszert (<code>metric</code> vagy <code>imperial</code>) és a témaválasztást (<code>light</code>, <code>dark</code>, vagy automatikus rendszerkövetés). A beállítások az <code>AsyncStorage</code>-ben tárolódnak <code>charted-settings</code> kulcs alatt.</p>
+<h2 id="hibakezeles-errorstore">Hibakezelés (<code>errorStore</code>)<a class="headerlink" href="#hibakezeles-errorstore" title="Permanent link">¶</a></h2>
+<p>A globális API hibákat kezeli. Három hibatype-ot különböztet meg: <code>network</code>, <code>unauthorized</code> és <code>server</code>. A gyökér layout <code>useEffect</code>-je figyeli a store állapotát, és hiba esetén toast üzenetet jelenít meg a felhasználónak.</p>
 
 
 
@@ -3109,7 +3255,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

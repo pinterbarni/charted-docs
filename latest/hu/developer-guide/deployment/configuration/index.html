@@ -2401,6 +2401,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Konfiguráció
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2417,6 +2435,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#mobilalkalmazas-expo_public_-prefix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobilalkalmazás
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bff-backend-envproduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BFF backend
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2910,6 +2969,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#mobilalkalmazas-expo_public_-prefix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobilalkalmazás
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bff-backend-envproduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BFF backend
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2995,7 +3084,67 @@
 
 
 <h1 id="kornyezeti-valtozok-es-konfiguracio">Környezeti változók és konfiguráció<a class="headerlink" href="#kornyezeti-valtozok-es-konfiguracio" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>A rendszer két szinten használ környezeti változókat: a mobilalkalmazásban és a BFF backendben.</p>
+<details class="info">
+<summary>Webes módosítás</summary>
+<p>Az alábbi rész a webes változat jobb használhatósága érdekében módosult a beadott dolgozathoz képest.</p>
+</details>
+<h2 id="mobilalkalmazas-expo_public_-prefix">Mobilalkalmazás (<code>EXPO_PUBLIC_</code> prefix)<a class="headerlink" href="#mobilalkalmazas-expo_public_-prefix" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Változó</th>
+<th>Leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>EXPO_PUBLIC_BFF_URL</code></td>
+<td>A BFF alap URL-je (fejlesztői: lokális cím, éles: <code>https://api.charted.hu</code>).</td>
+</tr>
+<tr>
+<td><code>EXPO_PUBLIC_TILE_API_KEY</code></td>
+<td>A tile API kulcs, amelyet a BFF validál.</td>
+</tr>
+</tbody>
+</table>
+<p>Az <code>EXPO_PUBLIC_</code> prefix azt jelenti, hogy ezek a változók a bundle-be kerülnek és a kliens oldalon is láthatók. Érzékeny adatokat nem szabad itt tárolni.</p>
+<h2 id="bff-backend-envproduction">BFF backend (<code>.env.production</code>)<a class="headerlink" href="#bff-backend-envproduction" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Változó</th>
+<th>Leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DB_HOST</code>, <code>DB_PORT</code>, <code>DB_USER</code>, <code>DB_PASSWORD</code>, <code>DB_NAME</code></td>
+<td>Adatbázis kapcsolati adatok.</td>
+</tr>
+<tr>
+<td><code>KEYCLOAK_URL</code>, <code>KEYCLOAK_JWKS_URI</code></td>
+<td>Keycloak OIDC végpontok.</td>
+</tr>
+<tr>
+<td><code>MARTIN_URL</code>, <code>MARTIN_API_KEY</code></td>
+<td>Martin tile server elérési adatok.</td>
+</tr>
+<tr>
+<td><code>VALHALLA_URL</code></td>
+<td>Valhalla routing engine URL-je.</td>
+</tr>
+<tr>
+<td><code>NODE_ENV</code></td>
+<td>A futtatási környezet (<code>production</code> értékkel a szinkronizáció ki van kapcsolva).</td>
+</tr>
+<tr>
+<td><code>DB_SYNCHRONIZE</code></td>
+<td>Opcionálisan <code>true</code> értékre állítható az első telepítéskor az adatbázis séma inicializálásához.</td>
+</tr>
+</tbody>
+</table>
+<p>A <code>.env</code> fájlok nem kerülnek verziókezelőbe (<code>.gitignore</code>-ban szerepelnek). Minden repository tartalmaz egy <code>.env.example</code> fájlt, amely dokumentálja a szükséges változókat értékek nélkül.</p>
 
 
 
@@ -3109,7 +3258,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

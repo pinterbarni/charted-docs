@@ -2995,7 +2995,117 @@
 
 
 <h1 id="technologiai-stack">Technológiai stack<a class="headerlink" href="#technologiai-stack" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>A mobilalkalmazás fejlesztése során az alábbi főbb technológiák és könyvtárak kerültek felhasználásra:</p>
+<table>
+<thead>
+<tr>
+<th>Csomag</th>
+<th>Szerep</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Expo SDK 55</code> és <code>React Native 0.83.2</code></td>
+<td>A keresztplatformos mobilalkalmazás alapjai, lehetővé teszik az iOS és Android célplatformok egyidejű fejlesztését egy köztes nyelven.</td>
+</tr>
+<tr>
+<td><code>TypeScript</code> (strict mode)</td>
+<td>Statikus fordításidejű típusellenőrzést biztosít, <code>strict=true</code> beállítások mellett.</td>
+</tr>
+<tr>
+<td><code>expo-router</code></td>
+<td>Navigációs megoldás, amely leegyszerűsíti a képernyők közötti átjárást és az útvonalkezelést, file-alapú.</td>
+</tr>
+<tr>
+<td><code>zustand</code></td>
+<td>Könnyűsúlyú globális állapotkezelést biztosít az alkalmazás számára, Redux helyett választotam.</td>
+</tr>
+<tr>
+<td><code>@react-native-async-storage/async-storage</code></td>
+<td>Perzisztens adattárolást biztosít az alkalmazás számára.</td>
+</tr>
+<tr>
+<td><code>i18next</code>, <code>react-i18next</code>, <code>expo-localization</code></td>
+<td>Többnyelvű támogatást biztosítanak (magyar és angol), lehetővé téve a felhasználói felület lokalizációját.</td>
+</tr>
+<tr>
+<td><code>@maplibre/maplibre-react-native</code> v11 (beta)</td>
+<td>Térképes megjelenítésért felelős könyvtár, amely lehetővé teszi útvonalak, pozíciók és egyéb geoadatok vizualizálását. Expo SDK 55-ös verziójával egyetlen kompatibilis MapLibre verzió. Megköveteli az EAS prebuildet.</td>
+</tr>
+<tr>
+<td><code>@mapbox/polyline</code></td>
+<td>Útvonalak dekódolására szolgál, amely szükséges lesz a térképen megjelenített vonalak feldolgozásához a jövőben. A Valhalla által kiszolgát útvonalak renderelésére választottam.</td>
+</tr>
+<tr>
+<td><code>@gorhom/bottom-sheet</code></td>
+<td>Alsó navigációs panel kezelésére szolgál, amely a mobil felhasználói felület egyik központi eleme.</td>
+</tr>
+<tr>
+<td><code>expo-location</code>, <code>expo-task-manager</code></td>
+<td>Helymeghatározás és háttérben történő GPS követés megvalósítására szolgálnak.</td>
+</tr>
+<tr>
+<td><code>expo-auth-session</code>, <code>jwt-decode</code></td>
+<td>PKCE alapú autentikáció és token feldolgozás megvalósítására szolgálnak.</td>
+</tr>
+<tr>
+<td><code>expo-secure-store</code>, <code>expo-crypto</code></td>
+<td>Biztonságos adattárolást és kriptográfiai műveleteket biztosítanak az autentikációs adatok kezeléséhez.</td>
+</tr>
+<tr>
+<td><code>expo-file-system</code>, <code>expo-sharing</code></td>
+<td>Fájlkezelést és fájlmegosztást biztosítanak, amelyeket a GPX alapú túraútvonalak mentésére és exportálására használ az alkalmazás. Az <code>expo-sharing</code> végül nem került alkalmazásra, viszont későbbi funkciók igényelhetik, benne hagytam.</td>
+</tr>
+<tr>
+<td><code>fast-xml-parser</code></td>
+<td>XML alapú GPX fájlok feldolgozására szolgál.</td>
+</tr>
+<tr>
+<td><code>geolib</code></td>
+<td>Földrajzi számításokat tesz lehetővé, például távolságmérés és koordináta műveletek.</td>
+</tr>
+<tr>
+<td><code>react-native-svg</code></td>
+<td>SVG alapú grafikus elemek és ikonok megjelenítésére szolgál, a Figmából exportált SVG-k kezelésére használtam.</td>
+</tr>
+<tr>
+<td><code>react-native-reanimated</code></td>
+<td>Animációk kezelésére szolgál, különösen a komplex UI elemek esetén.</td>
+</tr>
+<tr>
+<td><code>moti</code></td>
+<td>Skeleton loader komponensek implementálása miatt került az alkalmazásba. A <code>react-native-skeleton-placeholder</code> csomagnál jobban favorizáltam az impllementáció módját, a csomag viszont sokkal többet tud.</td>
+</tr>
+<tr>
+<td><code>react-native-gesture-handler</code>, <code>react-native-screens</code></td>
+<td>Natív navigációs és gesztuskezelési támogatást biztosítanak.</td>
+</tr>
+<tr>
+<td><code>react-native-toast-message</code></td>
+<td>Visszajelző üzenetek (toastok) megjelenítésére szolgál, melynek a használatában volt már tapasztalatom.</td>
+</tr>
+<tr>
+<td><code>uuid</code>, <code>react-native-get-random-values</code></td>
+<td>Egyedi azonosítók generálására szolgálnak.</td>
+</tr>
+<tr>
+<td><code>expo-notifications</code>, <code>expo-keep-awake</code></td>
+<td>Értesítések kezelésére és az alkalmazás aktív állapotban tartására szolgálnak.</td>
+</tr>
+<tr>
+<td><code>expo-dev-client</code></td>
+<td>Egyedi fejlesztői build futtatását teszi lehetővé natív modulok használata esetén.</td>
+</tr>
+<tr>
+<td><code>EAS Build</code> és <code>EAS Submit</code></td>
+<td>Buildelési és telepítési folyamatokat biztosítanak az alkalmazás számára.</td>
+</tr>
+<tr>
+<td><code>jest</code>, <code>jest-expo</code></td>
+<td>Automatizált tesztelési környezetet biztosítanak az alkalmazás számára. Végül teszteseteket nem implementáltam, az alkalmazás viszont elő van készítve az npm packageüben még szripteket is létrehoztam a futtatásukra.</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -3109,7 +3219,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

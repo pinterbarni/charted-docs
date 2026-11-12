@@ -1281,6 +1281,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adatmodell tervezése
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1297,6 +1315,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#felhasznalokezeles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Felhasználókezelés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#turak-es-utvonalak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Túrák és útvonalak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kozossegi-funkciok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Közösségi funkciók
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2910,6 +2980,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#felhasznalokezeles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Felhasználókezelés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#turak-es-utvonalak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Túrák és útvonalak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kozossegi-funkciok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Közösségi funkciók
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2995,7 +3106,105 @@
 
 
 <h1 id="adatmodell-tervezese">Adatmodell tervezése<a class="headerlink" href="#adatmodell-tervezese" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>Az alkalmazás adatmodelljét PostgreSQL relációs adatbázisra terveztem, TypeORM ORM réteggel. Az entitások három fő csoportra oszthatók: felhasználókezelés, túrák és útvonalak, valamint közösségi funkciók.</p>
+<p>Megjegyzendő, hogy az entitások között nem kerültek definiálásra TypeORM relációk (<code>@OneToMany</code>, <code>@ManyToOne</code> stb.), mivel tapasztalat hiányában ezek konfigurálása nem volt prioritás a fejlesztés során. A relációk hiánya azt jelenti, hogy a Compodoc által automatikusan generálható ERD diagram nem tartalmazza a kapcsolatokat, ezért az entitás-kapcsolat diagram manuálisan, Mermaid segítségével készült el.</p>
+<figure>
+<pre class="mermaid"><code>erDiagram
+    users {
+        uuid id PK
+        string username
+        string display_name
+        string bio
+        string avatar_url
+        float total_distance_m
+        timestamp created_at
+        timestamp updated_at
+    }
+    user_avatars {
+        uuid user_id PK
+        text base64
+        timestamp updated_at
+    }
+    planned_routes {
+        uuid id PK
+        uuid user_id
+        string title
+        jsonb waypoints
+        jsonb valhalla_response
+        jsonb pois
+        timestamp created_at
+        timestamp updated_at
+    }
+    follows {
+        uuid id PK
+        uuid follower_id
+        uuid following_id
+        timestamp created_at
+    }
+    blocks {
+        uuid id PK
+        uuid blocker_id
+        uuid blocked_id
+        timestamp created_at
+    }
+    reports {
+        uuid id PK
+        uuid reporter_id
+        enum target_type
+        uuid target_id
+        string reason
+        string admin_response
+        timestamp created_at
+        timestamp updated_at
+    }
+    trails {
+        uuid id PK
+        uuid user_id
+        string title
+        string description
+        int distance_m
+        string distance_unit
+        float distance_original
+        int duration_s
+        int elevation_gain_m
+        boolean is_shared
+        jsonb track_points
+        jsonb pois
+        timestamp started_at
+        timestamp finished_at
+        timestamp created_at
+        timestamp updated_at
+    }
+    trail_likes {
+        uuid id PK
+        uuid user_id
+        uuid trail_id
+        timestamp created_at
+    }
+
+    users ||--o| user_avatars : has
+    users ||--o{ planned_routes : plans
+    users ||--o{ follows : follows
+    users ||--o{ blocks : blocks
+    users ||--o{ reports : submits
+    users ||--o{ trails : records
+    users ||--o{ trail_likes : likes
+    trails ||--o{ trail_likes : receives
+</code></pre>
+<figcaption>
+<p>Az adatbázis entitás-kapcsolat diagramja</p>
+</figcaption>
+</figure>
+<h2 id="felhasznalokezeles">Felhasználókezelés<a class="headerlink" href="#felhasznalokezeles" title="Permanent link">¶</a></h2>
+<p>A <code>users</code> tábla elsődleges kulcsa a Keycloak által generált JWT <code>sub</code> claim, tehát nem egy külön generált UUID, hanem az identity provider által kiosztott azonosító. Ez egyszerűsíti a felhasználó azonosítását, mivel a BFF minden hitelesített kérésnél közvetlenül a tokenből tudja kiolvasni a felhasználó azonosítóját.</p>
+<p>A felhasználói avatar külön <code>user_avatars</code> táblában kerül tárolásra. Ennek oka, hogy az avatar base64 formátumban akár több száz kilobájt is lehet, és a profil lekérésekor nem mindig szükséges ezt visszaadni, a szétválasztással elkerülhető a felesleges adatátvitel.</p>
+<p>A <code>total_distance_m</code> mező értékét nem futásidőben számítjuk ki a túrákból, hanem minden új túra mentésekor növeljük. Így a felhasználói szint megjelenítéséhez szükséges össztávolság egyetlen mezőolvasással elérhető, nem kell aggregációs lekérdezés.</p>
+<h2 id="turak-es-utvonalak">Túrák és útvonalak<a class="headerlink" href="#turak-es-utvonalak" title="Permanent link">¶</a></h2>
+<p>A <code>trails</code> táblában a nyomvonalpontok (<code>track_points</code>) és az érdekességek (<code>pois</code>) egyetlen <code>JSONB</code> oszlopban kerülnek tárolásra, nem külön táblákban. Egy aktív túra akár több ezer GPS-pontot is rögzíthet, ezek külön táblában való tárolása rendkívül nagy táblát eredményezne. A <code>JSONB</code> formátum PostgreSQL alatt lekérdezhető, ugyanakkor az összetartozó adatok egyetlen sorban maradnak.</p>
+<p>A <code>planned_routes</code> tábla a Valhalla útvonaltervező motor teljes válaszát is eltárolja, hogy az útvonal újra megjeleníthetőszükséges legyen ismételt számítás nélkül.</p>
+<h2 id="kozossegi-funkciok">Közösségi funkciók<a class="headerlink" href="#kozossegi-funkciok" title="Permanent link">¶</a></h2>
+<p>A követési és blokkolási kapcsolatok egyszerű irányított párként kerülnek tárolásra. A blokkolás kétirányú hatású: ha A blokkolja B-t, egyik fél sem láthatja a másik tartalmát, ezért minden lekérdezésnél mindkét irány figyelembe van véve.</p>
+<p>A <code>reports</code> tábla egy <code>target_type</code> mezővel jelzi, hogy a bejelentés felhasználóra vagy túrára vonatkozik-e, a <code>target_id</code> pedig a bejelentett elem azonosítóját tárolja. Ez lehetővé teszi, hogy különböző típusú bejelentések egyetlen táblában kezelhetők legyenek.</p>
 
 
 
@@ -3109,7 +3318,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

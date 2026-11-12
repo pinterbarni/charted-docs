@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="TODO">
+        <meta name="description" content="A kódbázis minőségi konvenciói, a dokumentáció, a névkonvenciók, a kódszervezés és a fejlesztést támogató eszközök.">
       
       
       
@@ -1825,6 +1825,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kódminőség
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1841,6 +1859,147 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#jsdoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JSDoc
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nevkonvenciok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Névkonvenciók
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kodszervezes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kódszervezés
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kódszervezés">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#konstansok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konstansok
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modul-konfiguraciok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modul konfigurációk
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typescript-strict-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TypeScript strict mode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dokumentacio-es-fejlesztoi-eszkozok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dokumentáció és fejlesztői eszközök
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dokumentáció és fejlesztői eszközök">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compodoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compodoc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bruno-api-kliens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bruno API kliens
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eslint-prettier-cspell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ESLint, Prettier, CSpell
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2910,6 +3069,136 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#jsdoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JSDoc
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nevkonvenciok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Névkonvenciók
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kodszervezes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kódszervezés
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kódszervezés">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#konstansok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konstansok
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modul-konfiguraciok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modul konfigurációk
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typescript-strict-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TypeScript strict mode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dokumentacio-es-fejlesztoi-eszkozok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dokumentáció és fejlesztői eszközök
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dokumentáció és fejlesztői eszközök">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compodoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compodoc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bruno-api-kliens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bruno API kliens
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eslint-prettier-cspell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ESLint, Prettier, CSpell
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2995,7 +3284,40 @@
 
 
 <h1 id="kodminoseg-es-dokumentacio">Kódminőség és dokumentáció<a class="headerlink" href="#kodminoseg-es-dokumentacio" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>A kódbázis konzisztens minőségi konvenciókat követ, amelyek az egész projektre érvényesek.</p>
+<details class="info">
+<summary>Webes módosítás</summary>
+<p>Az alábbi rész a webes változat jobb használhatósága érdekében módosult a beadott dolgozathoz képest.</p>
+</details>
+<h2 id="jsdoc">JSDoc<a class="headerlink" href="#jsdoc" title="Permanent link">¶</a></h2>
+<p>Minden publikus service metódus, controller és injectable osztály JSDoc kommentekkel van ellátva. A kommentek tartalmazzák a <code>@param</code> leírásokat minden paraméterhez, a <code>@returns</code> leírást a visszatérési értékhez, és a <code>@throws</code> leírást az összes dobható kivételhez. Ez biztosítja a Compodoc által generált dokumentáció teljességét.</p>
+<h2 id="nevkonvenciok">Névkonvenciók<a class="headerlink" href="#nevkonvenciok" title="Permanent link">¶</a></h2>
+<p>A service metódusok clean code elveket követnek. Az <code>assertXxxExists()</code> validál és <code>NotFoundException</code>-t dob, a <code>findXxxOrNull()</code> nullable lekérdezést végez, a <code>buildXxxQuery()</code> pedig TypeORM <code>QueryBuilder</code> alapú összetett lekérdezéseket csomagol magába.</p>
+<h2 id="kodszervezes">Kódszervezés<a class="headerlink" href="#kodszervezes" title="Permanent link">¶</a></h2>
+<p>A hosszabb service és controller fájlokban <code>#region</code> és <code>#endregion</code> komment szekciók tagolják a kódot logikai egységekre, megkönnyítve a navigációt IDE-ben.</p>
+<h3 id="konstansok">Konstansok<a class="headerlink" href="#konstansok" title="Permanent link">¶</a></h3>
+<p>Az összes alkalmazásszintű konstans a <code>src/constants/</code> könyvtárban van centralizálva, témák szerint külön fájlokban:</p>
+<ul>
+<li><code>app.constants.ts</code>: globális prefix, portok, environment</li>
+<li><code>auth.constants.ts</code>: JWT algoritmus, JWKS cache konfiguráció</li>
+<li><code>cache.constants.ts</code>: tile cache TTL</li>
+<li><code>database.constants.ts</code>: adatbázis konfiguráció</li>
+<li><code>levels.constants.ts</code>: gamifikációs küszöbértékek</li>
+<li><code>throttler.constants.ts</code>: rate limiting beállítások</li>
+<li><code>validation.constants.ts</code>: input validációs szabályok</li>
+</ul>
+<h3 id="modul-konfiguraciok">Modul konfigurációk<a class="headerlink" href="#modul-konfiguraciok" title="Permanent link">¶</a></h3>
+<p>A NestJS modul factory függvények a <code>src/config/module-configs.ts</code> fájlban vannak centralizálva, így az <code>AppModule</code> tisztán csak a modulok regisztrálásával foglalkozik, a konkrét konfigurációs logika így el van különítve.</p>
+<h2 id="typescript-strict-mode">TypeScript strict mode<a class="headerlink" href="#typescript-strict-mode" title="Permanent link">¶</a></h2>
+<p>A <code>tsconfig.json</code> már említett <code>strict: true</code> beállítással van konfigurálva, amely biztosítja a szigorú típusellenőrzést fordítási időben, beleértve a <code>strictNullChecks</code>, <code>noImplicitAny</code> és <code>strictFunctionTypes</code> beállításokat.</p>
+<h2 id="dokumentacio-es-fejlesztoi-eszkozok">Dokumentáció és fejlesztői eszközök<a class="headerlink" href="#dokumentacio-es-fejlesztoi-eszkozok" title="Permanent link">¶</a></h2>
+<p>A kódminőséget és a dokumentáció előállítását a következő eszközök támogatják.</p>
+<h3 id="compodoc">Compodoc<a class="headerlink" href="#compodoc" title="Permanent link">¶</a></h3>
+<p>A kóddokumentáció a <code>@compodoc/compodoc</code> eszközzel generálható, amely Mermaid ERD diagramot, modul függőségi gráfot és az összes JSDoc kommentet HTML formátumban jeleníti meg. A TypeDoc és JsDoc eszközök kipróbálása után a Compodoc lett választva, mivel natívan támogatja a NestJS moduláris struktúrát.</p>
+<h3 id="bruno-api-kliens">Bruno API kliens<a class="headerlink" href="#bruno-api-kliens" title="Permanent link">¶</a></h3>
+<p>A <code>requests/</code> könyvtárban <code>.bru</code> formátumú API kérések találhatók, amelyek a Bruno API kliensben futtathatók fejlesztés és manuális tesztelés során. Ez a Postman alternatívája, amely verziókezelőbarát szöveg alapú formátumot használ.</p>
+<h3 id="eslint-prettier-cspell">ESLint, Prettier, CSpell<a class="headerlink" href="#eslint-prettier-cspell" title="Permanent link">¶</a></h3>
+<p>A kód formázása és minőségellenőrzése ESLint és Prettier eszközökkel van biztosítva, amelyek a fejlesztési folyamat részét képezik. A helyesírást CSpell kényszeríti.</p>
 
 
 
@@ -3109,7 +3431,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

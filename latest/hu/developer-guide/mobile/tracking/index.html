@@ -2995,7 +2995,25 @@
 
 
 <h1 id="turarogzites-es-gps-kovetes">Túrarögzítés és GPS követés<a class="headerlink" href="#turarogzites-es-gps-kovetes" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>A GPS alapú túrarögzítés az <code>expo-location</code> és <code>expo-task-manager</code> könyvtárakra épül. Az <code>expo-task-manager</code> lehetővé teszi, hogy a helymeghatározás háttérben, az alkalmazás minimalizált állapotában is működjön. Android platformon a <code>foregroundService</code> egy folyamatos értesítést jelenít meg, amely jelzi a felhasználónak, hogy a rögzítés aktív<sup id="fnref:foreground-language"><a class="footnote-ref" href="#fn:foreground-language">1</a></sup>.</p>
+<p>A helyadatok feldolgozása a <code>locationTask.ts</code> fájlban definiált <code>TaskManager</code> feladatban történik, amely minden GPS frissítéskor fut. A feladat frissíti a koordinátákat, és aktív, nem szüneteltetett követési állapotban rögzíti a trackpointot a Zustand store-ba. A sebesség figyelő logika <code>SPEED_WARNING_MS</code> (15 m/s) küszöbértéknél értesítést küld a felhasználónak, ha valószínűleg elfelejtette leállítani a rögzítést. Az értesítés 10 perces visszaszámlálóval (cooldown) rendelkezik az ismételt riasztások elkerülése érdekében.</p>
+<p>A trackpoint struktúra a következő mezőket tartalmazza: <code>lat</code>, <code>lon</code>, <code>ele</code> (magasság), <code>time</code> (ISO 8601 timestamp), <code>accuracy</code>, <code>speed</code> és <code>heading</code>.</p>
+<p>A metrikák számítása a <code>localStore</code> <code>addTrackPoint()</code> metódusában történik:</p>
+<ul>
+<li><strong>Távolság</strong>: a <code>geolib</code> könyvtár <code>getDistance()</code> függvényével, az előző és aktuális koordináta közötti haversine távolságot számítja.</li>
+<li><strong>Szintemelkedés</strong>: csak pozitív változások kerülnek számlálásra, és kizárólag 3 méternél nagyobb különbségek (<code>ELEVATION_THRESHOLD_M</code>), ezzel kiszűrve a GPS zajt.</li>
+<li><strong>Időtartam</strong>: egy másodperces <code>setInterval</code> alapú timer számolja, amelyet a szüneteltetés leállít és a folytatás újraindít.</li>
+</ul>
+<p>A tracking állapotgép hat állapotot kezel: <code>idle</code>, <code>tracking</code>, <code>paused</code>, <code>done</code>, <code>retracking</code> és <code>retracking_active</code>. Az átmenetek a <code>useBackgroundLocation</code> kompozíciós hook-on keresztül érhetők el, amely három specializált hook-ot aggregál: <code>useMapLocationPermissions</code> az engedélyek kezelésére, <code>useTrackingControls</code> a rögzítés vezérlésére és <code>usePlanningControls</code> a tervezési mód kezelésére.</p>
+<p>Az offline szinkronizáció az <code>AsyncStorage</code> alapú <code>pendingHikeStorage</code> segítségével valósul meg: a befejezett, de szinkronizálatlan túrák helyi tárolóba kerülnek, és az alkalmazás következő indításakor automatikusan szinkronizálódnak a BFF-fel.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:foreground-language">
+<p>Ennek ismert korlátja, hogy csak angolul jelenik meg jelenleg.&nbsp;<a class="footnote-backref" href="#fnref:foreground-language" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -3109,7 +3127,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

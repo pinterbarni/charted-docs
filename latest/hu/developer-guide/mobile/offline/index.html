@@ -2147,6 +2147,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Offline funkciók
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2163,6 +2181,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#mentes-saveplannedrouteasgpx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mentés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listazas-listsavedroutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Listázás
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beolvasas-parsegpxfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beolvasás
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#torles-deletegpxfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Törlés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ismert-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ismert probléma
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2910,6 +3002,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#mentes-saveplannedrouteasgpx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mentés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listazas-listsavedroutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Listázás
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beolvasas-parsegpxfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beolvasás
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#torles-deletegpxfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Törlés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ismert-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ismert probléma
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2995,7 +3150,23 @@
 
 
 <h1 id="offline-funkciok">Offline funkciók<a class="headerlink" href="#offline-funkciok" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>Az offline GPX tárolás az <code>expo-file-system</code>re épül. A fájlok az eszköz dokumentum könyvtárában, a <code>charted/routes/</code> alkönyvtárban kerülnek tárolásra.</p>
+<p>A GPX formátum a következő struktúrát alkalmazza: a nyomvonalpontok <code>&lt;trkpt&gt;</code> elemekben szerepelnek a <code>&lt;trkseg&gt;</code> szegmensen belül, a POI pontok pedig <code>&lt;wpt&gt;</code> elemekként, ahol a <code>&lt;name&gt;</code> tag a POI kategóriát tartalmazza szöveg formátumban. Ez a megoldás lehetővé teszi, hogy a POI kategória-információ megmaradjon a GPX fájlban anélkül, hogy egyedi XML névteret kellene bevezetni.</p>
+<p>A GPX fájlok kezelésére vonatkozó főbb műveletek.</p>
+<details class="info">
+<summary>Webes módosítás</summary>
+<p>Az alábbi rész a webes változat jobb használhatósága érdekében módosult a beadott dolgozathoz képest.</p>
+</details>
+<h2 id="mentes-saveplannedrouteasgpx">Mentés (<code>savePlannedRouteAsGpx()</code>)<a class="headerlink" href="#mentes-saveplannedrouteasgpx" title="Permanent link">¶</a></h2>
+<p>Koordináták és POI-ok alapján GPX XML-t generál és fájlba ír. A fájlnév a túra nevéből és egy Unix timestamp-ből áll, hogy az ütközések elkerülhetők legyenek.</p>
+<h2 id="listazas-listsavedroutes">Listázás (<code>listSavedRoutes()</code>)<a class="headerlink" href="#listazas-listsavedroutes" title="Permanent link">¶</a></h2>
+<p>A könyvtárban lévő <code>.gpx</code> kiterjesztésű fájlokat listázza és megfordított sorrendben adja vissza.</p>
+<h2 id="beolvasas-parsegpxfile">Beolvasás (<code>parseGpxFile()</code>)<a class="headerlink" href="#beolvasas-parsegpxfile" title="Permanent link">¶</a></h2>
+<p>A <code>fast-xml-parser</code> könyvtárral értelmezi a GPX fájlt, és kinyeri a <code>&lt;wpt&gt;</code> elemeket. Az attribútumokat <code>@_lat</code> és <code>@_lon</code> formátumban olvassa, mivel a könyvtár az XML attribútumok nevét <code>@_</code> előtaggal látja el.</p>
+<h2 id="torles-deletegpxfile">Törlés (<code>deleteGpxFile()</code>)<a class="headerlink" href="#torles-deletegpxfile" title="Permanent link">¶</a></h2>
+<p>Törli a megadott elérési úton lévő fájlt.</p>
+<h2 id="ismert-problema">Ismert probléma<a class="headerlink" href="#ismert-problema" title="Permanent link">¶</a></h2>
+<p>Az <code>expo-file-system</code> új API-jában a <code>Directory.exists()</code> metódus nem működik megbízhatóan Android platformon. A megoldás egy <code>try-catch</code> alapú megközelítés: a <code>create()</code> metódus kivételt dob, ha a könyvtár már létezik, amelyet az alkalmazás elnyelhet.</p>
 
 
 
@@ -3109,7 +3280,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

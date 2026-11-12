@@ -2373,6 +2373,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CI/CD pipeline
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2389,6 +2407,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#mobilalkalmazas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobilalkalmazás
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bff-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BFF backend
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2910,6 +2969,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#mobilalkalmazas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobilalkalmazás
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bff-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BFF backend
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2995,7 +3084,40 @@
 
 
 <h1 id="cicd-pipeline">CI/CD pipeline<a class="headerlink" href="#cicd-pipeline" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>A mobilalkalmazás build és deploy folyamata az EAS platformra épül.</p>
+<details class="info">
+<summary>Webes módosítás</summary>
+<p>Az alábbi rész a webes változat jobb használhatósága érdekében módosult a beadott dolgozathoz képest.</p>
+</details>
+<h2 id="mobilalkalmazas">Mobilalkalmazás<a class="headerlink" href="#mobilalkalmazas" title="Permanent link">¶</a></h2>
+<p>Három build profil van definiálva az <code>eas.json</code> fájlban:</p>
+<table>
+<thead>
+<tr>
+<th>Profil</th>
+<th>Leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>development</code></td>
+<td>Fejlesztői klienst tartalmazó build, belső terjesztéshez. A fejlesztői szerverre csatlakozik hot reload támogatással.</td>
+</tr>
+<tr>
+<td><code>preview</code></td>
+<td>Release módú build belső teszteléshez, fejlesztői kliens nélkül.</td>
+</tr>
+<tr>
+<td><code>production</code></td>
+<td>Éles APK build Android platformra. Az <code>autoIncrement: true</code> beállítás automatikusan növeli a build számot minden fordításnál. A környezeti változók közvetlenül az <code>eas.json</code> <code>env</code> szekciójában vannak definiálva, hogy biztosan az éles értékek kerüljenek a buildbe.</td>
+</tr>
+</tbody>
+</table>
+<p>Build indítása:</p>
+<div class="highlight"><pre><span></span><code>eas<span class="w"> </span>build<span class="w"> </span>--platform<span class="w"> </span>android<span class="w"> </span>--profile<span class="w"> </span>production
+</code></pre></div>
+<h2 id="bff-backend">BFF backend<a class="headerlink" href="#bff-backend" title="Permanent link">¶</a></h2>
+<p>A BFF backend deploy folyamata manuális: a forráskód módosítása után a Vesta szerveren a Docker image újraépítése és a konténer újraindítása szükséges. Önhoszolt Drone CI szerver áll rendelkezésre a Vesta szerveren, amelynek automatizált deploy pipeline-hoz való integrálása V2-re van tervezve.</p>
 
 
 
@@ -3109,7 +3231,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

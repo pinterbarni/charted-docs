@@ -2661,6 +2661,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beállítások
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2677,6 +2695,91 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#mertekegyseg-valtas-altalanos-hasznalat-kozben" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mértékegység váltás
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mertekegyseg-valtas-aktiv-trackeles-kozben" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mértékegység trackelés közben
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mertekegyseg-beallitas-perzisztenciaja" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mértékegység megőrzése
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dark-mode-automatikus-mod-mukodese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dark mode automatikus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dark-mode-manualis-beallitasa-es-megorzese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dark mode manuális
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dark-mode-rendszerkovetes-tesztelese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dark mode rendszerkövetés
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2910,6 +3013,80 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#mertekegyseg-valtas-altalanos-hasznalat-kozben" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mértékegység váltás
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mertekegyseg-valtas-aktiv-trackeles-kozben" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mértékegység trackelés közben
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mertekegyseg-beallitas-perzisztenciaja" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mértékegység megőrzése
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dark-mode-automatikus-mod-mukodese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dark mode automatikus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dark-mode-manualis-beallitasa-es-megorzese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dark mode manuális
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dark-mode-rendszerkovetes-tesztelese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dark mode rendszerkövetés
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2995,7 +3172,150 @@
 
 
 <h1 id="beallitasok-es-preferenciak">Beállítások és preferenciák<a class="headerlink" href="#beallitasok-es-preferenciak" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<h2 id="mertekegyseg-valtas-altalanos-hasznalat-kozben">Mértékegység váltás általános használat közben<a class="headerlink" href="#mertekegyseg-valtas-altalanos-hasznalat-kozben" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Lépés</th>
+<th>GIVEN</th>
+<th>WHEN</th>
+<th>THEN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td>a felhasználó autentikált és az alkalmazásban van</td>
+<td>a bottom sheet-en a mértékegységet metrikusról imperialra váltja</td>
+<td>az értékek minden felületen átváltanak</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td>a mértékegység át lett állítva</td>
+<td>a felhasználó a profil oldalra navigál</td>
+<td>a korábbi túrák és statisztikák is az új mértékegységben jelennek meg</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mertekegyseg-valtas-aktiv-trackeles-kozben">Mértékegység váltás aktív trackelés közben<a class="headerlink" href="#mertekegyseg-valtas-aktiv-trackeles-kozben" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Lépés</th>
+<th>GIVEN</th>
+<th>WHEN</th>
+<th>THEN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td>a felhasználó aktívan trackel egy túrát</td>
+<td>a mértékegységet átváltja</td>
+<td>a megjelenített metrikák azonnal átalakulnak az új egységre</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mertekegyseg-beallitas-perzisztenciaja">Mértékegység beállítás perzisztenciája<a class="headerlink" href="#mertekegyseg-beallitas-perzisztenciaja" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Lépés</th>
+<th>GIVEN</th>
+<th>WHEN</th>
+<th>THEN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td>a felhasználó megváltoztatta a mértékegységet</td>
+<td>bezárja az alkalmazást</td>
+<td>az alkalmazás leáll</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td>az alkalmazás újraindul</td>
+<td>a felhasználó megnyitja</td>
+<td>a mértékegység beállítás megmarad és az értékek ennek megfelelően jelennek meg</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dark-mode-automatikus-mod-mukodese">Dark mode automatikus mód működése<a class="headerlink" href="#dark-mode-automatikus-mod-mukodese" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Lépés</th>
+<th>GIVEN</th>
+<th>WHEN</th>
+<th>THEN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td>az automatikus mód be van kapcsolva</td>
+<td>a felhasználó megtekinti a beállításokat</td>
+<td>a light és dark opciók nem módosíthatók</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td>az automatikus mód aktív</td>
+<td>a rendszer témája változik</td>
+<td>az alkalmazás automatikusan követi azt</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dark-mode-manualis-beallitasa-es-megorzese">Dark mode manuális beállítása és megőrzése<a class="headerlink" href="#dark-mode-manualis-beallitasa-es-megorzese" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Lépés</th>
+<th>GIVEN</th>
+<th>WHEN</th>
+<th>THEN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td>az automatikus mód ki van kapcsolva</td>
+<td>a felhasználó manuálisan light vagy dark módot választ</td>
+<td>az alkalmazás átvált a kiválasztott módra</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td>a mód át lett állítva</td>
+<td>az alkalmazást bezárja és újranyitja</td>
+<td>a kiválasztott mód megmarad</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dark-mode-rendszerkovetes-tesztelese">Dark mode rendszerkövetés tesztelése<a class="headerlink" href="#dark-mode-rendszerkovetes-tesztelese" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Lépés</th>
+<th>GIVEN</th>
+<th>WHEN</th>
+<th>THEN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td>az automatikus mód be van kapcsolva</td>
+<td>a felhasználó a rendszer szintjén módosítja a témát</td>
+<td>az alkalmazás automatikusan átáll a megfelelő módra</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td>az automatikus mód ki van kapcsolva</td>
+<td>a rendszer témája változik</td>
+<td>az alkalmazás nem változtatja meg a saját témáját</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -3109,7 +3429,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

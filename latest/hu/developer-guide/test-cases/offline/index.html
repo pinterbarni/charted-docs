@@ -2689,6 +2689,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Offline működés
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2705,6 +2723,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#offline-mukodes-elmentett-utvonalak-elerhetosege" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elmentett útvonalak offline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offline-allapotban-alkalmazas-megnyitasa-autentikalt-felhasznaloval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offline megnyitás
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offline-mukodes-nincs-elerheto-offline-adat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nincs offline adat
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2910,6 +2980,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#offline-mukodes-elmentett-utvonalak-elerhetosege" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elmentett útvonalak offline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offline-allapotban-alkalmazas-megnyitasa-autentikalt-felhasznaloval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offline megnyitás
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offline-mukodes-nincs-elerheto-offline-adat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nincs offline adat
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2995,7 +3106,96 @@
 
 
 <h1 id="offline-mukodes">Offline működés<a class="headerlink" href="#offline-mukodes" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<h2 id="offline-mukodes-elmentett-utvonalak-elerhetosege">Offline működés, elmentett útvonalak elérhetősége<a class="headerlink" href="#offline-mukodes-elmentett-utvonalak-elerhetosege" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Lépés</th>
+<th>GIVEN</th>
+<th>WHEN</th>
+<th>THEN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td>a felhasználó internetkapcsolattal használja az alkalmazást és rendelkezik elmentett offline túrákkal</td>
+<td>az internetkapcsolat megszűnik</td>
+<td>az alkalmazás offline módba kerül</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td>az alkalmazás offline módban van</td>
+<td>a felhasználó a profil oldalra navigál</td>
+<td>csak az offline elérhető túraútvonalak jelennek meg</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td>offline túrák megjelentek</td>
+<td>a felhasználó kiválaszt egyet</td>
+<td>a túra betöltődik és megtekinthető offline módban is</td>
+</tr>
+</tbody>
+</table>
+<h2 id="offline-allapotban-alkalmazas-megnyitasa-autentikalt-felhasznaloval">Offline állapotban alkalmazás megnyitása autentikált felhasználóval<a class="headerlink" href="#offline-allapotban-alkalmazas-megnyitasa-autentikalt-felhasznaloval" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Lépés</th>
+<th>GIVEN</th>
+<th>WHEN</th>
+<th>THEN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td>a felhasználó korábban sikeresen autentikálta magát</td>
+<td>bezárja az alkalmazást</td>
+<td>az alkalmazás leáll</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td>az eszköz offline állapotban van</td>
+<td>a felhasználó újranyitja az alkalmazást</td>
+<td>a felhasználó autentikált állapotban marad és az alkalmazás használható</td>
+</tr>
+</tbody>
+</table>
+<p><em>Megjegyzés: Ez a teszteset nem került teljeskörűen tesztelésre, mivel a fejlesztői build nem biztosított megfelelő feltételeket az offline autentikáció validálására.</em><sup id="fnref:note-1"><a class="footnote-ref" href="#fn:note-1">1</a></sup></p>
+<h2 id="offline-mukodes-nincs-elerheto-offline-adat">Offline működés, nincs elérhető offline adat<a class="headerlink" href="#offline-mukodes-nincs-elerheto-offline-adat" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Lépés</th>
+<th>GIVEN</th>
+<th>WHEN</th>
+<th>THEN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td>az eszköz offline állapotban van</td>
+<td>a felhasználó a profil oldalra navigál</td>
+<td>az offline szekció jelenik meg</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td>nincs elmentett offline túra</td>
+<td>a felhasználó megtekinti az offline listát</td>
+<td>„nincsenek offline túraútvonalak” üzenet jelenik meg</td>
+</tr>
+</tbody>
+</table>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:note-1">
+<p>Sikerült tesztelni, működik. <em>Megjegyezve: 2026.05.01.</em>&nbsp;<a class="footnote-backref" href="#fnref:note-1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -3109,7 +3309,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

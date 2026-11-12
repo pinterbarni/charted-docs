@@ -2995,7 +2995,55 @@
 
 
 <h1 id="navigacio-es-kepernyostruktura">Navigáció és képernyőstruktúra<a class="headerlink" href="#navigacio-es-kepernyostruktura" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>Az alkalmazás két fő útvonalcsoportra van osztva, amelyek az autentikációs állapottól függően kerülnek aktiválásra:</p>
+<ul>
+<li><code>(auth)</code>: az autentikációs képernyőket tartalmazó csoport egyetlen képernyőt tartalmaz: <code>login.tsx</code>.</li>
+<li><code>(app)</code>: a bejelentkezett felhasználók számára elérhető főalkalmazás, amely az alábbi képernyőket tartalmazza:<ul>
+<li><code>map.tsx</code>: a főképernyő, amely a térképes nézetet és az összes túrázáshoz kapcsolódó funkciót tartalmazza.</li>
+<li><code>profile.tsx</code>: felhasználói profil megjelenítése, mind saját, mind más felhasználók profiljaként működik a <code>userId</code> útvonal paraméter alapján.</li>
+<li><code>connections.tsx</code>: követők, követett felhasználók és felhasználókereső képernyő.</li>
+<li><code>hikeDetails.tsx</code>: befejezett túra részletes adatainak megjelenítése.</li>
+<li><code>trailsList.tsx</code>: túrák listanézete.</li>
+<li><code>savedTrailDetails.tsx</code>: helyi fájlrendszerben tárolt GPX útvonal részleteinek megjelenítése. A jövőben egyesíteni lehetne <code>trailsList.tsx</code>-komponenssel.</li>
+</ul>
+</li>
+</ul>
+<figure id="fig-navigation-map">
+<pre class="mermaid"><code>flowchart LR
+    Map[Map Screen]
+    Auth[Auth]
+    Keycloak[Keycloak Browser]
+    Profile[Profile Screen]
+    Blocked[Blocked Screen]
+    Connections[Followers / Following]
+    Search[Search Screen]
+    MoreTrails[More Trails]
+    OtherProfile[Other User Profile]
+    HikeDetails[Hike Details]
+    SavedHike[Saved Hike]
+
+    Auth &lt;--&gt; Keycloak
+    Map &lt;--&gt; Auth
+    Map --&gt; Blocked
+    Map --&gt; Profile
+    Profile --&gt; Auth
+    Profile --&gt; Connections
+    Profile --&gt; Search
+    Profile --&gt; MoreTrails
+    Profile --&gt; HikeDetails
+    Profile --&gt; SavedHike
+    Blocked --&gt; OtherProfile
+    Connections --&gt; OtherProfile
+    Search --&gt; OtherProfile
+    MoreTrails --&gt; HikeDetails
+    MoreTrails --&gt; SavedHike
+</code></pre>
+<figcaption>
+<p>Az alkalmazás képernyői közötti navigációs térkép</p>
+</figcaption>
+</figure>
+<p>A gyökér <code>_layout.tsx</code> fájl tartalmazza az <code>useAuthGuard</code> hook-ot, amely az autentikációs állapot változásait figyeli és automatikusan átirányítja a felhasználót a megfelelő útvonalcsoportba. Ha a felhasználó be van jelentkezve és nem az <code>(app)</code> csoportban tartózkodik, a rendszer a térképes főképernyőre navigál. Ha nincs bejelentkezve és nem az <code>(auth)</code> csoportban van, a bejelentkezési képernyőre irányítja.</p>
+<p>Az <code>(app)</code> csoport saját <code>_layout.tsx</code> fájlja konfigurálódik a Stack navigátor header megjelenésével: egységes háttérszín, tipográfia, vissza gomb és profilképernyőn a felhasználókereső ikon. Ezek a beállítások <code>sharedHeaderOptions</code> objektumban vannak.</p>
 
 
 
@@ -3109,7 +3157,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

@@ -1225,6 +1225,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Követelmények
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1241,6 +1259,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#funkcionalis-kovetelmenyek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funkcionális követelmények
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nem-funkcionalis-kovetelmenyek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nem funkcionális követelmények
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2910,6 +2969,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#funkcionalis-kovetelmenyek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funkcionális követelmények
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nem-funkcionalis-kovetelmenyek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nem funkcionális követelmények
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2995,7 +3084,29 @@
 
 
 <h1 id="kovetelmenyek-osszegyujtese">Követelmények összegyűjtése<a class="headerlink" href="#kovetelmenyek-osszegyujtese" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>A rendszerrel szemben támasztott követelmények két csoportba sorolhatók: a funkcionális követelmények azt határozzák meg, mit kell az alkalmazásnak tudnia, a nem funkcionális követelmények pedig azt, milyen feltételek mellett és milyen minőségben kell működnie.</p>
+<details class="info">
+<summary>Webes kiegészítés</summary>
+<p>Az első bekezdés a webes változat egységessége érdekében került be, a beadott dolgozatban nem szerepel. Az oldal további tartalma változatlanul a beadott dolgozatból származik.</p>
+</details>
+<h2 id="funkcionalis-kovetelmenyek">Funkcionális követelmények<a class="headerlink" href="#funkcionalis-kovetelmenyek" title="Permanent link">¶</a></h2>
+<p>A funkcionális követelmények meghatározása részben már a dizájn tervezési fázisában elkezdődött, azonban több elem később, üzleti igényként jelent meg a fejlesztés során.</p>
+<ul>
+<li>A felhasználó képes legyen túrák rögzítésére GPS alapú helymeghatározással, akár háttérben futó módban is.</li>
+<li>A rendszer támogassa POI pontok létrehozását és kezelését.</li>
+<li>Közösségi funkciók biztosítása, amely lehetővé teszi, hogy a felhasználók egymást lássák és követhessék.</li>
+<li>A rendszer biztosítson alapvető moderációs lehetőségeket, mint például felhasználók jelentése és blokkolása.</li>
+<li>A backend logikában biztosított legyen, hogy blokkolt felhasználók ne jelenjenek meg lekérdezések során.</li>
+<li>Gamifikációs elemek támogatása, amelyek növelik a felhasználói aktivitást és elköteleződést.</li>
+<li>Az alkalmazás minimalizálja a felhasználóra háruló interakciós terhet.</li>
+</ul>
+<h2 id="nem-funkcionalis-kovetelmenyek">Nem funkcionális követelmények<a class="headerlink" href="#nem-funkcionalis-kovetelmenyek" title="Permanent link">¶</a></h2>
+<ul>
+<li>Az alkalmazás legyen keresztplatformos, és fusson mind iOS, mind Android operációs rendszereken.</li>
+<li>A rendszer legyen képes saját infrastruktúrán működni.</li>
+<li>Az alkalmazás rendelkezzen offline működési képességekkel.</li>
+<li>Az autentikációs rendszer legyen a minimális megoldásoknál fejlettebb, biztonságosabb és skálázhatóbb.</li>
+</ul>
 
 
 
@@ -3109,7 +3220,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

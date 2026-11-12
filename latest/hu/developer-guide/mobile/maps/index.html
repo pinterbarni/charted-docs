@@ -2995,7 +2995,15 @@
 
 
 <h1 id="terkepintegracio">Térképintegráció<a class="headerlink" href="#terkepintegracio" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>A térképes megjelenítéshez a MapLibre React Native v11 béta verziója került választásra. Ez volt az egyetlen MapLibre verzió, amely kompatibilis az Expo SDK 55-tel. A csomag megköveteli az EAS prebuildet, azaz nem futtatható Expo Go környezetben. A könyvtár választásának fő indoka az önhoszolt tile server támogatása volt, amellyel elkerülhető a forgalomalapú díjszabású külső térképszolgáltatók használata (pl. MapBox).</p>
+<p>A térkép csempéit a Vesta szerveren futó Martin tile server szolgáltatja, amelyet a BFF proxyzik. A térkép vizuális stílusát egy egyedi MapLibre stílusdefiníció határozza meg, amelyet az alkalmazás témájától függően a <code>getMapStyle(theme)</code> függvény generál.</p>
+<p>A térképen az alábbi geoadat rétegek jelennek meg:</p>
+<ul>
+<li><code>GeoJSONSource</code> és <code>Layer</code>: a rögzített túra nyomvonalát, a tervezett útvonalat, valamint az újrajárható (retrack) útvonalat jeleníti meg <code>LineLayer</code> típussal. A rétegek a <code>Map</code> komponensen belül kerülnek elhelyezésre, mivel a MapLibre GeoJSON forrás nem renderelhető önálló React komponensként, csak a térkép közvetlen gyermekeként.</li>
+<li><code>ViewAnnotation</code>: a POI pontok megjelenítésére szolgál, React Native komponenseket helyez el a térkép megfelelő koordinátáin.</li>
+<li><code>NativeUserLocation</code>: a felhasználó aktuális pozícióját és irányát jeleníti meg natív felhasználókoronggal.</li>
+</ul>
+<p>A kamera vezérlése a <code>useMapCamera</code> hook-on keresztül történik.</p>
 
 
 
@@ -3109,7 +3117,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

@@ -2995,7 +2995,13 @@
 
 
 <h1 id="backend-es-bff-architektura">Backend és BFF architektúra<a class="headerlink" href="#backend-es-bff-architektura" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>A backend a BFF (Backend for Frontend) tervezési mintára épül. Ennek lényege, hogy a mobilalkalmazás nem kommunikál közvetlenül a belső szolgáltatásokkal (Martin, Valhalla, PostgreSQL), hanem minden kérés egyetlen NestJS alkalmazáson keresztül érkezik. Ez több előnnyel jár:</p>
+<ul>
+<li>Az API kulcsok és belső hálózati címek nem kerülnek ki a kliensre.</li>
+<li>A JWT token validáció egy helyen, a BFF-ben történik.</li>
+<li>A mobilalkalmazás egyetlen URL-lel dolgozik.</li>
+</ul>
+<p>A BFF NestJS keretrendszerre épül, moduláris architektúrával. A monolith-first megközelítés azt jelenti, hogy a rendszer egységes alkalmazásként működik, de a belső modulhatárok úgy lettek kialakítva, hogy szükség esetén az egyes modulok különálló mikroszolgáltatásokká bonthatók legyenek. Ezen design döntések szemelőtt voltak tartva a kezdetektől.</p>
 
 
 
@@ -3109,7 +3115,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

@@ -2995,7 +2995,142 @@
 
 
 <h1 id="adatbazis-modell-es-entitasok">Adatbázis modell és entitások<a class="headerlink" href="#adatbazis-modell-es-entitasok" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>Az adatbázis modell TypeORM entitásokkal van leírva, amelyek közvetlenül leképezik a PostgreSQL táblastruktúrát. Az entitások <code>snake_case</code> elnevezési konvenciót követnek az adatbázisban egy egyedi <code>SnakeCaseNamingStrategy</code> segítségével, míg TypeScript oldalon <code>camelCase</code> neveket használnak. Fejlesztői és éles környezetben is <code>synchronize: true</code> beállítással az adatbázis séma automatikusan szinkronizálódik az entitásokból.</p>
+<p>Megjegyzendő, hogy az entitások között nem kerültek definiálásra TypeORM relációk (<code>@OneToMany</code>, <code>@ManyToOne</code> stb.), mivel tapasztalat hiányában ezek konfigurálása nem volt prioritás a fejlesztés során. A relációk hiánya azt jelenti, hogy a Compodoc által automatikusan generálható ERD diagram nem tartalmazza a kapcsolatokat, ezért az entitás-kapcsolat diagram manuálisan, Mermaid segítségével készült el.</p>
+<details class="info">
+<summary>Webes módosítás</summary>
+<p>Az alábbi rész a webes változat jobb használhatósága érdekében módosult a beadott dolgozathoz képest.</p>
+</details>
+<p>Az adatbázis entitás-kapcsolat diagramja az alábbi ábrán látható. Az adatmodell tervezéséről további információ a <a href="../../design/data-model/">tervezési fejezetben</a> található.</p>
+<figure id="fig-er-diagram">
+<pre class="mermaid"><code>erDiagram
+    users {
+        uuid id PK
+        string username
+        string display_name
+        string bio
+        string avatar_url
+        float total_distance_m
+        timestamp created_at
+        timestamp updated_at
+    }
+    user_avatars {
+        uuid user_id PK
+        text base64
+        timestamp updated_at
+    }
+    planned_routes {
+        uuid id PK
+        uuid user_id
+        string title
+        jsonb waypoints
+        jsonb valhalla_response
+        jsonb pois
+        timestamp created_at
+        timestamp updated_at
+    }
+    follows {
+        uuid id PK
+        uuid follower_id
+        uuid following_id
+        timestamp created_at
+    }
+    blocks {
+        uuid id PK
+        uuid blocker_id
+        uuid blocked_id
+        timestamp created_at
+    }
+    reports {
+        uuid id PK
+        uuid reporter_id
+        enum target_type
+        uuid target_id
+        string reason
+        string admin_response
+        timestamp created_at
+        timestamp updated_at
+    }
+    trails {
+        uuid id PK
+        uuid user_id
+        string title
+        string description
+        int distance_m
+        string distance_unit
+        float distance_original
+        int duration_s
+        int elevation_gain_m
+        boolean is_shared
+        jsonb track_points
+        jsonb pois
+        timestamp started_at
+        timestamp finished_at
+        timestamp created_at
+        timestamp updated_at
+    }
+    trail_likes {
+        uuid id PK
+        uuid user_id
+        uuid trail_id
+        timestamp created_at
+    }
+
+    users ||--o| user_avatars : has
+    users ||--o{ planned_routes : plans
+    users ||--o{ follows : follows
+    users ||--o{ blocks : blocks
+    users ||--o{ reports : submits
+    users ||--o{ trails : records
+    users ||--o{ trail_likes : likes
+    trails ||--o{ trail_likes : receives
+</code></pre>
+<figcaption>
+<p>Az adatbázis entitás-kapcsolat diagramja</p>
+</figcaption>
+</figure>
+<table>
+<thead>
+<tr>
+<th>Entitás</th>
+<th>Leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UserEntity</code></td>
+<td>A felhasználó alaptáblája. Az <code>id</code> mező a Keycloak <code>sub</code> claim, tehát nem az alkalmazás generálja, hanem az identity provider adja. Tartalmazza a <code>username</code>, <code>displayName</code>, <code>bio</code>, <code>avatarUrl</code> mezőket, valamint a <code>totalDistanceM</code> float mezőt, amelyből a gamifikációs szint kerül dinamikusan kiszámításra. A <code>totalDistanceM</code> soha nem csökken, törléskor sem.</td>
+</tr>
+<tr>
+<td><code>UserAvatarEntity</code></td>
+<td>Az avatar adatokat külön táblában tárolja <code>base64</code> szöveg formátumban, a <code>userId</code> mint elsődleges kulcs és idegen kulcs a <code>users</code> táblára. A szétválasztás oka az, hogy a profil lekérések ne hozzák magukkal a potenciálisan nagy méretű képadatot. A service megjegyzi, hogy V2-ben MinIO objektumtárba kerülne migráció.</td>
+</tr>
+<tr>
+<td><code>TrailEntity</code></td>
+<td>A túra összes adatát tárolja. A <code>trackPoints</code> és <code>pois</code> mezők <code>jsonb</code> típusúak PostgreSQL-ben, így strukturált adat tárolható relációs séma nélkül. A <code>distanceM</code>, <code>durationS</code> és <code>elevationGainM</code> mezők denormalizáltan kerülnek tárolásra a klienstől érkező kalkulált értékekkel. Az <code>isShared</code> boolean mező szabályozza a publikus láthatóságot. A <code>userId</code> idegen kulcs a <code>users</code> táblára.</td>
+</tr>
+<tr>
+<td><code>TrailLikeEntity</code></td>
+<td>A like kapcsolatokat tárolja <code>userId</code> és <code>trailId</code> párban, egyedi constrainttel az ismételt like megelőzésére.</td>
+</tr>
+<tr>
+<td><code>FollowEntity</code></td>
+<td>Követési kapcsolatokat tárol <code>followerId</code> és <code>followingId</code> párban, egyedi constrainttel.</td>
+</tr>
+<tr>
+<td><code>BlockEntity</code></td>
+<td>Blokkolási kapcsolatokat tárol <code>blockerId</code> és <code>blockedId</code> párban, egyedi constrainttel. Blokkoláskor az összes kölcsönös <code>FollowEntity</code> törlésre kerül.</td>
+</tr>
+<tr>
+<td><code>ReportEntity</code></td>
+<td>Bejelentéseket tárol. A <code>targetType</code> enum mező jelzi, hogy felhasználóról vagy túráról van-e szó. A <code>targetId</code> a bejelentett entitás UUID azonosítója. Az <code>adminResponse</code> mező a moderátor válaszát tárolja, amely utólag <code>PATCH</code> kéréssel adható hozzá. Egyedi constraint akadályozza meg, hogy ugyanaz a felhasználó kétszer bejelentse ugyanazt az entitást.</td>
+</tr>
+<tr>
+<td><code>PlannedRouteEntity</code></td>
+<td>A tervezett útvonalakat tárolja. A <code>waypoints</code> és <code>valhalla_response</code> mezők <code>jsonb</code> típusúak. A teljes Valhalla válasz perzisztálásra kerül, hogy a kliens utólag visszatölthesse az útvonalat anélkül, hogy újra kellene számolni.</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -3109,7 +3244,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

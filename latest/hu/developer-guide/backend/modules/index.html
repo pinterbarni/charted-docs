@@ -2995,7 +2995,58 @@
 
 
 <h1 id="modulstruktura">Modulstruktúra<a class="headerlink" href="#modulstruktura" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>A BFF alkalmazás NestJS moduláris architektúrára épül. Az <code>AppModule</code> gyökérmodul regisztrálja az összes feature modult és a globális infrastruktúrát, beleértve a konfigurációkezelést, az adatbázis-kapcsolatot, a rate limitinget, a strukturált naplózást és a globális <code>JWT</code> autentikációs guard-ot.</p>
+<figure id="fig-module-structure">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/developer-guide/backend/nest-modules.png" data-desc-position="bottom"><img alt="A NestJS BFF modulstruktúrája (Compodoc)" src="../../../../assets/images/developer-guide/backend/nest-modules.png"></a></p>
+<figcaption>
+<p>A NestJS BFF modulstruktúrája (Compodoc)</p>
+</figcaption>
+</figure>
+<p>Az alkalmazás az alábbi feature modulokból áll:</p>
+<table>
+<thead>
+<tr>
+<th>Modul</th>
+<th>Leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>HealthModule</code></td>
+<td>Publikus health check végpont, autentikáció nélkül elérhető. A Docker Compose <code>healthcheck</code> konfigurációja ezt a végpontot kérdezi le a konténer állapotának meghatározásához.</td>
+</tr>
+<tr>
+<td><code>TilesModule</code></td>
+<td>Martin tile server proxy modul. A tile válaszok <code>Cache-Control</code> fejléccel vannak ellátva 24 órás érvényességgel. A végpontok ki vannak zárva a Swagger dokumentációból, mivel belső proxy végpontok. <em>(Deprekált: A Martin API kulcsot szerver oldalon injektálta minden proxyzott kérésbe, így az soha nem kerül ki a kliens oldalra.)</em></td>
+</tr>
+<tr>
+<td><code>RoutingModule</code></td>
+<td>Valhalla routing engine proxy modul. A gyalogos útvonaltervezési kéréseket irányítja a Valhalla felé, és a Valhalla hibáit közvetlenül továbbítja a kliensnek. A frontend jelenleg részlegesen használja, teljes integráció V2-re tervezett.</td>
+</tr>
+<tr>
+<td><code>RoutesModule</code></td>
+<td>Tervezett útvonalak kezelése. Valhalla hívást indít az útvonal kiszámításához, majd a teljes Valhalla választ <code>jsonb</code> típusban perzisztálja PostgreSQL-be. Az útvonalak a bejelentkezett felhasználóhoz vannak kötve.</td>
+</tr>
+<tr>
+<td><code>ProfileModule</code></td>
+<td>Felhasználói profil és avatar kezelés, felhasználókeresés. A profil az első bejelentkezéskor automatikusan létrejön upsert művelettel, a Keycloak JWT <code>sub</code> claim-et használva elsődleges kulcsként. Az avatar adatok külön táblában tárolódnak, hogy a profil lekérések ne hozzák magukkal a nagy méretű képadatot. A felhasználókeresés kiszűri a blokkolt felhasználókat az eredményekből. Két controller kezeli: <code>ProfileController</code> a profil műveletekhez, <code>AvatarController</code> az avatar műveletekhez. Az avatar műveletek le lettek választva, hogy ezzel is áramvonalasítsuk a lekérdezéseket. Jelenleg Base64 kódolással tároljuk, bár a felhasználó entitásoknak már létrehoztunk egy URL mezőt, hogy a következő verzióban már URL segítségével lehessen profilképeket tárolni.</td>
+</tr>
+<tr>
+<td><code>TrailsModule</code></td>
+<td>Túrák CRUD műveletei, megosztás és like funkciók. By design, három külön controllerre van bontva felelősségi körök szerint: <code>TrailsController</code> az alap CRUD műveletekhez, <code>TrailsLikesController</code> a like/unlike műveletekhez, <code>TrailsSharedController</code> a publikus felfedezési feedekhez. A trail létrehozásakor automatikusan inkrementálódik a felhasználó <code>totalDistanceM</code> értéke, amelyből a gamifikációs szint kerül kiszámításra. Fontos megjegyzés: a távolság törléskor soha nem csökken.</td>
+</tr>
+<tr>
+<td><code>SocialModule</code></td>
+<td>Követés, blokkolás és publikus profil megtekintés. Három controller kezeli: <code>SocialFollowController</code> a követési műveletekhez, <code>SocialBlockController</code> a blokkolási műveletekhez, <code>SocialProfileController</code> a publikus profilok lekéréséhez. A blokkolás automatikusan eltávolítja az összes kölcsönös követési kapcsolatot. A blokkolt felhasználók számára minden esetben <code>NotFoundException</code> kerül visszaadásra, a blokk ténye soha nem kerül felfedésre.</td>
+</tr>
+<tr>
+<td><code>ReportsModule</code></td>
+<td>Felhasználók és túrák bejelentése moderációs célból. Tartalmaz admin végpontot is a moderátori válasz hozzáadásához.</td>
+</tr>
+</tbody>
+</table>
+<p>A modulok közötti függőségek a következőképpen alakulnak: a <code>SocialModule</code> és a <code>TrailsModule</code> egyaránt importálja a <code>ProfileModule</code>-t, mivel a felhasználói adatok eléréséhez szükséges a <code>UserEntity</code> repository és a <code>SocialBlockService</code>.</p>
+<p>A BFF modulstruktúrájának részletes vizuális ábrázolása a Compodoc dokumentációból érhető el. A dokumentáció generálásához és megtekintéséhez lásd a projekt <code>README.md</code> fájlját.</p>
 
 
 
@@ -3109,7 +3160,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

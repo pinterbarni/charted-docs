@@ -2995,7 +2995,16 @@
 
 
 <h1 id="eas-es-fejlesztes">EAS és fejlesztés<a class="headerlink" href="#eas-es-fejlesztes" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>Az alkalmazás a MapLibre React Native natív moduljai miatt nem futtatható az Expo Go környezetben, ezért fejlesztői build (development build) használata szükséges. Ez azt jelenti, hogy az alkalmazás egy egyedi natív buildet igényel, amelybe a fejlesztői kliens is be van fordítva.</p>
+<p>A fejlesztői build elkészítése az EAS (Expo Application Services) segítségével történik:</p>
+<div class="highlight"><pre><span></span><code>eas<span class="w"> </span>build<span class="w"> </span>--platform<span class="w"> </span>android<span class="w"> </span>--profile<span class="w"> </span>development
+</code></pre></div>
+<p>A build elkészülte után az APK telepíthető a fejlesztői eszközre, amely ezután a lokálisan futó Expo fejlesztői szerverre csatlakozik:</p>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>start
+</code></pre></div>
+<p>A fejlesztői build és az Expo Go közötti fő különbség, hogy a fejlesztői build tartalmazza az összes natív modult (beleértve a MapLibre-t), így az összes funkció tesztelhető, míg az Expo Go csak az Expo SDK által előre csomagolt modulokat támogatja. A kódváltozások továbbra is hot reload-dal jelennek meg, a natív réteg újrafordítása nélkül.</p>
+<p>Az <code>eas.json</code> fájl három build profilt definiál: <code>development</code>, <code>preview</code>, és <code>production</code>.</p>
+<p>Az <code>app.json</code> fájlban be lett állítva, hogy a képernyő ne legyen elforgatható és tableteket ne támogasson, mivel a UI nem lett közepes képernyőn tesztelve.</p>
 
 
 
@@ -3109,7 +3118,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

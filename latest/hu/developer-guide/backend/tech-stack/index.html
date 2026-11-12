@@ -2995,7 +2995,89 @@
 
 
 <h1 id="technologiai-stack">Technológiai stack<a class="headerlink" href="#technologiai-stack" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>A backend (BFF) szolgáltatás fejlesztése során a következő főbb technológiák és könyvtárak kerültek felhasználásra:</p>
+<table>
+<thead>
+<tr>
+<th>Csomag</th>
+<th>Szerep</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NestJS (<code>@nestjs/common</code>, <code>@nestjs/core</code>, <code>@nestjs/platform-express</code>)</td>
+<td>Moduláris, TypeScript alapú backend keretrendszer.</td>
+</tr>
+<tr>
+<td><code>@nestjs/config</code></td>
+<td>Környezeti változók és konfiguráció kezelésére szolgál.</td>
+</tr>
+<tr>
+<td><code>@nestjs/typeorm</code>, <code>typeorm</code></td>
+<td>Adatbázis-kezelés entitás alapú ORM segítségével.</td>
+</tr>
+<tr>
+<td><code>PostgreSQL</code> (<code>PostGIS</code> kiterjesztéssel)</td>
+<td>Relációs adatbázis, geospaciális műveletek támogatásának lehetőségével.</td>
+</tr>
+<tr>
+<td><code>@nestjs/jwt</code></td>
+<td>JWT tokenek kezelésére szolgál.</td>
+</tr>
+<tr>
+<td><code>jwks-rsa</code></td>
+<td>Külső identity provider (Keycloak) publikus kulcsainak lekérésére és token validációra.</td>
+</tr>
+<tr>
+<td><code>@nestjs/swagger</code></td>
+<td>Automatikus OpenAPI dokumentáció generálására.</td>
+</tr>
+<tr>
+<td><code>class-validator</code>, <code>class-transformer</code></td>
+<td>DTO validáció és adattranszformáció.</td>
+</tr>
+<tr>
+<td><code>@nestjs/axios</code>, <code>axios</code></td>
+<td>Külső HTTP hívások kezelésére.</td>
+</tr>
+<tr>
+<td><code>@nestjs/throttler</code></td>
+<td>Rate limiting.</td>
+</tr>
+<tr>
+<td><code>helmet</code></td>
+<td>HTTP biztonsági fejlécek beállítására. Könnyű implementálni.</td>
+</tr>
+<tr>
+<td><code>nestjs-pino</code>, <code>pino-http</code>, <code>pino-pretty</code></td>
+<td>Strukturált naplózás, prod-env logviewer alkalmazásokkal való integrációhoz és fejlesztői futtatáshoz külön beállításokkal.</td>
+</tr>
+<tr>
+<td><code>reflect-metadata</code>, <code>rxjs</code></td>
+<td>A NestJS működéséhez szükséges alap könyvtárak.</td>
+</tr>
+<tr>
+<td><code>@compodoc/compodoc</code></td>
+<td>Automatikus kóddokumentáció generálására alkalmas, a Nest által támogatott dokumentációs eszköz. <code>TypeDoc</code> és <code>JsDoc</code> kipróbálása után erre esett a választásom, bár nem volt vele tapasztalatom.</td>
+</tr>
+<tr>
+<td><code>jest</code>, <code>ts-jest</code></td>
+<td>Tesztelési környezet, a jelenlegi alkalmazás nem használja, viszont elő van készítve.</td>
+</tr>
+<tr>
+<td><code>eslint</code>, <code>prettier</code></td>
+<td>Kódminőség és formázás biztosítása.</td>
+</tr>
+<tr>
+<td><code>@types/express</code></td>
+<td>TypeScript típusdefiníciókat biztosít az Express keretrendszerhez, amelyet a NestJS HTTP adaptere használ.</td>
+</tr>
+<tr>
+<td><code>TypeScript</code> (strict mode)</td>
+<td>Statikus fordításidejű típusellenőrzést biztosít, <code>strict=true</code> beállítások mellett.</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -3109,7 +3191,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

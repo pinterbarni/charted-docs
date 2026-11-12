@@ -2521,6 +2521,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autentikáció
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2537,6 +2555,91 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#elfelejtett-jelszo-kerese-majd-visszanavigalas-az-alkalmazas-nativ-feluletere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elfelejtett jelszó, visszanavigálás
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elfelejtett-jelszo-kerese-majd-autentikacio-a-redirect-ablakon-keresztul" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elfelejtett jelszó, redirect
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regisztracio-majd-sikeres-bejelentkezes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regisztráció és bejelentkezés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sikeres-autentikacio-utan-alkalmazas-bezarasa-majd-ujranyitas-utan-autentikalt-allapot-megmarad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Munkamenet megőrzése
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kijelentkezes-az-alkalmazasbol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kijelentkezés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offline-allapotban-a-mar-autentikalt-felhasznalo-bejelentkezve-marad-az-alkalmazas-megnyithato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offline bejelentkezett állapot
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2910,6 +3013,80 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#elfelejtett-jelszo-kerese-majd-visszanavigalas-az-alkalmazas-nativ-feluletere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elfelejtett jelszó, visszanavigálás
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elfelejtett-jelszo-kerese-majd-autentikacio-a-redirect-ablakon-keresztul" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elfelejtett jelszó, redirect
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regisztracio-majd-sikeres-bejelentkezes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regisztráció és bejelentkezés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sikeres-autentikacio-utan-alkalmazas-bezarasa-majd-ujranyitas-utan-autentikalt-allapot-megmarad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Munkamenet megőrzése
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kijelentkezes-az-alkalmazasbol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kijelentkezés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#offline-allapotban-a-mar-autentikalt-felhasznalo-bejelentkezve-marad-az-alkalmazas-megnyithato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offline bejelentkezett állapot
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2995,7 +3172,258 @@
 
 
 <h1 id="autentikacio-es-session-kezeles">Autentikáció és session kezelés<a class="headerlink" href="#autentikacio-es-session-kezeles" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<h2 id="elfelejtett-jelszo-kerese-majd-visszanavigalas-az-alkalmazas-nativ-feluletere">Elfelejtett jelszó kérése, majd visszanavigálás az alkalmazás natív felületére<a class="headerlink" href="#elfelejtett-jelszo-kerese-majd-visszanavigalas-az-alkalmazas-nativ-feluletere" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Lépés</th>
+<th>GIVEN</th>
+<th>WHEN</th>
+<th>THEN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td>az alkalmazás telepítve van és a felhasználó megnyitja</td>
+<td>megjelenik a bejelentkezési felület</td>
+<td>a felhasználó látja a bejelentkezés, regisztráció és elfelejtett jelszó opciókat</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td>a felhasználó rendelkezik már fiókkal</td>
+<td>az elfelejtett jelszó opcióra kattint</td>
+<td>az alkalmazás egy webes felületre navigál</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td>a webes jelszó visszaállító felület megjelent</td>
+<td>a felhasználó megadja az email címét vagy felhasználónevét és megnyomja a submit gombot</td>
+<td>a rendszer elküldi a jelszó visszaállító emailt</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4</strong></td>
+<td>a felhasználó még a webes felületen van</td>
+<td>a bal alsó sarokban található X gombbal visszanavigál</td>
+<td>visszakerül az alkalmazás natív login felületére</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>5</strong></td>
+<td>a felhasználó megkapta az emailt</td>
+<td>megnyitja és rákattint a benne található linkre</td>
+<td>megjelenik az új jelszó megadására szolgáló felület</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>6</strong></td>
+<td>a jelszó megváltoztatás felülete megjelent</td>
+<td>a felhasználó megadja az új jelszavát</td>
+<td>a rendszer elmenti az új jelszót</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>7</strong></td>
+<td>a felhasználó visszajelzést kapott arról, hogy az új jelszó sikeresen elmentésre került</td>
+<td>újranyitja az alkalmazást</td>
+<td>a login felület jelenik meg</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>8</strong></td>
+<td>a felhasználó a login felületen van</td>
+<td>rákattint a login gombra</td>
+<td>az alkalmazás egy webes autentikációs felületre navigál, ahol megjelenik a login oldal</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>9</strong></td>
+<td>a webes login felület megjelent</td>
+<td>a felhasználó megadja a felhasználónevét/email címét és az új jelszavát, majd bejelentkezik</td>
+<td>az autentikáció sikeres és az alkalmazás a térkép oldalra navigál</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>10</strong></td>
+<td>a felhasználó a login folyamatban van</td>
+<td>megadja a felhasználónevét/email címét és az új jelszavát, majd bejelentkezik</td>
+<td>az autentikáció sikeres és az alkalmazás a térkép oldalra navigál</td>
+</tr>
+</tbody>
+</table>
+<h2 id="elfelejtett-jelszo-kerese-majd-autentikacio-a-redirect-ablakon-keresztul">Elfelejtett jelszó kérése, majd autentikáció a redirect ablakon keresztül<a class="headerlink" href="#elfelejtett-jelszo-kerese-majd-autentikacio-a-redirect-ablakon-keresztul" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Lépés</th>
+<th>GIVEN</th>
+<th>WHEN</th>
+<th>THEN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td>az alkalmazás telepítve van és a felhasználó megnyitja</td>
+<td>megjelenik a bejelentkezési felület</td>
+<td>a felhasználó látja a bejelentkezés, regisztráció és elfelejtett jelszó opciókat</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td>a felhasználó rendelkezik már fiókkal</td>
+<td>az elfelejtett jelszó opcióra kattint</td>
+<td>az alkalmazás egy webes felületre navigál</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td>a webes jelszó visszaállító felület megjelent</td>
+<td>a felhasználó megadja az email címét vagy felhasználónevét és megnyomja a submit gombot</td>
+<td>a rendszer elküldi a jelszó visszaállító emailt és a felület login nézetre vált</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4</strong></td>
+<td>a felhasználó megkapta az emailt</td>
+<td>megnyitja és rákattint a benne található linkre</td>
+<td>megjelenik az új jelszó megadására szolgáló felület</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>5</strong></td>
+<td>a jelszó megváltoztatás felülete megjelent</td>
+<td>a felhasználó megadja az új jelszavát</td>
+<td>a rendszer elmenti az új jelszót</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>6</strong></td>
+<td>a felhasználó visszatér az alkalmazásba</td>
+<td>a webes autentikációs felület még nyitva van és login állapotban van</td>
+<td>meg tudja adni a felhasználónevét és az új jelszavát</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>7</strong></td>
+<td>a webes login felület megjelent</td>
+<td>a felhasználó megadja a felhasználónevét/email címét és az új jelszavát, majd bejelentkezik</td>
+<td>az autentikáció sikeres és az alkalmazás a térkép oldalra navigál</td>
+</tr>
+</tbody>
+</table>
+<h2 id="regisztracio-majd-sikeres-bejelentkezes">Regisztráció, majd sikeres bejelentkezés<a class="headerlink" href="#regisztracio-majd-sikeres-bejelentkezes" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Lépés</th>
+<th>GIVEN</th>
+<th>WHEN</th>
+<th>THEN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td>az alkalmazás telepítve van és a felhasználó megnyitja</td>
+<td>megjelenik a bejelentkezési felület</td>
+<td>a felhasználó látja a bejelentkezés, regisztráció és elfelejtett jelszó opciókat</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td>a felhasználó a login felületen van</td>
+<td>rákattint a regisztráció gombra</td>
+<td>az alkalmazás egy webes regisztrációs felületre navigál</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td>a webes regisztrációs felület megjelent</td>
+<td>a felhasználó megadja a felhasználónevét, jelszavát, jelszó megerősítést, email címét, keresztnevét és vezetéknevét (minden mező kötelező)</td>
+<td>a mezők kitöltésre kerülnek</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4</strong></td>
+<td>minden szükséges adat megadásra került</td>
+<td>a felhasználó rákattint a regisztráció gombra</td>
+<td>a rendszer létrehozza a felhasználót és az alkalmazás a térkép oldalra navigál</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>5</strong></td>
+<td>a felhasználó sikeresen regisztrált</td>
+<td>az alkalmazás betölt</td>
+<td>a felhasználó autentikált állapotban van és a térkép oldalt látja</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sikeres-autentikacio-utan-alkalmazas-bezarasa-majd-ujranyitas-utan-autentikalt-allapot-megmarad">Sikeres autentikáció után alkalmazás bezárása, majd újranyitás után autentikált állapot megmarad<a class="headerlink" href="#sikeres-autentikacio-utan-alkalmazas-bezarasa-majd-ujranyitas-utan-autentikalt-allapot-megmarad" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Lépés</th>
+<th>GIVEN</th>
+<th>WHEN</th>
+<th>THEN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td>a felhasználó sikeresen autentikálta magát és a térkép oldalon van</td>
+<td>bezárja az alkalmazást</td>
+<td>az alkalmazás leáll</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td>az alkalmazás korábban bezárásra került</td>
+<td>a felhasználó újranyitja az alkalmazást</td>
+<td>az alkalmazás a térkép oldalon tölt be és a felhasználó autentikált állapotban marad</td>
+</tr>
+</tbody>
+</table>
+<h2 id="kijelentkezes-az-alkalmazasbol">Kijelentkezés az alkalmazásból<a class="headerlink" href="#kijelentkezes-az-alkalmazasbol" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Lépés</th>
+<th>GIVEN</th>
+<th>WHEN</th>
+<th>THEN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td>a felhasználó be van jelentkezve és a térkép oldalon van</td>
+<td>a profil oldalra navigál</td>
+<td>megjelenik a saját profil felülete</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td>a felhasználó a profil oldalon van</td>
+<td>a felhasználói kártyán a három pontra kattint</td>
+<td>megjelenik egy modális ablak</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td>a modális ablak megjelent</td>
+<td>a felhasználó kiválasztja a kijelentkezés opciót</td>
+<td>az alkalmazás kijelentkezteti a felhasználót és visszanavigál a login felületre</td>
+</tr>
+</tbody>
+</table>
+<h2 id="offline-allapotban-a-mar-autentikalt-felhasznalo-bejelentkezve-marad-az-alkalmazas-megnyithato">Offline állapotban a már autentikált felhasználó bejelentkezve marad, az alkalmazás megnyitható<a class="headerlink" href="#offline-allapotban-a-mar-autentikalt-felhasznalo-bejelentkezve-marad-az-alkalmazas-megnyithato" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Lépés</th>
+<th>GIVEN</th>
+<th>WHEN</th>
+<th>THEN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td>a felhasználó sikeresen autentikálta magát és a térkép oldalon van</td>
+<td>az alkalmazást bezárja</td>
+<td>az alkalmazás leáll</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td>az eszköz offline állapotban van</td>
+<td>a felhasználó újranyitja az alkalmazást</td>
+<td>az alkalmazás a térkép oldalon tölt be és a felhasználó autentikált állapotban marad</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -3109,7 +3537,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

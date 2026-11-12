@@ -1253,6 +1253,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technológiaválasztás
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1269,6 +1287,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#mobilfejlesztesi-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobilfejlesztési platform
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terkepszolgaltatas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Térképszolgáltatás
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autentikacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autentikáció
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-keretrendszer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend keretrendszer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adatbazis-es-kapcsolodo-technologiak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adatbázis és kapcsolódó technológiák
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2910,6 +3002,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#mobilfejlesztesi-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobilfejlesztési platform
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terkepszolgaltatas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Térképszolgáltatás
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autentikacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autentikáció
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-keretrendszer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend keretrendszer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adatbazis-es-kapcsolodo-technologiak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adatbázis és kapcsolódó technológiák
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2995,7 +3150,313 @@
 
 
 <h1 id="technologiavalasztas-es-osszehasonlitas">Technológiaválasztás és összehasonlítás<a class="headerlink" href="#technologiavalasztas-es-osszehasonlitas" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>A rendszer fő építőelemeinek kiválasztása előtt minden területen több lehetséges megoldást vetettem össze, a projekt szempontjából lényeges szempontok mentén. Az alábbi táblázatok a mobilfejlesztési platform, a térképszolgáltatás, az autentikáció, a backend keretrendszer és az adatbázis választását mutatják be.</p>
+<details class="info">
+<summary>Webes kiegészítés</summary>
+<p>Az első bekezdés a webes változat egységessége érdekében került be, a beadott dolgozatban nem szerepel. Az oldal további tartalma változatlanul a beadott dolgozatból származik.</p>
+</details>
+<h2 id="mobilfejlesztesi-platform">Mobilfejlesztési platform<a class="headerlink" href="#mobilfejlesztesi-platform" title="Permanent link">¶</a></h2>
+<p>A választás a React Native-re és az Expo keretrendszerre esett. A döntést a korábbi React Native tapasztalataim, a frontenddel és a backenddel közös TypeScript nyelv, valamint az EAS build támogatás indokolta. A Flutter hasonló képességei ellenére egy új nyelv és ökoszisztéma elsajátítását igényelte volna, a natív fejlesztés pedig platformonként külön kódbázist jelentett volna.</p>
+<details class="info">
+<summary>Webes kiegészítés</summary>
+<p>Az fenti bekezdés a webes változatban került hozzá a meglévő szakaszhoz, a szakdolgozat hosszára tekintettel, a szakdolgozatból kihagytam.</p>
+</details>
+<figure id="__table-caption_1">
+<table>
+<thead>
+<tr>
+<th>Szempont</th>
+<th>React Native (Expo)</th>
+<th>Flutter</th>
+<th>Natív (Kotlin/Swift)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Keresztplatformos</strong></td>
+<td>Igen, iOS és Android</td>
+<td>Igen, iOS és Android</td>
+<td>Nem, platformonként külön kódbázis</td>
+</tr>
+<tr>
+<td><strong>JavaScript / TypeScript ökoszisztéma</strong></td>
+<td>Teljes körű TS támogatás</td>
+<td>Dart nyelv, elkülönült ökoszisztéma</td>
+<td>Kotlin/Swift, nincs JS integráció</td>
+</tr>
+<tr>
+<td><strong>EAS build</strong></td>
+<td>Natívan támogatott</td>
+<td>Nem elérhető</td>
+<td>Nem elérhető</td>
+</tr>
+<tr>
+<td><strong>Natív modulok és library támogatás</strong></td>
+<td>Széles, aktív közösség</td>
+<td>Növekvő, de szűkebb</td>
+<td>Teljes natív hozzáférés</td>
+</tr>
+<tr>
+<td><strong>Fejlesztési sebesség</strong></td>
+<td>Gyors, hot reload</td>
+<td>Gyors, hot reload</td>
+<td>Lassabb, platformspecifikus</td>
+</tr>
+<tr>
+<td><strong>Teljesítmény</strong></td>
+<td>Közel natív</td>
+<td>Közel natív, Skia renderer</td>
+<td>Natív teljesítmény</td>
+</tr>
+</tbody>
+</table>
+<figcaption>
+<p><span class="caption-prefix">Table 1.</span> Elemzett mobilfejlesztési platformok összehasonlítása</p>
+</figcaption>
+</figure>
+<h2 id="terkepszolgaltatas">Térképszolgáltatás<a class="headerlink" href="#terkepszolgaltatas" title="Permanent link">¶</a></h2>
+<p>A választás a MapLibre-re esett. Egyedüliként tette lehetővé a térképcsempék saját infrastruktúrán, Martin tile szerverrel történő kiszolgálását, emellett nyílt forráskódú, ingyenes, támogatja az offline térképeket, és a stílusa teljes körűen testreszabható.</p>
+<details class="info">
+<summary>Webes kiegészítés</summary>
+<p>Az fenti bekezdés a webes változatban került hozzá a meglévő szakaszhoz, a szakdolgozat hosszára tekintettel, a szakdolgozatból kihagytam.</p>
+</details>
+<figure id="__table-caption_2">
+<table>
+<thead>
+<tr>
+<th>Szempont</th>
+<th>MapLibre</th>
+<th>Google Maps / Apple Maps</th>
+<th>Mapbox</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Önhoszolt tile server</strong></td>
+<td>Igen, Martin tile szerverrel</td>
+<td>Nem</td>
+<td>Nem</td>
+</tr>
+<tr>
+<td><strong>Nyílt forráskód</strong></td>
+<td>Igen, MIT licenc</td>
+<td>Nem</td>
+<td>Részben</td>
+</tr>
+<tr>
+<td><strong>React Native támogatás</strong></td>
+<td>Igen, hivatalos csomag</td>
+<td>Igen</td>
+<td>Igen</td>
+</tr>
+<tr>
+<td><strong>Költség</strong></td>
+<td>Ingyenes</td>
+<td>Forgalomalapú díjszabás</td>
+<td>Forgalomalapú díjszabás</td>
+</tr>
+<tr>
+<td><strong>Offline térkép támogatás</strong></td>
+<td>Igen</td>
+<td>Korlátozott</td>
+<td>Igen, de fizetős</td>
+</tr>
+<tr>
+<td><strong>Stílus testreszabhatóság</strong></td>
+<td>Teljes körű</td>
+<td>Korlátozott</td>
+<td>Teljes körű</td>
+</tr>
+</tbody>
+</table>
+<figcaption>
+<p><span class="caption-prefix">Table 2.</span> Elemzett térképszolgáltatások összehasonlítása</p>
+</figcaption>
+</figure>
+<h2 id="autentikacio">Autentikáció<a class="headerlink" href="#autentikacio" title="Permanent link">¶</a></h2>
+<p>A választás a Keycloakra esett, a kezdetben tervezett Firebase Authentication helyett. A Keycloak saját infrastruktúrán, akár Raspberry Pi-n is futtatható, natívan támogatja a PKCE-t és teljes körűen az OAuth2 és OpenID Connect szabványokat, valamint beépített felhasználókezelő felülettel rendelkezik. Egy saját megoldás ugyanezt csak jóval nagyobb fejlesztési ráfordítással és biztonsági kockázattal nyújtotta volna.</p>
+<details class="info">
+<summary>Webes kiegészítés</summary>
+<p>Az fenti bekezdés a webes változatban került hozzá a meglévő szakaszhoz, a szakdolgozat hosszára tekintettel, a szakdolgozatból kihagytam.</p>
+</details>
+<figure id="__table-caption_3">
+<table>
+<thead>
+<tr>
+<th>Szempont</th>
+<th>Keycloak</th>
+<th>Firebase Auth</th>
+<th>Custom megoldás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Önhoszolható</strong></td>
+<td>Igen, Raspberry Pi-n is</td>
+<td>Nem, Google infrastruktúra</td>
+<td>Igen</td>
+</tr>
+<tr>
+<td><strong>Nyílt forráskód</strong></td>
+<td>Igen</td>
+<td>Nem</td>
+<td>Igen</td>
+</tr>
+<tr>
+<td><strong>PKCE támogatás</strong></td>
+<td>Igen, natív</td>
+<td>Korlátozott</td>
+<td>Manuálisan implementálandó</td>
+</tr>
+<tr>
+<td><strong>OAuth2 / OpenID Connect</strong></td>
+<td>Teljes körű</td>
+<td>Részleges</td>
+<td>Manuálisan implementálandó</td>
+</tr>
+<tr>
+<td><strong>Felhasználókezelés</strong></td>
+<td>Beépített admin felület</td>
+<td>Beépített</td>
+<td>Teljes egészében egyedi</td>
+</tr>
+<tr>
+<td><strong>Fejlesztési komplexitás</strong></td>
+<td>Közepes</td>
+<td>Alacsony</td>
+<td>Magas</td>
+</tr>
+</tbody>
+</table>
+<figcaption>
+<p><span class="caption-prefix">Table 3.</span> Elemzett autentikációs megoldások összehasonlítása</p>
+</figcaption>
+</figure>
+<h2 id="backend-keretrendszer">Backend keretrendszer<a class="headerlink" href="#backend-keretrendszer" title="Permanent link">¶</a></h2>
+<p>A választás a NestJS-re esett. Mivel a frontendhez hasonlóan TypeScript nyelvre épül, a fejlesztés során nem kellett több programozási nyelvet párhuzamosan elsajátítani, emellett moduláris architektúrát, natív TypeORM integrációt és beépített Swagger támogatást biztosít. A korábbi C# tapasztalataim ellenére a közös nyelv előnye döntött a .NET-tel szemben.</p>
+<details class="info">
+<summary>Webes kiegészítés</summary>
+<p>Az fenti bekezdés a webes változatban került hozzá a meglévő szakaszhoz, a szakdolgozat hosszára tekintettel, a szakdolgozatból kihagytam.</p>
+</details>
+<figure id="__table-caption_4">
+<table>
+<thead>
+<tr>
+<th>Szempont</th>
+<th>NestJS</th>
+<th>.NET</th>
+<th>Express / Fastify</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TypeScript natív támogatás</strong></td>
+<td>Igen, teljes körű</td>
+<td>Igen (C#)</td>
+<td>Részleges, konfigurációt igényel</td>
+</tr>
+<tr>
+<td><strong>Moduláris architektúra</strong></td>
+<td>Igen, dekorátor alapú</td>
+<td>Igen</td>
+<td>Nem, manuálisan kialakítandó</td>
+</tr>
+<tr>
+<td><strong>TypeORM integráció</strong></td>
+<td>Natív, beépített support</td>
+<td>Nincs, Entity Framework</td>
+<td>Lehetséges, de nem natív</td>
+</tr>
+<tr>
+<td><strong>Swagger / OpenAPI</strong></td>
+<td>Beépített modul</td>
+<td>Beépített</td>
+<td>Külön csomag szükséges</td>
+</tr>
+<tr>
+<td><strong>Tanulási görbe</strong></td>
+<td>Közepes (Angular-szerű)</td>
+<td>Közepes</td>
+<td>Alacsony</td>
+</tr>
+<tr>
+<td><strong>Közösség és ökoszisztéma</strong></td>
+<td>Aktív, növekvő</td>
+<td>Nagy, vállalati</td>
+<td>Nagyon nagy, de heterogén</td>
+</tr>
+</tbody>
+</table>
+<figcaption>
+<p><span class="caption-prefix">Table 4.</span> Elemzett backend keretrendszerek összehasonlítása</p>
+</figcaption>
+</figure>
+<h2 id="adatbazis-es-kapcsolodo-technologiak">Adatbázis és kapcsolódó technológiák<a class="headerlink" href="#adatbazis-es-kapcsolodo-technologiak" title="Permanent link">¶</a></h2>
+<p>A választás a PostgreSQL-re esett. A PostGIS kiterjesztéssel teljes körű térinformatikai lekérdezéseket támogat, kiválóan kezeli az összetett relációkat, nyílt forráskódú, és megbízhatóan fut Raspberry Pi-n is. A választásban szerepet játszott a széles körű ipari elterjedtsége és a Linux alapú környezetekhez való illeszkedése is.</p>
+<details class="info">
+<summary>Webes kiegészítés</summary>
+<p>Az fenti bekezdés a webes változatban került hozzá a meglévő szakaszhoz, a szakdolgozat hosszára tekintettel, a szakdolgozatból kihagytam.</p>
+</details>
+<figure id="__table-caption_5">
+<table>
+<thead>
+<tr>
+<th>Szempont</th>
+<th>PostgreSQL</th>
+<th>MySQL</th>
+<th>MongoDB</th>
+<th>SQLite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Geospatiális lekérdezések</strong></td>
+<td>Igen, PostGIS</td>
+<td>Korlátozott</td>
+<td>Igen, GeoJSON</td>
+<td>Korlátozott</td>
+</tr>
+<tr>
+<td><strong>TypeORM támogatás</strong></td>
+<td>Teljes körű</td>
+<td>Teljes körű</td>
+<td>Részleges</td>
+<td>Teljes körű</td>
+</tr>
+<tr>
+<td><strong>Összetett relációk</strong></td>
+<td>Kiváló</td>
+<td>Jó</td>
+<td>Gyenge</td>
+<td>Jó</td>
+</tr>
+<tr>
+<td><strong>Raspberry Pi-n futtatható</strong></td>
+<td>Igen</td>
+<td>Igen</td>
+<td>Igen, erőforrásigényes</td>
+<td>Igen</td>
+</tr>
+<tr>
+<td><strong>Megbízhatóság</strong></td>
+<td>Kiváló</td>
+<td>Jó</td>
+<td>Jó</td>
+<td>Korlátozott (beágyazott)</td>
+</tr>
+<tr>
+<td><strong>Licenc</strong></td>
+<td>Nyílt forráskód</td>
+<td>Nyílt forráskód</td>
+<td>SSPL (részben zárt)</td>
+<td>Nyílt forráskód</td>
+</tr>
+</tbody>
+</table>
+<figcaption>
+<p><span class="caption-prefix">Table 5.</span> Elemzett adatbázis technológiák összehasonlítása</p>
+</figcaption>
+</figure>
 
 
 
@@ -3109,7 +3570,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>

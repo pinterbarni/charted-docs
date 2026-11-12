@@ -2995,7 +2995,9 @@
 
 
 <h1 id="lokalizacio">Lokalizáció<a class="headerlink" href="#lokalizacio" title="Permanent link">¶</a></h1>
-<p>TODO</p>
+<p>A lokalizáció az <code>i18next</code> és <code>react-i18next</code> könyvtárakra épül. A fordítási kulcsok JSON fájlokban vannak. A rendszernyelv detektálása az <code>expo-localization</code> <code>getLocales()</code> metódusával történik. Ha nem elérhető, van fallback nyelv. A felhasználó manuálisan nem változtathatja meg a nyelvbeállítást az alkalmazáson belül.</p>
+<p>A mértékegység lokalizáció a <code>formatDistance()</code>, <code>formatElevation()</code>, <code>formatTime()</code> és <code>formatPace()</code> segédfüggvényekkel valósul meg, amelyek a <code>settingsStore</code> <code>unitOfMeasurementSystem</code> értéke alapján metrikus vagy birodalmi egységeket alkalmaznak. A számformázás a natív <code>toLocaleString()</code> metódussal történik, biztosítja a tizedes- és ezres elválasztók helyes megjelenítését.</p>
+<p>Ismert korlát: a rendszer által megjelenített engedélykérő dialógusok (helymeghatározás, értesítések) mindig a rendszernyelven jelennek meg, az alkalmazás lokalizációs beállításától függetlenül, mivel ezek az operációs rendszer saját felhasználói felületei. Ezért minden egyes natív hívás előtt meg kell ejelníteni egy, az alkalmazáson bellüli modált, hogy elmagyarázzuk a felhasználónak mi fog történni, választási lehetőslget biztosítva.</p>
 
 
 
@@ -3109,7 +3111,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.instant.preview", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "announce.dismiss", "content.footnote.tooltips"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.term.missing": "\u00dcres", "select.version": "Verzi\u00f3v\u00e1lt\u00e1s"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>
