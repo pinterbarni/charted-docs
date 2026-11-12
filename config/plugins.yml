@@ -2,6 +2,7 @@ INHERIT: base.yml
 
 plugins:
   - search
+  - glightbox #git commit -m "feat: open images in a lightbox on click"
   - i18n:
       docs_structure: suffix
       fallback_to_default: true
