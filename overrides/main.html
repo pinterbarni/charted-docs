@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block extrahead %}
+  <link rel="apple-touch-icon" href="{{ 'assets/images/brand/apple-touch-icon.png' | url }}">
+{% endblock %}
+
 {% block announce %}
   {%- if i18n_page_locale == "en" -%}
     The English translation is in progress, the complete thesis is available in <a href="{{ base_url }}/hu/{{ page.url }}">Hungarian</a>. This is the living version of the thesis; the submitted text is version 1.0.0.

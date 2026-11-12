@@ -8,7 +8,7 @@ hide:
 
 # Charted
 
-Todo description
+TODO
 
 ## Összefoglaló
 
@@ -52,6 +52,8 @@ TODO
 
 </div>
 
+![Charted](assets/images/brand/hero.png){ .hero .off-glb width="480" }
+
 ## Technológiák
 
 - **Mobil:** React Native, Expo, MapLibre
@@ -59,3 +61,5 @@ TODO
 - **Térkép és útvonaltervezés:** Valhalla, Martin
 - **Hitelesítés:** Keycloak (OAuth2, PKCE)
 - **Infrastruktúra:** Docker Compose, Drone CI, két Raspberry Pi
+
+<!-- ![Charted](assets/images/brand/hero.png){ .hero .off-glb width="480" } -->
