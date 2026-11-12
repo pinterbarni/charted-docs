@@ -1,0 +1,13 @@
+sequenceDiagram
+participant App as Mobil App
+participant KC as Keycloak
+participant BFF as NestJS BFF
+
+    App->>KC: Authorization Code kérés (PKCE)
+    KC-->>App: Authorization Code
+    App->>KC: Token csere (code + code_verifier)
+    KC-->>App: access_token + refresh_token
+    App->>App: signIn(tokens) - authStore-ba menti
+    App->>BFF: POST /api/profile/me
+    BFF-->>App: Profile
+    

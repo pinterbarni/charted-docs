@@ -36,16 +36,21 @@ theme:
     - toc.follow
     - search.suggest
     - announce.dismiss
+    - content.footnote.tooltips
 
 markdown_extensions:
   - admonition
   - attr_list
   - md_in_html
+  - footnotes
   - pymdownx.details
   - pymdownx.blocks.caption
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.snippets:
+      base_path: [diagrams, snippets]
+      check_paths: true
   - toc:
       permalink: true
   - plantuml_markdown:
@@ -55,6 +60,9 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+
+validation:
+  anchors: warn
 
 extra:
   generator: false
