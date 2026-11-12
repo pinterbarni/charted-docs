@@ -5,7 +5,7 @@ description: TODO
 
 # Jogosultságok és rendszerintegráció
 
-## Foreground lokáció hozzáférés elfogadása első alkalmazás megnyitásakor
+## Foreground lokáció hozzáférés elfogadása első alkalmazás megnyitásakor { data-toc-label="Előtéri lokáció elfogadása" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -14,7 +14,7 @@ description: TODO
 | **3** | a natív lokációs engedélykérő ablak megjelent | a felhasználó engedélyezi a foreground lokáció hozzáférést | az engedély megadásra kerül és az alkalmazás visszatér a térkép nézetre |
 | **4** | a foreground lokáció engedélyezve van | az alkalmazás aktív állapotban van | a start tracking gomb aktívvá válik a térképen és a folyamat sikeresen lezárul |
 
-## Foreground lokáció hozzáférés megtagadása első megnyitáskor, majd újrakérés következő megnyitáskor
+## Foreground lokáció hozzáférés megtagadása első megnyitáskor, majd újrakérés következő megnyitáskor { data-toc-label="Előtéri lokáció megtagadása" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -22,7 +22,7 @@ description: TODO
 | **2** | a felhasználó nem fogadta el a lokációt | nem történik elfogadás | natív engedélykérő ablak nem jelenik meg |
 | **3** | a felhasználó bezárja az alkalmazást | újranyitja azt | az alkalmazás újra megjeleníti a foreground lokáció engedélykérő modált |
 
-## Notification hozzáférés elfogadása
+## Notification hozzáférés elfogadása { data-toc-label="Értesítések elfogadása" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -30,14 +30,14 @@ description: TODO
 | **2** | a notification modál megjelent | a felhasználó elfogadja | megjelenik a natív notification engedélykérő ablak |
 | **3** | a natív engedélykérő megjelent | a felhasználó engedélyezi | a notification hozzáférés megadásra kerül |
 
-## Notification hozzáférés megtagadása, majd többszöri használat után újrakérés
+## Notification hozzáférés megtagadása, majd többszöri használat után újrakérés { data-toc-label="Értesítések megtagadása" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
 | **1** | a felhasználó autentikált és a notification modál megjelent | a felhasználó elutasítja a notification hozzáférést | a hozzáférés nem kerül megadásra |
 | **2** | a felhasználó többször újranyitja az alkalmazást (3 vagy 5 alkalom) | az alkalmazás újra megnyílik | egyszer ismét megjelenik a notification engedélykérő modál |
 
-## Lokáció hozzáférés kérése után a felhasználó trackelést indít, majd background lokáció hozzáférés elfogadása
+## Lokáció hozzáférés kérése után a felhasználó trackelést indít, majd background lokáció hozzáférés elfogadása { data-toc-label="Háttér lokáció elfogadása" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -45,7 +45,7 @@ description: TODO
 | **2** | a background lokációt kérő modál megjelent | a felhasználó elfogadja | az alkalmazás a natív beállítási felületre navigál |
 | **3** | a natív engedélykérő megjelent | a felhasználó engedélyezi a background lokációt | a hozzáférés megadásra kerül és a trackelés teljes funkcionalitással működik |
 
-## Background lokáció hozzáférés megtagadása esetén az alkalmazás működik, de háttérben nem számol, figyelmeztető megjelenik
+## Background lokáció hozzáférés megtagadása esetén az alkalmazás működik, de háttérben nem számol, figyelmeztető megjelenik { data-toc-label="Háttér lokáció megtagadása" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -54,7 +54,7 @@ description: TODO
 | **3** | a figyelmeztető modál megjelent | a felhasználó folytatja | a trackelés elindul, de háttérben nem működik |
 | **4** | a felhasználó többször újraindítja a trackelést | a start gombra kattint | újra megjelenik a modál, amely lehetőséget ad beállítások megnyitására vagy folytatásra |
 
-## Trackelés elindítása és túra sikeres végrehajtása (happy path)
+## Trackelés elindítása és túra sikeres végrehajtása (happy path) { data-toc-label="Trackelés (happy path)" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -63,7 +63,7 @@ description: TODO
 | **3** | a trackelés folyamatban van | a felhasználó megnyomja a pause gombot | megjelenik egy összesítő (hike review) modál |
 | **4** | az összesítő modál megjelent | a felhasználó megadja a túra nevét és hosszú nyomással befejezi | a túra mentésre kerül és az alkalmazás visszajelzést ad a sikeres mentésről |
 
-## Background lokáció hozzáférés félrekattintása natív modálon, majd figyelmeztető kezelése
+## Background lokáció hozzáférés félrekattintása natív modálon, majd figyelmeztető kezelése { data-toc-label="Háttér lokáció félrekattintása" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -73,7 +73,7 @@ description: TODO
 | **4** | a figyelmeztető modál megjelent | a felhasználó az engedélyezés opciót választja | az alkalmazás a beállítások felületre navigál, ahol a hozzáférés módosítható |
 | **5** | a figyelmeztető modál megjelent | a felhasználó úgy dönt, hogy engedély nélkül folytatja | a trackelés elindul, de background működés nélkül |
 
-## Notification permission elfogadása utáni viselkedés
+## Notification permission elfogadása utáni viselkedés { data-toc-label="Értesítések elfogadása után" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|

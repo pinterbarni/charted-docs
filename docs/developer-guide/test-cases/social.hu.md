@@ -4,7 +4,7 @@ description: TODO
 
 # Szociális funkciók
 
-## Másik felhasználó riportolása indoklás nélkül (sikertelen)
+## Másik felhasználó riportolása indoklás nélkül (sikertelen) { data-toc-label="Riport indoklás nélkül" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -12,20 +12,20 @@ description: TODO
 | **2** | a műveleti modál megjelent | a felhasználó a report user opcióra kattint | megjelenik a riportáló felület |
 | **3** | a riportáló felület megjelent | a felhasználó indoklás nélkül próbálja elküldeni a riportot | a riport nem küldhető el |
 
-## Másik felhasználó riportolása sikeresen
+## Másik felhasználó riportolása sikeresen { data-toc-label="Sikeres riport" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
 | **1** | a felhasználó egy másik felhasználó profil oldalán van | a három pontra kattint és kiválasztja a report user opciót | megjelenik a riportáló felület |
 | **2** | a riportáló felület megjelent | a felhasználó megad egy indoklást és elküldi | a riport elküldésre kerül és sikeres visszajelző üzenet jelenik meg |
 
-## Másik felhasználó többszöri riportolásának tiltása
+## Másik felhasználó többszöri riportolásának tiltása { data-toc-label="Ismételt riport tiltása" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
 | **1** | a felhasználó már riportolt egy másik felhasználót | újra megpróbálja riportolni ugyanazt a felhasználót | a riport nem küldhető el újra |
 
-## Másik felhasználó blokkolása
+## Másik felhasználó blokkolása { data-toc-label="Blokkolás" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -34,7 +34,7 @@ description: TODO
 | **3** | a megerősítő modál megjelent | megerősíti a blokkolást | a felhasználó blokkolásra kerül és visszajelző üzenet jelenik meg |
 | **4** | a blokkolás megtörtént | a felhasználó profilját újra megtekinti | a felhasználó blokkolt állapotban van és a tartalom nem elérhető |
 
-## Blokkolt felhasználó feloldása a blokkolt listából
+## Blokkolt felhasználó feloldása a blokkolt listából { data-toc-label="Blokkolás feloldása" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -44,7 +44,7 @@ description: TODO
 | **4** | a blokkolt felhasználó profil oldala megjelent | rákattint az unblock gombra | a felhasználó feloldásra kerül és sikeres visszajelző üzenet jelenik meg |
 | **5** | a felhasználó feloldásra került | a profil oldalon marad | lehetősége van azonnal bekövetni a felhasználót |
 
-## Felhasználó blokkolása, aki már követ minket
+## Felhasználó blokkolása, aki már követ minket { data-toc-label="Követő blokkolása" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -52,7 +52,7 @@ description: TODO
 | **2** | a blokkolás megtörtént | a rendszer frissíti az adatokat | a követési kapcsolat mindkét irányban megszűnik |
 | **3** | a kapcsolat megszűnt | a számokat megtekintjük | a mi követőink száma csökken egyel és a másik felhasználó követéseinek száma is csökken egyel |
 
-## Felhasználó rákeres egy másik felhasználóra és beköveti
+## Felhasználó rákeres egy másik felhasználóra és beköveti { data-toc-label="Keresés és követés" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -60,7 +60,7 @@ description: TODO
 | **2** | a találati lista megjelent | kiválaszt egy felhasználót | megnyílik annak a profil oldala |
 | **3** | a felhasználó profil oldalon van | rákattint a follow gombra | a követés létrejön és a követők száma növekszik, valamint visszajelző üzenet jelenik meg |
 
-## Felhasználó egy követett felhasználót kikövet
+## Felhasználó egy követett felhasználót kikövet { data-toc-label="Kikövetés" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|

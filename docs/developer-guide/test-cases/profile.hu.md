@@ -5,7 +5,7 @@ description: TODO
 
 # Profil és felhasználói adatok
 
-## Greenfield felhasználó első navigációja a profil oldalra
+## Greenfield felhasználó első navigációja a profil oldalra { data-toc-label="Új felhasználó profilja" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -15,7 +15,7 @@ description: TODO
 | **4** | a felhasználó a recently shared szekcióra navigál | megnyitja | más felhasználók túráit látja |
 | **5** | a felhasználó az offline trails szekciót nyitja meg | nincs adat | „no offline trails” üzenet jelenik meg |
 
-## Greenfield felhasználó túratervezés után navigál a profil oldalra
+## Greenfield felhasználó túratervezés után navigál a profil oldalra { data-toc-label="Profil túratervezés után" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -23,7 +23,7 @@ description: TODO
 | **2** | a túrák listája megjelent | a felhasználó rákattint egy túrára | megjelenik a túra térképes nézete és metrikái |
 | **3** | a felhasználó nem a fő listát használja | a More opcióra kattint | egy részletes listaoldalra navigál |
 
-## Felhasználó más által trackelt túraútvonal megtekintése
+## Felhasználó más által trackelt túraútvonal megtekintése { data-toc-label="Más túrájának megtekintése" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -31,34 +31,34 @@ description: TODO
 | **2** | a másik felhasználó profil oldala megjelent | a felhasználó kiválaszt egy túraútvonalat | a túra betöltődik térképen |
 | **3** | a túra betöltődött | a felhasználó megtekinti | láthatóvá válnak a túra metrikái és adatai |
 
-## Felhasználó saját túrái közül egy megtekintése
+## Felhasználó saját túrái közül egy megtekintése { data-toc-label="Saját túra megtekintése" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
 | **1** | a felhasználó rendelkezik saját túrával | a MyHikes szekcióra navigál | megjelennek a saját túrái |
 | **2** | a lista megjelent | kiválaszt egy túrát | megjelenik a túra részletes nézete |
 
-## Felhasználó túra megtekintése lista oldalról, további részletek megnyitása
+## Felhasználó túra megtekintése lista oldalról, további részletek megnyitása { data-toc-label="Túra a listanézetből" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
 | **1** | a felhasználó a profil oldalon van | a lista alján található további opcióra kattint | egy teljes listaoldalra navigál |
 | **2** | a listaoldal megjelent | kiválaszt egy elemet | megnyílik a túra részletes nézete |
 
-## Felhasználó megpróbálja megtekinteni követőit/követéseit, de még nincs adat
+## Felhasználó megpróbálja megtekinteni követőit/követéseit, de még nincs adat { data-toc-label="Üres követői lista" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
 | **1** | a felhasználó profil oldalon van és nincs követője | rákattint a követők vagy követések számra | nem történik navigáció vagy változás |
 
-## Felhasználó megtekinti követőit/követéseit és egy profilra navigál
+## Felhasználó megtekinti követőit/követéseit és egy profilra navigál { data-toc-label="Követők és profil" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
 | **1** | a felhasználó követ más felhasználókat | a profil oldalon a követésekre kattint | megjelenik a lista |
 | **2** | a lista megjelent | kiválaszt egy felhasználót | megnyílik annak a profil oldala |
 
-## Felhasználó megpróbálja módosítani a nevét sikertelenül
+## Felhasználó megpróbálja módosítani a nevét sikertelenül { data-toc-label="Névmódosítás sikertelen" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -66,32 +66,32 @@ description: TODO
 | **2** | a szerkesztő felület megjelent | üres nevet ad meg | a mentés nem lehetséges |
 | **3** | a felhasználó túl hosszú nevet próbál megadni | beírja | a rendszer nem engedi a limit fölé |
 
-## Felhasználó sikeresen módosítja a nevét
+## Felhasználó sikeresen módosítja a nevét { data-toc-label="Névmódosítás sikeres" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
 | **1** | a felhasználó a név szerkesztő felületen van | megfelelő hosszúságú nevet ad meg és ment | a név frissül és egy visszajelző üzenet jelenik meg |
 
-## Felhasználó módosítja a bióját
+## Felhasználó módosítja a bióját { data-toc-label="Bio módosítása" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
 | **1** | a felhasználó a bio szerkesztő felületen van | módosítja a biót (akár üresre is) | a módosítás elmenthető |
 | **2** | a felhasználó túl hosszú biót próbál megadni | beírja | a rendszer limitálja a hosszát |
 
-## Felhasználó túl hosszú biót próbál megadni
+## Felhasználó túl hosszú biót próbál megadni { data-toc-label="Túl hosszú bio" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
 | **1** | a felhasználó a bio szerkesztő felületen van | túl hosszú szöveget próbál beírni | a rendszer nem engedi a megengedett karakterszám fölé a bevitelt |
 
-## Felhasználó megtekinti offline túráit, de még nincs elérhető adat
+## Felhasználó megtekinti offline túráit, de még nincs elérhető adat { data-toc-label="Üres offline túralista" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
 | **1** | a felhasználó autentikált és a profil oldalon van | az offline trails szekcióra navigál | „no offline trails” üzenet jelenik meg |
 
-## Felhasználó offline túrát hoz létre, majd megtekinti azt
+## Felhasználó offline túrát hoz létre, majd megtekinti azt { data-toc-label="Offline túra létrehozása" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|

@@ -4,7 +4,7 @@ description: TODO
 
 # Offline működés
 
-## Offline működés, elmentett útvonalak elérhetősége
+## Offline működés, elmentett útvonalak elérhetősége { data-toc-label="Elmentett útvonalak offline" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -12,7 +12,7 @@ description: TODO
 | **2** | az alkalmazás offline módban van | a felhasználó a profil oldalra navigál | csak az offline elérhető túraútvonalak jelennek meg |
 | **3** | offline túrák megjelentek | a felhasználó kiválaszt egyet | a túra betöltődik és megtekinthető offline módban is |
 
-## Offline állapotban alkalmazás megnyitása autentikált felhasználóval
+## Offline állapotban alkalmazás megnyitása autentikált felhasználóval { data-toc-label="Offline megnyitás" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -21,7 +21,7 @@ description: TODO
 
 *Megjegyzés: Ez a teszteset nem került teljeskörűen tesztelésre, mivel a fejlesztői build nem biztosított megfelelő feltételeket az offline autentikáció validálására.*[^note-1]
 
-## Offline működés, nincs elérhető offline adat
+## Offline működés, nincs elérhető offline adat { data-toc-label="Nincs offline adat" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|

@@ -5,7 +5,7 @@ description: TODO
 
 # Autentikáció és session kezelés
 
-## Elfelejtett jelszó kérése, majd visszanavigálás az alkalmazás natív felületére
+## Elfelejtett jelszó kérése, majd visszanavigálás az alkalmazás natív felületére { data-toc-label="Elfelejtett jelszó, visszanavigálás" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -20,7 +20,7 @@ description: TODO
 | **9** | a webes login felület megjelent | a felhasználó megadja a felhasználónevét/email címét és az új jelszavát, majd bejelentkezik | az autentikáció sikeres és az alkalmazás a térkép oldalra navigál |
 | **10** | a felhasználó a login folyamatban van | megadja a felhasználónevét/email címét és az új jelszavát, majd bejelentkezik | az autentikáció sikeres és az alkalmazás a térkép oldalra navigál |
 
-## Elfelejtett jelszó kérése, majd autentikáció a redirect ablakon keresztül
+## Elfelejtett jelszó kérése, majd autentikáció a redirect ablakon keresztül { data-toc-label="Elfelejtett jelszó, redirect" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -32,7 +32,7 @@ description: TODO
 | **6** | a felhasználó visszatér az alkalmazásba | a webes autentikációs felület még nyitva van és login állapotban van | meg tudja adni a felhasználónevét és az új jelszavát |
 | **7** | a webes login felület megjelent | a felhasználó megadja a felhasználónevét/email címét és az új jelszavát, majd bejelentkezik | az autentikáció sikeres és az alkalmazás a térkép oldalra navigál |
 
-## Regisztráció, majd sikeres bejelentkezés
+## Regisztráció, majd sikeres bejelentkezés { data-toc-label="Regisztráció és bejelentkezés" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -42,14 +42,14 @@ description: TODO
 | **4** | minden szükséges adat megadásra került | a felhasználó rákattint a regisztráció gombra | a rendszer létrehozza a felhasználót és az alkalmazás a térkép oldalra navigál |
 | **5** | a felhasználó sikeresen regisztrált | az alkalmazás betölt | a felhasználó autentikált állapotban van és a térkép oldalt látja |
 
-## Sikeres autentikáció után alkalmazás bezárása, majd újranyitás után autentikált állapot megmarad
+## Sikeres autentikáció után alkalmazás bezárása, majd újranyitás után autentikált állapot megmarad { data-toc-label="Munkamenet megőrzése" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
 | **1** | a felhasználó sikeresen autentikálta magát és a térkép oldalon van | bezárja az alkalmazást | az alkalmazás leáll |
 | **2** | az alkalmazás korábban bezárásra került | a felhasználó újranyitja az alkalmazást | az alkalmazás a térkép oldalon tölt be és a felhasználó autentikált állapotban marad |
 
-## Kijelentkezés az alkalmazásból
+## Kijelentkezés az alkalmazásból { data-toc-label="Kijelentkezés" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
@@ -57,7 +57,7 @@ description: TODO
 | **2** | a felhasználó a profil oldalon van | a felhasználói kártyán a három pontra kattint | megjelenik egy modális ablak |
 | **3** | a modális ablak megjelent | a felhasználó kiválasztja a kijelentkezés opciót | az alkalmazás kijelentkezteti a felhasználót és visszanavigál a login felületre |
 
-## Offline állapotban a már autentikált felhasználó bejelentkezve marad, az alkalmazás megnyitható
+## Offline állapotban a már autentikált felhasználó bejelentkezve marad, az alkalmazás megnyitható { data-toc-label="Offline bejelentkezett állapot" }
 
 | Lépés | GIVEN | WHEN | THEN |
 |:---:|---|---|---|
