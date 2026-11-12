@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: Hogyan lehet webes felületen regisztrálni, bejelentkezni és elfelejtett jelszót visszaállítani, valamint hogyan marad meg a munkamenet.
 ---
 
 # Regisztráció és bejelentkezés

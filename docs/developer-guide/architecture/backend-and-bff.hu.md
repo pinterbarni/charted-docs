@@ -1,6 +1,6 @@
 ---
 title: Backend és BFF
-description: TODO
+description: A BFF minta szerepe, amelyen keresztül a mobilalkalmazás egyetlen NestJS belépési ponton éri el a belső szolgáltatásokat.
 ---
 
 # Backend és BFF architektúra

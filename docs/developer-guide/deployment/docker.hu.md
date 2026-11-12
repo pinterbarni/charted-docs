@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A Vesta és Janus szervereken futó konténerizált szolgáltatások áttekintése és az éles BFF Docker Compose alapú indítása.
 ---
 
 # Docker és infrastruktúra

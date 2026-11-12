@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A két Raspberry Pi szerver, a Janus edge proxy és a Vesta alkalmazásszerver szerepe, Tailscale kapcsolattal és telepítési diagramokkal.
 ---
 
 # Infrastruktúra

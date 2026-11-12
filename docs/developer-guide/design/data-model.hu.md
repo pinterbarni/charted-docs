@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: Az adatmodell tervezési döntései, mint a Keycloak azonosító elsődleges kulcsként, a JSONB alapú nyomvonaltárolás és a közösségi kapcsolatok kezelése.
 ---
 
 # Adatmodell tervezése

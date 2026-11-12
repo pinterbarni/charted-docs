@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A mobilalkalmazás fő könyvtárai és szerepük, az Expo és React Native alapoktól a MapLibre térképen és helymeghatározáson át a tesztelésig.
 ---
 
 # Technológiai stack

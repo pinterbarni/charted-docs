@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A V2 tervezett fejlesztései, a frontend refaktorálásától a teljes Valhalla integráción és mobil funkciókon át az infrastruktúra bővítéséig.
 ---
 
 # V2 fejlesztési lehetőségek

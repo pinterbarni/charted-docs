@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A fejlesztés során felmerült technikai nehézségek és megoldásaik, az Expo és MapLibre korlátaitól az autentikáción át az éles telepítésig.
 ---
 
 # Nehézségek és megoldások

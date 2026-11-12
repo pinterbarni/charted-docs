@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A mobilalkalmazás EAS build profiljai és buildelése, valamint a BFF jelenleg manuális, Docker alapú deploy folyamata.
 ---
 
 # CI/CD pipeline

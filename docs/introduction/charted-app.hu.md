@@ -1,6 +1,6 @@
 ---
 title: A Charted alkalmazás
-description: TODO
+description: A laikus túrázóknak készült Charted alkalmazás bemutatása, fő funkcióival, mint a térképes megjelenítés, az útvonalrögzítés és a POI-kezelés.
 ---
 
 # A Charted alkalmazás bemutatása

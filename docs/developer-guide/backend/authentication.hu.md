@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A Keycloak alapú PKCE bejelentkezés, a JWKS alapú tokenvalidáció, a tokenfrissítés és a végpontok globális guarddal történő védelme.
 ---
 
 # Authentikáció

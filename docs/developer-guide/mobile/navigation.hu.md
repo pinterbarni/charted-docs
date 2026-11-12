@@ -1,6 +1,6 @@
 ---
 title: Navigáció
-description: TODO
+description: Az expo-router alapú képernyőstruktúra a két útvonalcsoporttal, az autentikációs állapot szerinti átirányítással és a közös fejlécbeállításokkal.
 ---
 
 # Navigáció és képernyőstruktúra

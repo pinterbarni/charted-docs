@@ -1,6 +1,6 @@
 ---
 title: Cél és motiváció
-description: TODO
+description: A dolgozat céljai és a személyes motiváció, a saját Raspberry Pi infrastruktúrától az ipari módszertanokon át a térinformatikai tapasztalatszerzésig.
 ---
 
 # A dolgozat célja és motivációja

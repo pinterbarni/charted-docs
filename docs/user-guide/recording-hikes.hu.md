@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: Túrák valós idejű rögzítése az indítástól a szüneteltetésen és befejezésen át a mentésig, valamint a túrák és túratervek törlése.
 ---
 
 # Túra rögzítése és mentése

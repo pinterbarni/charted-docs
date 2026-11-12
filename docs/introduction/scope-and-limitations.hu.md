@@ -1,6 +1,6 @@
 ---
 title: Hatókör és korlátok
-description: TODO
+description: Mire terjed ki a dolgozat, és mi marad ki belőle, például a natív mobil megoldások, a komplex útvonaltervezés és az infrastruktúra részletei.
 ---
 
 # A dolgozat hatóköre és korlátai

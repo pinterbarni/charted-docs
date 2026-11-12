@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A MapLibre alapú térképintegráció, a Martin csempeszerver használata, a téma szerinti térképstílus és a térképen megjelenő geoadat rétegek.
 ---
 
 # Térképintegráció

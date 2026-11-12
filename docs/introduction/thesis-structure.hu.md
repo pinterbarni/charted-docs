@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A szakdolgozat fejezeteinek rövid áttekintése a bevezetéstől a felhasználói és fejlesztői dokumentáción át az összefoglalásig.
 ---
 
 # A dolgozat szerkezete

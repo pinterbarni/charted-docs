@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: Személyes tanulságok a projekt végén a szűkebb scope és a korai integráció fontosságáról, valamint a csapatmunka szerepéről.
 ---
 
 # Záró gondolatok

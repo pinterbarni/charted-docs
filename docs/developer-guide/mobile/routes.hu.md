@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A Valhalla alapú útvonaltervezés mobil oldali megvalósítása a polyline dekódolással, valamint az integráció jelenlegi, részleges állapota.
 ---
 
 # Útvonalkezelés

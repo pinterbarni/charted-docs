@@ -1,6 +1,6 @@
 ---
 title: Jogosultságok
-description: TODO
+description: Tesztesetek az előtéri és háttérbeli helyhozzáférés, valamint az értesítési engedélyek elfogadására, megtagadására és újrakérésére.
 ---
 
 # Jogosultságok és rendszerintegráció

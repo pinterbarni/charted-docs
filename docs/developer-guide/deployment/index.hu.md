@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A fejlesztői környezet felállítása, az éles Docker infrastruktúra, a környezeti változók, valamint a mobil és backend build és deploy folyamata.
 template: section-index.html
 ---
 

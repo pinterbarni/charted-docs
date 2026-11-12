@@ -1,6 +1,6 @@
 ---
 title: Profil
-description: TODO
+description: A profiloldal tesztesetei új és meglévő felhasználóval, a túrák és követők megtekintésétől a név és bio szerkesztéséig és az offline túrákig.
 ---
 
 # Profil és felhasználói adatok

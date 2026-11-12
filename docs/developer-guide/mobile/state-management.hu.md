@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A Zustand alapú globális állapotkezelés négy store-ja, az autentikáció, a helyi állapot, a beállítások és a hibakezelés feladataival.
 ---
 
 # Állapotkezelés

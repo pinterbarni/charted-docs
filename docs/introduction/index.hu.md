@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A bevezető fejezet a dolgozat célját, a Charted alkalmazást, a felhasznált technológiákat, a hatókört és a dolgozat szerkezetét mutatja be.
 template: section-index.html
 ---
 

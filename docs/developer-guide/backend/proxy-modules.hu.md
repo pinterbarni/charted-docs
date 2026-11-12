@@ -1,6 +1,5 @@
 ---
-todo: true
-description: TODO
+description: Hogyan továbbítja a BFF a csempe- és útvonaltervezési kéréseket a Martin tile serverhez és a Valhallához, elrejtve a belső címeket.
 ---
 
 # Proxy modulok

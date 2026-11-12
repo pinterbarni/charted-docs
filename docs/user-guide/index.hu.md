@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A Charted végfelhasználói útmutatója a rendszerkövetelményektől a bejelentkezésen, túrarögzítésen és útvonaltervezésen át a közösségi funkciókig.
 template: section-index.html
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Autentikáció
-description: TODO
+description: Tesztesetek a regisztrációhoz, a bejelentkezéshez, az elfelejtett jelszó két folyamatához, a kijelentkezéshez és a munkamenet megőrzéséhez.
 ---
 
 # Autentikáció és session kezelés

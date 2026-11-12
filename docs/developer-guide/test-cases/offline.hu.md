@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: Az offline működés tesztesetei, az elmentett útvonalak elérhetősége, az alkalmazás offline megnyitása és az üres offline lista kezelése.
 ---
 
 # Offline működés

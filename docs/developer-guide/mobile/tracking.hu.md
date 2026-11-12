@@ -1,6 +1,6 @@
 ---
 title: Túrarögzítés és GPS
-description: TODO
+description: A háttérben is működő GPS túrarögzítés, a trackpointok és metrikák számítása, a sebességfigyelmeztetés és a követési állapotgép.
 ---
 
 # Túrarögzítés és GPS követés

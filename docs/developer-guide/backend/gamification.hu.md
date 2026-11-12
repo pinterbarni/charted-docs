@@ -1,6 +1,6 @@
 ---
 title: Gamifikáció
-description: TODO
+description: A megtett össztávolságból dinamikusan számított szintrendszer, amelynek küszöbei ikonikus túraútvonalakhoz és földrajzi méretekhez igazodnak.
 ---
 
 # Gamifikációs logika

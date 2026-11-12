@@ -1,6 +1,6 @@
 ---
 title: Konfiguráció
-description: TODO
+description: A mobilalkalmazás bundle-be kerülő és a BFF backend környezeti változói, valamint az .env fájlok verziókezelésen kívüli kezelése.
 ---
 
 # Környezeti változók és konfiguráció

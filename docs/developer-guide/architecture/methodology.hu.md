@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: Az egyszemélyes fejlesztés menete a Vikunjával követett sprintektől a projekt későbbi szakaszában alkalmazott vízesésmodellig.
 ---
 
 # Fejlesztési módszertan

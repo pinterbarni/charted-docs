@@ -1,6 +1,6 @@
 ---
 title: Beállítások
-description: TODO
+description: A mértékegység váltásának és megőrzésének, valamint a sötét mód automatikus és manuális beállításának tesztesetei.
 ---
 
 # Beállítások és preferenciák

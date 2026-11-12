@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A fejlesztés nehézségeinek és tanulságainak összegzése, a V2 fejlesztési lehetőségei és a szakdolgozatot lezáró záró gondolatok.
 template: section-index.html
 ---
 

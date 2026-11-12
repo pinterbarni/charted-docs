@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A felület fordítása i18next segítségével, a rendszernyelv felismerése, a mértékegységek formázása és a natív engedélykérők nyelvi korlátja.
 ---
 
 # Lokalizáció

@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A mikroszolgáltatás-alapú tervtől a moduláris, monolith-first backendig vezető architekturális döntés és annak indoklása.
 ---
 
 # Architekturális döntések

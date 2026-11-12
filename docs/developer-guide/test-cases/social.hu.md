@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A közösségi funkciók tesztesetei a felhasználók keresésével, követésével, kikövetésével, blokkolásával, feloldásával és jelentésével.
 ---
 
 # Szociális funkciók
