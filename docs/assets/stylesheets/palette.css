@@ -1,0 +1,52 @@
+/* Brand colors from the mobile app (constants/theme.constants.ts in charted-mobile). */
+
+:root {
+  --charted-lime: #42ff00; /* fullGreen 50, only readable on dark surfaces */
+}
+
+/* Light scheme. */
+[data-md-color-primary="custom"] {
+  --md-primary-fg-color: #286912; /* fullGreen 300 */
+  --md-primary-fg-color--light: #8faf84; /* fullGreen 200 */
+  --md-primary-fg-color--dark: #2f4229; /* fullGreen 400 */
+  --md-primary-bg-color: #fcfdfc; /* neutralGreen 50 */
+  --md-primary-bg-color--light: rgba(252, 253, 252, 0.7);
+}
+
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color: #2f4229; /* fullGreen 400 */
+  --md-accent-fg-color--transparent: rgba(47, 66, 41, 0.1);
+  --md-accent-bg-color: #fcfdfc;
+  --md-accent-bg-color--light: rgba(252, 253, 252, 0.7);
+}
+
+/* Light mode footer in the app's dark greens instead of neutral gray. */
+[data-md-color-scheme="default"] {
+  --md-footer-bg-color: #2f4229; /* fullGreen 400 */
+  --md-footer-bg-color--dark: #091f01; /* neutralGreen 800 */
+  --md-footer-fg-color: #fcfdfc; /* neutralGreen 50 */
+  --md-footer-fg-color--light: rgba(252, 253, 252, 0.75);
+  --md-footer-fg-color--lighter: rgba(252, 253, 252, 0.5);
+}
+
+/* Dark scheme: tint Material's slate toward the app's neutral greens,
+   with near-white text based on neutralGreen 50. */
+[data-md-color-scheme="slate"] {
+  --md-hue: 106; /* hue of neutralGreen 700 */
+  --md-default-fg-color: rgba(252, 253, 252, 0.95);
+  --md-default-fg-color--light: rgba(252, 253, 252, 0.85);
+  --md-default-fg-color--lighter: rgba(252, 253, 252, 0.45);
+  --md-default-fg-color--lightest: rgba(252, 253, 252, 0.12);
+  --md-typeset-color: var(--md-default-fg-color);
+}
+
+[data-md-color-scheme="slate"][data-md-color-primary="custom"] {
+  --md-primary-fg-color: #525a50; /* neutral 300, the app's dark header */
+  --md-primary-fg-color--dark: #424c3f; /* neutralGreen 700 */
+  --md-typeset-a-color: #8faf84; /* fullGreen 200 */
+}
+
+[data-md-color-scheme="slate"][data-md-color-accent="custom"] {
+  --md-accent-fg-color: #cbd9c7; /* neutralGreen 300 */
+  --md-accent-fg-color--transparent: rgba(203, 217, 199, 0.1);
+}
