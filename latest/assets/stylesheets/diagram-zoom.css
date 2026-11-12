@@ -1,0 +1,64 @@
+/* Diagram display and click-to-fullscreen for Mermaid diagrams.
+   Works together with assets/javascripts/diagram-zoom.js. */
+
+/* Custom magnifier cursors, so the hint shows even where the system cursor theme lacks zoom cursors. */
+:root {
+  --diagram-zoom-in:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke-linecap='round'%3E%3Cg stroke='white' stroke-width='4'%3E%3Ccircle cx='10' cy='10' r='6.5'/%3E%3Cpath d='M15 15l6 6'/%3E%3Cpath d='M7 10h6'/%3E%3Cpath d='M10 7v6'/%3E%3C/g%3E%3Cg stroke='black' stroke-width='2'%3E%3Ccircle cx='10' cy='10' r='6.5'/%3E%3Cpath d='M15 15l6 6'/%3E%3Cpath d='M7 10h6'/%3E%3Cpath d='M10 7v6'/%3E%3C/g%3E%3C/svg%3E")
+      10 10,
+    zoom-in;
+  --diagram-zoom-out:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke-linecap='round'%3E%3Cg stroke='white' stroke-width='4'%3E%3Ccircle cx='10' cy='10' r='6.5'/%3E%3Cpath d='M15 15l6 6'/%3E%3Cpath d='M7 10h6'/%3E%3C/g%3E%3Cg stroke='black' stroke-width='2'%3E%3Ccircle cx='10' cy='10' r='6.5'/%3E%3Cpath d='M15 15l6 6'/%3E%3Cpath d='M7 10h6'/%3E%3C/g%3E%3C/svg%3E")
+      10 10,
+    zoom-out;
+}
+
+/* Let figures holding a Mermaid diagram use the full content width.
+   Material sizes figures to their content, which shrinks diagrams that have no fixed width. */
+.md-typeset figure:has(.mermaid),
+.md-typeset figure:has(.mermaid) .mermaid {
+  width: 100%;
+}
+
+/* Clickable diagrams. */
+.md-typeset .mermaid {
+  cursor: var(--diagram-zoom-in);
+}
+
+/* Fullscreen: the diagram on a page-colored card, framed by a tinted margin. */
+.md-typeset .mermaid:fullscreen {
+  --frame-y: 6vh;
+  --frame-x: 6vw;
+  --card-radius: 0.8rem;
+
+  display: grid;
+  place-items: safe center;
+  box-sizing: border-box;
+  border: solid transparent;
+  border-width: var(--frame-y) var(--frame-x);
+  /* Outer radius = frame + card radius, so the inner card gets exactly --card-radius. */
+  border-radius: calc(var(--frame-x) + var(--card-radius)) /
+    calc(var(--frame-y) + var(--card-radius));
+  padding: 2rem;
+  overflow: auto;
+  background:
+    linear-gradient(var(--md-default-bg-color), var(--md-default-bg-color))
+      padding-box,
+    linear-gradient(
+        var(--md-default-fg-color--lightest),
+        var(--md-default-fg-color--lightest)
+      )
+      border-box,
+    var(--md-default-bg-color) border-box;
+  cursor: var(--diagram-zoom-out);
+}
+
+/* The rounded outer corners reveal the backdrop behind the fullscreen element; tint it to match the frame. */
+.md-typeset .mermaid:fullscreen::backdrop {
+  background:
+    linear-gradient(
+      var(--md-default-fg-color--lightest),
+      var(--md-default-fg-color--lightest)
+    ),
+    var(--md-default-bg-color);
+}
