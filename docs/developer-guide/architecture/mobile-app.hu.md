@@ -7,15 +7,13 @@ description: A mobilalkalmazás réteges felépítése a képernyőktől a hooko
 
 A mobilalkalmazás réteges architektúrára épül, ahol az egyes rétegek jól elkülönített felelősségi körökkel rendelkeznek:
 
-- **`Screens`:** az expo-router file-alapú útválasztási rendszere által kezelt képernyők.
-- **`Hooks`:** összetett állapotlogika és oldal-effektek kezelése pl.:
-    - `useBackgroundLocation`,
-    - `useMapCamera`.
-- **`Services`:** BFF-fel való kommunikáció az `apiClient` HTTP klienesen keresztül.
-- **`Stores`:** Zustand alapú globális állapotkezelés pl.:
-    - `authStore`,
-    - `localStore`,
-    - `settingsStore`,
-    - `errorStore`.
-- **`Utils`:** állapotfüggetlen segédfüggvények (GPX kezelés, mértékegység konverzió stb.).
-- **`Components`:** újrafelhasználható UI komponenskönyvtár.
+--8<-- "web-modification.hu.md"
+
+| Réteg | Felelősség | Példák |
+|---|---|---|
+| `Screens` | Az expo-router file-alapú útválasztási rendszere által kezelt képernyők. | |
+| `Hooks` | Összetett állapotlogika és oldal-effektek kezelése. | `useBackgroundLocation`, `useMapCamera` |
+| `Services` | BFF-fel való kommunikáció az `apiClient` HTTP kliensen keresztül. | |
+| `Stores` | Zustand alapú globális állapotkezelés. | `authStore`, `localStore`, `settingsStore`, `errorStore` |
+| `Utils` | Állapotfüggetlen segédfüggvények. | GPX kezelés, mértékegység konverzió |
+| `Components` | Újrafelhasználható UI komponenskönyvtár. | |
