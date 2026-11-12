@@ -15,7 +15,7 @@ A felhasználó kétféle módon indíthat túrát:
 - azonnali indítással a térkép nézetből,
 - egy korábban tervezett túratervezet betöltésével (retrack mód, a tervezett túraútvonalakhoz).
 
-Az indítást követően a felugró panelen megjelenik egy számláló, az alkalmazás megkezdi a felhasználó mozgásának követését, a bejárt útvonal kirajzolódik a térképen. A rögzítés, szüneteltetés, befejezés és mentés folyamata a \ref{fig:flow-track-save}. ábrán követhető nyomon.
+Az indítást követően a felugró panelen megjelenik egy számláló, az alkalmazás megkezdi a felhasználó mozgásának követését, a bejárt útvonal kirajzolódik a térképen. A rögzítés, szüneteltetés, befejezés és mentés folyamata az [alábbi ábrán](#fig-flow-track-save) követhető nyomon.
 
 ## Rögzítés közbeni működés
 
@@ -43,6 +43,7 @@ Sikeres mentés után:
 
 ![Túra indítása, rögzítése, szüneteltetése, befejezése és mentése](../assets/images/user-guide/flows/save-finished-route.png)
 /// caption
+    attrs: {id: fig-flow-track-save}
 Túra indítása, rögzítése, szüneteltetése, befejezése és mentése
 ///
 
