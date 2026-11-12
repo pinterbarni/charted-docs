@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A mértékegység-rendszer, a világos, sötét vagy automatikus téma és a nyelv beállítása, valamint a rendszerszintű engedélykérések nyelve.
 ---
 
 # Beállítások és lokalizáció

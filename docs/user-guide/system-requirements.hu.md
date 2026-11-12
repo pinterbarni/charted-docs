@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: Az Android és iOS minimális verziói, a béta APK telepítése, a Tailscale hálózati hozzáférés és az offline használat korlátai.
 ---
 
 # Rendszerkövetelmények

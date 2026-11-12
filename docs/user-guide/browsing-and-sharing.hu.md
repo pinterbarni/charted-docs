@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: Saját, nemrég megosztott és offline mentett túrák böngészése a profil szűrőivel, valamint más felhasználók megosztott túráinak megtekintése.
 ---
 
 # Túrák böngészése és megosztása

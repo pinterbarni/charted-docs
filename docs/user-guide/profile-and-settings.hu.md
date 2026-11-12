@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A profiloldal használata, a megjelenített név és a bio szerkesztése, a jelszó módosításának módja és a kijelentkezés.
 ---
 
 # Profil és beállítások

@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: Felhasználók keresése és követése, profilok megtekintése, blokkolás és feloldás, valamint más felhasználók jelentése indoklással.
 ---
 
 # Közösségi funkciók
