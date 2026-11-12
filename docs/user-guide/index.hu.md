@@ -1,9 +1,8 @@
 ---
-todo: true
 description: TODO
 template: section-index.html
 ---
 
 # Felhasználói dokumentáció
 
-TODO
+Ez a fejezet a Charted alkalmazás végfelhasználói dokumentációját tartalmazza. bemutatja a rendszerkövetelményeket, a telepítési folyamatot, valamint az alkalmazás összes funkcióját a bejelentkezéstől kezdve a túrarögzítésen és útvonaltervezésen át a közösségi funkciókig és a beállításokig.
