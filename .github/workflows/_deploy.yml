@@ -20,6 +20,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Set up PlantUML
+        uses: ./.github/actions/setup-plantuml
+
       - name: Fetch gh-pages branch
         run: git fetch origin gh-pages --depth=1 || true
 
