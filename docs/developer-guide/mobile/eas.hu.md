@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: Miért szükséges fejlesztői build az Expo Go helyett, és hogyan készül EAS segítségével, a build profilok és az app.json beállításai mellett.
 ---
 
 # EAS és fejlesztés

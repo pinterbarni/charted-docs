@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: Tervezett útvonalak offline tárolása GPX fájlokban a mentés, listázás, beolvasás és törlés műveleteivel, valamint egy ismert Android hibával.
 ---
 
 # Offline funkciók

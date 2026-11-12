@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A BFF fő csomagjai és szerepük, a NestJS és TypeORM alapoktól a JWT validáción és naplózáson át a dokumentációs és tesztelési eszközökig.
 ---
 
 # Technológiai stack

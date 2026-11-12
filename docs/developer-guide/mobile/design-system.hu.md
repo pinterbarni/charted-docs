@@ -1,6 +1,6 @@
 ---
 title: Design rendszer
-description: TODO
+description: A témától függő stílusgyártó függvényekre épülő design rendszer, a tipográfiai stílusok és a mobil komponenskönyvtár fő elemei.
 ---
 
 # Design rendszer és tipográfia

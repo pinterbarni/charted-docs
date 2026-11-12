@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: Túratervezés, bejárás és spontán rögzítés tesztesetei a POI-kezeléssel, a recenter gombbal, a leállítási értesítéssel és a túrák törlésével.
 ---
 
 # Túraútvonal és core funkciók

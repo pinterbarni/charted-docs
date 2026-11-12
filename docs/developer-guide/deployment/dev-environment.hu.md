@@ -1,6 +1,6 @@
 ---
 title: Fejlesztői környezet
-description: TODO
+description: A BFF és a mobilalkalmazás lokális indítása, az előfeltételek és a Vesta szerver szolgáltatásainak elérése Tailscale-en keresztül.
 ---
 
 # Fejlesztői környezet felállítása

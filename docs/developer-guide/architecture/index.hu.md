@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A rendszerarchitektúra áttekintése, a BFF alapú backend, a mobilalkalmazás rétegei, a Raspberry Pi alapú infrastruktúra és a fejlesztési módszertan.
 template: section-index.html
 ---
 

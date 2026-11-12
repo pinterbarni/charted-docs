@@ -1,6 +1,6 @@
 ---
 title: Mobil alkalmazás
-description: TODO
+description: A mobilalkalmazás réteges felépítése a képernyőktől a hookokon, service-eken és Zustand store-okon át a segédfüggvényekig és komponensekig.
 ---
 
 # Mobil alkalmazás architektúra

@@ -1,6 +1,6 @@
 ---
 title: Technológiaválasztás
-description: TODO
+description: A mobilplatform, a térképszolgáltatás, az autentikáció, a backend keretrendszer és az adatbázis kiválasztása összehasonlító táblázatokkal.
 ---
 
 # Technológiaválasztás és összehasonlítás

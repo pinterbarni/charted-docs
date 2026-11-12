@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: Az AppModule által regisztrált NestJS feature modulok feladatai, controllerei és egymás közötti függőségei a BFF-ben.
 ---
 
 # Modulstruktúra

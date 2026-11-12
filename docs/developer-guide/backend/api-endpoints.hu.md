@@ -1,6 +1,6 @@
 ---
 title: API végpontok
-description: TODO
+description: A BFF REST végpontjai modulonként táblázatba foglalva, a profil, túra, közösségi, útvonal, bejelentési és proxy végpontokkal.
 ---
 
 # API végpontok dokumentációja

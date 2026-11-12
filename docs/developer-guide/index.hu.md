@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A rendszer fejlesztői leírása a tervezéstől és az architektúrától a backend és mobil megvalósításon át az üzemeltetésig és a tesztesetekig.
 template: section-index.html
 ---
 

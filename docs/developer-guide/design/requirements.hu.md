@@ -1,6 +1,6 @@
 ---
 title: Követelmények
-description: TODO
+description: Az alkalmazás funkcionális és nem funkcionális követelményei, a GPS alapú túrarögzítéstől a moderáción át az offline működésig.
 ---
 
 # Követelmények összegyűjtése

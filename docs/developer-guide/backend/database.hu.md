@@ -1,6 +1,6 @@
 ---
 title: Adatbázis modell
-description: TODO
+description: A TypeORM entitások és a PostgreSQL táblák leírása entitás-kapcsolat diagrammal, a mezők és az egyedi megszorítások magyarázatával.
 ---
 
 # Adatbázis modell és entitások

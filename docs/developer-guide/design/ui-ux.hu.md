@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A felhasználói felület tervezése a meglévő alkalmazások vizsgálatától a papíralapú vázlatokon, tipográfián és színpalettán át a Figma komponensekig.
 ---
 
 # UI/UX tervezés

@@ -1,5 +1,5 @@
 ---
-description: TODO
+description: A tervezési fázis bemutatása a követelményektől és a technológiaválasztástól az adatmodellen át a felhasználói felület Figma alapú megtervezéséig.
 template: section-index.html
 ---
 
