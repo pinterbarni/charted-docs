@@ -79,6 +79,21 @@ Sikeres bejelentkezés után az alkalmazás a `POST /api/profile/me` végponton 
 Bejelentkezés utáni profil upsert folyamat szekvenciadiagramja
 ///
 
+| Lépés | Küldő | Fogadó | Leírás |
+|:---:|---|---|---|
+| **1** | App | Keycloak | Authorization Code kérés PKCE-vel |
+| **2** | Keycloak | App | Authorization Code visszaküldése |
+| **3** | App | Keycloak | Token csere: code és `code_verifier` elküldése |
+| **4** | Keycloak | App | `access_token` és `refresh_token` visszaküldése |
+| **5** | App | App | A tokenek mentése az `authStore`-ba (`signIn`) |
+| **6** | App | BFF | Profil létrehozása vagy frissítése (`POST /api/profile/me`) |
+| **7** | BFF | App | A létrehozott vagy frissített profil visszaküldése |
+
+/// table-caption
+    attrs: {id: tab-upsert-steps}
+A profil upsert folyamat lépései
+///
+
 ## Végpontok védelme
 
 A globálisan regisztrált `JwtAuthGuard` minden NestJS végpontot véd alapértelmezés szerint, az `APP_GUARD` mechanizmuson keresztül. A publikusan elérhető végpontok (pl. health check, tile proxy) a `@Public()` dekorátorral jelölhetők meg, amelyek bypass-olják az autentikációt. A guard a NestJS `Reflector` segítségével olvassa ki ezt a metaadatot a route handler és controller szintjéről.
