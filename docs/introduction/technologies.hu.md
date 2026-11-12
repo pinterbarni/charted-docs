@@ -1,6 +1,6 @@
 ---
 title: Felhasznált technológiák
-description: TODO
+description: Áttekintés a rendszer technológiáiról, a React Native és Expo, a Next.js, a NestJS és a PostgreSQL választásának indoklásával.
 ---
 
 # Felhasznált technológiák áttekintése
