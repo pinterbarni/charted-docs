@@ -2996,24 +2996,51 @@
 
 <h1 id="mobil-alkalmazas-architektura">Mobil alkalmazás architektúra<a class="headerlink" href="#mobil-alkalmazas-architektura" title="Permanent link">¶</a></h1>
 <p>A mobilalkalmazás réteges architektúrára épül, ahol az egyes rétegek jól elkülönített felelősségi körökkel rendelkeznek:</p>
-<ul>
-<li><strong><code>Screens</code>:</strong> az expo-router file-alapú útválasztási rendszere által kezelt képernyők.</li>
-<li><strong><code>Hooks</code>:</strong> összetett állapotlogika és oldal-effektek kezelése pl.:<ul>
-<li><code>useBackgroundLocation</code>,</li>
-<li><code>useMapCamera</code>.</li>
-</ul>
-</li>
-<li><strong><code>Services</code>:</strong> BFF-fel való kommunikáció az <code>apiClient</code> HTTP klienesen keresztül.</li>
-<li><strong><code>Stores</code>:</strong> Zustand alapú globális állapotkezelés pl.:<ul>
-<li><code>authStore</code>,</li>
-<li><code>localStore</code>,</li>
-<li><code>settingsStore</code>,</li>
-<li><code>errorStore</code>.</li>
-</ul>
-</li>
-<li><strong><code>Utils</code>:</strong> állapotfüggetlen segédfüggvények (GPX kezelés, mértékegység konverzió stb.).</li>
-<li><strong><code>Components</code>:</strong> újrafelhasználható UI komponenskönyvtár.</li>
-</ul>
+<details class="info">
+<summary>Webes módosítás</summary>
+<p>Az alábbi rész a webes változat jobb használhatósága érdekében módosult a beadott dolgozathoz képest.</p>
+</details>
+<table>
+<thead>
+<tr>
+<th>Réteg</th>
+<th>Felelősség</th>
+<th>Példák</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Screens</code></td>
+<td>Az expo-router file-alapú útválasztási rendszere által kezelt képernyők.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Hooks</code></td>
+<td>Összetett állapotlogika és oldal-effektek kezelése.</td>
+<td><code>useBackgroundLocation</code>, <code>useMapCamera</code></td>
+</tr>
+<tr>
+<td><code>Services</code></td>
+<td>BFF-fel való kommunikáció az <code>apiClient</code> HTTP kliensen keresztül.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Stores</code></td>
+<td>Zustand alapú globális állapotkezelés.</td>
+<td><code>authStore</code>, <code>localStore</code>, <code>settingsStore</code>, <code>errorStore</code></td>
+</tr>
+<tr>
+<td><code>Utils</code></td>
+<td>Állapotfüggetlen segédfüggvények.</td>
+<td>GPX kezelés, mértékegység konverzió</td>
+</tr>
+<tr>
+<td><code>Components</code></td>
+<td>Újrafelhasználható UI komponenskönyvtár.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
 

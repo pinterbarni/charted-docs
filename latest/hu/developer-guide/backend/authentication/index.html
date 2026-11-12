@@ -3335,20 +3335,79 @@
 <p>Sikeres bejelentkezés után az alkalmazás a <code>POST /api/profile/me</code> végponton keresztül létrehozza vagy frissíti a felhasználó profilját (upsert), a Keycloak <code>sub</code> claim-et használva elsődleges kulcsként.</p>
 <figure id="fig-upsert-flow">
 <pre class="mermaid"><code>sequenceDiagram
-participant App as Mobil App
-participant KC as Keycloak
-participant BFF as NestJS BFF
+    participant App as Mobil App
+    participant KC as Keycloak
+    participant BFF as NestJS BFF
 
-    App-&gt;&gt;KC: Authorization Code kérés (PKCE)
-    KC--&gt;&gt;App: Authorization Code
-    App-&gt;&gt;KC: Token csere (code + code_verifier)
-    KC--&gt;&gt;App: access_token + refresh_token
-    App-&gt;&gt;App: signIn(tokens) - authStore-ba menti
-    App-&gt;&gt;BFF: POST /api/profile/me
-    BFF--&gt;&gt;App: Profile
+    App-&gt;&gt;KC: 1. Authorization Code kérés (PKCE)
+    KC--&gt;&gt;App: 2. Authorization Code
+    App-&gt;&gt;KC: 3. Token csere (code + code_verifier)
+    KC--&gt;&gt;App: 4. access_token + refresh_token
+    App-&gt;&gt;App: 5. signIn(tokens) - authStore-ba menti
+    App-&gt;&gt;BFF: 6. POST /api/profile/me
+    BFF--&gt;&gt;App: 7. Profile
 </code></pre>
 <figcaption>
 <p>Bejelentkezés utáni profil upsert folyamat szekvenciadiagramja</p>
+</figcaption>
+</figure>
+<figure id="tab-upsert-steps">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Lépés</th>
+<th>Küldő</th>
+<th>Fogadó</th>
+<th>Leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td>App</td>
+<td>Keycloak</td>
+<td>Authorization Code kérés PKCE-vel</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td>Keycloak</td>
+<td>App</td>
+<td>Authorization Code visszaküldése</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td>App</td>
+<td>Keycloak</td>
+<td>Token csere: code és <code>code_verifier</code> elküldése</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4</strong></td>
+<td>Keycloak</td>
+<td>App</td>
+<td><code>access_token</code> és <code>refresh_token</code> visszaküldése</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>5</strong></td>
+<td>App</td>
+<td>App</td>
+<td>A tokenek mentése az <code>authStore</code>-ba (<code>signIn</code>)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>6</strong></td>
+<td>App</td>
+<td>BFF</td>
+<td>Profil létrehozása vagy frissítése (<code>POST /api/profile/me</code>)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>7</strong></td>
+<td>BFF</td>
+<td>App</td>
+<td>A létrehozott vagy frissített profil visszaküldése</td>
+</tr>
+</tbody>
+</table>
+<figcaption>
+<p><span class="caption-prefix">Table 3.</span> A profil upsert folyamat lépései</p>
 </figcaption>
 </figure>
 <h2 id="vegpontok-vedelme">Végpontok védelme<a class="headerlink" href="#vegpontok-vedelme" title="Permanent link">¶</a></h2>
