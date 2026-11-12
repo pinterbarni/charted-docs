@@ -30,3 +30,9 @@
   filter: invert(1) hue-rotate(180deg);
   background: #000;
 }
+
+/* Landing page hero image, centered. */
+.md-typeset img.hero {
+  display: block;
+  margin: 0 auto;
+}
