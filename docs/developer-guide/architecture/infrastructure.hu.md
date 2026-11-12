@@ -7,7 +7,7 @@ description: TODO
 A rendszer két fizikai Raspberry Pi eszközre épül, amelyek különböző szerepet töltenek be az infrastruktúrában. A két eszköz közötti kommunikáció Tailscale mesh VPN-en keresztül zajlik, amely hálózati kapcsolatot biztosít anélkül, hogy portok nyitása vagy manuális VPN konfiguráció szükséges lenne, mindezt zero-config.
 A két eszköz elszeparált hálózaton operál, minden másik eszköz a guest hálózatot használja, ezzel is biztosítva a biztonságot. A két szerver fizikailag nincs szeparálva, és az RJ45 portok aktívak rajtuk, ami ismert biztonsági tényező, amelyet enyhít, hogy vendég egyedül nem tartózkodhat mellettük.
 
-**Janus** a nyilvánosan elérhető edge szerver, SD kártyáról operál. Fő feladata az nginx alapú reverse proxy működtetése, TLS tanúsítványokkal. A beérkező kéréseket domain név alapján továbbítja a Vesta szerverre Tailscale-en keresztül: az \texttt{api.charted.hu} kérések a BFF-re, az \texttt{sso.charted.hu} kérések a Keycloak-ra érkeznek.
+**Janus** a nyilvánosan elérhető edge szerver, SD kártyáról operál. Fő feladata az nginx alapú reverse proxy működtetése, TLS tanúsítványokkal. A beérkező kéréseket domain név alapján továbbítja a Vesta szerverre Tailscale-en keresztül: az `api.charted.hu` kérések a BFF-re, az `sso.charted.hu` kérések a Keycloak-ra érkeznek.
 
 **Vesta** (Raspberry Pi 5) a belső szerver, amely az összes alkalmazásszolgáltatást futtatja Docker konténerekben. A releváns futó szolgáltatások:
 
