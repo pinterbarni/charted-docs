@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="TODO">
+        <meta name="description" content="Egyéni túraútvonalak tervezése, POI-k elhelyezése, mentése és visszatöltése.">
       
       
       
@@ -16,7 +16,7 @@
         <link rel="prev" href="../profile-and-settings/">
       
       
-        <link rel="next" href="../start-route-planning/">
+        <link rel="next" href="../recording-hikes/">
       
       
         
@@ -723,16 +723,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
     
     
     
@@ -890,6 +880,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Túraútvonal tervezése
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -907,146 +915,80 @@
 
       </a>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../start-route-planning/" class="md-nav__link">
         
+
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
   
   
-  <span class="md-ellipsis">
+  
     
   
-    Útvonal tervezés indítása
   
-
-    
-  </span>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#utvonal-tervezes-inditasa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Útvonal tervezés indítása
+      
+    </span>
+  </a>
   
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terkep-forgatasa-dontese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Térkép forgatása, döntése
+      
+    </span>
+  </a>
   
-
-      </a>
-    </li>
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pontok-poi-k-elhelyezese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pontok (POI-k) elhelyezése
+      
+    </span>
+  </a>
   
-
-              
-            
-              
-                
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tura-tervezet-mentese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Túra tervezet mentése
+      
+    </span>
+  </a>
   
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utvonal-visszatoltese-retrack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Útvonal visszatöltése (retrack)
+      
+    </span>
+  </a>
   
+</li>
+      
+    </ul>
   
-  
-    <li class="md-nav__item">
-      <a href="../map-rotation-and-tilt/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Térkép forgatása, döntése
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../placing-pois/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Pontok (POI-k) elhelyezése
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../saving-drafts/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Túra tervezet mentése
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../retrack/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Útvonal visszatöltése
-  
-
-    
-  </span>
-  
-  
-
-      </a>
+</nav>
+      
     </li>
   
 
@@ -3031,6 +2973,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#utvonal-tervezes-inditasa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Útvonal tervezés indítása
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terkep-forgatasa-dontese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Térkép forgatása, döntése
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pontok-poi-k-elhelyezese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pontok (POI-k) elhelyezése
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tura-tervezet-mentese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Túra tervezet mentése
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utvonal-visszatoltese-retrack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Útvonal visszatöltése (retrack)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3098,7 +3103,60 @@
 
 
 <h1 id="turautvonal-tervezese">Túraútvonal tervezése<a class="headerlink" href="#turautvonal-tervezese" title="Permanent link">&para;</a></h1>
-<p>TODO</p>
+<p>Az alkalmazás lehetőséget biztosít egyéni túraútvonalak tervezésére és mentésére.</p>
+<h2 id="utvonal-tervezes-inditasa">Útvonal tervezés indítása<a class="headerlink" href="#utvonal-tervezes-inditasa" title="Permanent link">&para;</a></h2>
+<p>A felhasználó a térkép nézetben elérhető, jobb felső sarokban található "Create trail" gomb segítségével indíthat új túra tervezést.</p>
+<p>Az új túra tervezésének előfeltétele, hogy a felhasználó legalább egy, az alkalmazás valamilyen lokációs adatokhoz való hozzáférését elfogadja. A legjobb felhasználói élmény érdekében érdemes elfogadni az elő- és háttérbeli helyhozzáférést, így a felhasználó akár mások által bejárt útvonalakat is láthat.</p>
+<figure>
+<p><img alt="Túratervezés indítása" src="../../../assets/images/user-guide/flows/create-trail.png" /></p>
+<figcaption>
+<p>Túratervezés indítása</p>
+</figcaption>
+</figure>
+<h2 id="terkep-forgatasa-dontese">Térkép forgatása, döntése<a class="headerlink" href="#terkep-forgatasa-dontese" title="Permanent link">&para;</a></h2>
+<p>A felhasználónak lehetősége van két ujj lenyomva tartásával a térkép elforgatására. Az elforgatott térképen egy iránytű jelenik meg a jobb felső sarokban, ezzel is segítve a felhasználót a navigációban. A felhasználónak lehetősége van két ujját nyomva tartva a kamera dőlésszögének változtatására is.</p>
+<figure>
+<p><img alt="Térkép forgatása és döntése" src="../../../assets/images/user-guide/flows/tilt-map.png" /></p>
+<figcaption>
+<p>Térkép forgatása és döntése</p>
+</figcaption>
+</figure>
+<h2 id="pontok-poi-k-elhelyezese">Pontok (POI-k) elhelyezése<a class="headerlink" href="#pontok-poi-k-elhelyezese" title="Permanent link">&para;</a></h2>
+<p>A tervezés során a felhasználó pontokat (Point of Interest, röviden POI) helyezhet el a térképen. A pontok kijelölik a tervezett útvonal fő állomásait, nevezetességeit. A felhasználónak továbbá lehetősége van elágazásoknál égtájjelölők elhelyezésére is, melyek segítségével a tervezett haladás irányát jelölheti meg.</p>
+<p>A pontok:</p>
+<ul>
+<li>térképre helyezhetők,</li>
+<li>törölhetők, hogy módosíthassuk.</li>
+</ul>
+<p>A térképen lehelyezett POI-k az alsó felugró panelen egy táblázatban tárolódnak, lehelyezési sorrendben. Sorrendjük változtatására jelenlegi verzióban még nincs lehetőség.</p>
+<figure>
+<p><img alt="POI-k elhelyezése túratervezés közben" src="../../../assets/images/user-guide/flows/place-point-of-interest.png" /></p>
+<figcaption>
+<p>POI-k elhelyezése túratervezés közben</p>
+</figcaption>
+</figure>
+<h2 id="tura-tervezet-mentese">Túra tervezet mentése<a class="headerlink" href="#tura-tervezet-mentese" title="Permanent link">&para;</a></h2>
+<p>A tervezett útvonal menthető, amely során:</p>
+<ul>
+<li>a felhasználó nevet ad a túrának (kötelező),</li>
+<li>az útvonal eltárolásra kerül,</li>
+<li>a túra később visszatölthető.</li>
+</ul>
+<p>A mentett útvonaltervek GPX formátumban kerülnek tárolásra.</p>
+<figure>
+<p><img alt="Túratervezet mentése" src="../../../assets/images/user-guide/flows/save-trail-plan.png" /></p>
+<figcaption>
+<p>Túratervezet mentése</p>
+</figcaption>
+</figure>
+<h2 id="utvonal-visszatoltese-retrack">Útvonal visszatöltése (retrack)<a class="headerlink" href="#utvonal-visszatoltese-retrack" title="Permanent link">&para;</a></h2>
+<p>A korábban tervezett túrák bármikor betölthetők a térképre. A visszatöltött POI halmaz megjelenik a térképen, és követhető a tényleges bejárás során. A POI lista megjelenik, üresen, ezzel is előkészítve az alkalmazást a jövőbeli funkcióknak.</p>
+<figure>
+<p><img alt="Korábban tervezett túra visszatöltése" src="../../../assets/images/user-guide/flows/retrack-trail.png" /></p>
+<figcaption>
+<p>Korábban tervezett túra visszatöltése</p>
+</figcaption>
+</figure>
 
 
 
@@ -3154,13 +3212,13 @@
         
         
           
-          <a href="../start-route-planning/" class="md-footer__link md-footer__link--next" aria-label="Következő: Útvonal tervezés indítása">
+          <a href="../recording-hikes/" class="md-footer__link md-footer__link--next" aria-label="Következő: Túra rögzítése és mentése">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Következő
               </span>
               <div class="md-ellipsis">
-                Útvonal tervezés indítása
+                Túra rögzítése és mentése
               </div>
             </div>
             <div class="md-footer__button md-icon">
