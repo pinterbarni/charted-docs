@@ -67,8 +67,9 @@ flowchart LR
 
 ```bash
 charted-docs/
-├── .github/workflows/
-│   ├── docs.yml                 triggers, job order and permissions
+├── .github/
+│   ├── actions/setup-plantuml/  installs PlantUML for builds
+│   └── workflows/
 │   ├── _build.yml               strict build
 │   ├── _deploy.yml              deploy to GitHub Pages with mike
 │   ├── _links.yml               internal link check
@@ -107,6 +108,8 @@ charted-docs/
 ```
 
 ## Run locally
+
+> PlantUML diagrams need PlantUML installed locally (on Fedora: `sudo dnf install plantuml`). CI installs a pinned version through `.github/actions/setup-plantuml`.
 
 Requires [uv](https://docs.astral.sh/uv/). Install the dependencies once:
 
