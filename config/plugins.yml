@@ -1,7 +1,8 @@
 INHERIT: base.yml
 
 plugins:
-  - search
+  - search:
+      pipeline: []
   - glightbox #git commit -m "feat: open images in a lightbox on click"
   - i18n:
       docs_structure: suffix
