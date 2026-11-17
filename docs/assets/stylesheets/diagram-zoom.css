@@ -62,3 +62,8 @@
     ),
     var(--md-default-bg-color);
 }
+
+/* Center diagrams narrower than the content area, such as pie charts. */
+.md-typeset .mermaid {
+  text-align: center;
+}
