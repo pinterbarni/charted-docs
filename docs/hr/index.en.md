@@ -32,13 +32,13 @@ I lost only a single point in the evaluation of my thesis work, then defended it
 
 --8<-- "hr/design/maintainable-code.en.md"
 
-<!-- ### Diagrams -->
+### Diagrams
 
-<!-- --8<-- "hr/diagrams/mermaid-sequence.en.md"
+--8<-- "hr/diagrams/mermaid-sequence.en.md"
 
 --8<-- "hr/diagrams/data-model.en.md"
 
---8<-- "hr/diagrams/plantuml.en.md" -->
+--8<-- "hr/diagrams/plantuml.en.md"
 
 <!-- ### Backend and security -->
 
