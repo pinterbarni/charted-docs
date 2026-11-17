@@ -60,11 +60,11 @@ I lost only a single point in the evaluation of my thesis work, then defended it
 
 --8<-- "hr/operations/docker.en.md"
 
-<!-- ### Quality -->
+### Quality
 
-<!-- --8<-- "hr/quality/testing.en.md"
+--8<-- "hr/quality/testing.en.md"
 
---8<-- "hr/quality/what-went-wrong.en.md" -->
+--8<-- "hr/quality/what-went-wrong.en.md"
 
 <!-- ### Product and people -->
 
