@@ -24,7 +24,51 @@ I lost only a single point in the evaluation of my thesis work, then defended it
 
 ## I want to know…
 
+The questions you may have are grouped by topic below. Each one opens to a short answer and links to the pages with the details.
+
+<div class="grid cards" markdown>
+
+-   :material-lightbulb-on-outline:{ .lg .middle } **[Design and thinking](#design-and-thinking)**
+
+    ---
+
+    How decisions were made, and how the interface was designed.
+
+-   :material-sitemap:{ .lg .middle } **[Diagrams](#diagrams)**
+
+    ---
+
+    Flows, data and deployment, drawn as code.
+
+-   :material-shield-lock-outline:{ .lg .middle } **[Backend and security](#backend-and-security)**
+
+    ---
+
+    The API, and who can access what.
+
+-   :material-rocket-launch-outline:{ .lg .middle } **[Shipping and operations](#shipping-and-operations)**
+
+    ---
+
+    Servers, environments, containers and version control.
+
+-   :material-check-decagram-outline:{ .lg .middle } **[Quality](#quality)**
+
+    ---
+
+    How the app was tested, and what went wrong.
+
+-   :material-account-group-outline:{ .lg .middle } **[Product and people](#product-and-people)**
+
+    ---
+
+    Explaining a technical system to the people who use it.
+
+</div>
+
 ### Design and thinking
+
+How decisions were made, and how the interface was designed.
 
 --8<-- "hr/design/complex-thinking.en.md"
 
@@ -34,6 +78,8 @@ I lost only a single point in the evaluation of my thesis work, then defended it
 
 ### Diagrams
 
+Flows, data and deployment, drawn as code.
+
 --8<-- "hr/diagrams/mermaid-sequence.en.md"
 
 --8<-- "hr/diagrams/data-model.en.md"
@@ -42,6 +88,8 @@ I lost only a single point in the evaluation of my thesis work, then defended it
 
 ### Backend and security
 
+The API, and who can access what.
+
 --8<-- "hr/backend/endpoints.en.md"
 
 --8<-- "hr/backend/security.en.md"
@@ -49,6 +97,8 @@ I lost only a single point in the evaluation of my thesis work, then defended it
 --8<-- "hr/backend/stakeholder-rights.en.md"
 
 ### Shipping and operations
+
+Servers, environments, containers and version control.
 
 --8<-- "hr/operations/production.en.md"
 
@@ -62,10 +112,14 @@ I lost only a single point in the evaluation of my thesis work, then defended it
 
 ### Quality
 
+How the app was tested, and what went wrong.
+
 --8<-- "hr/quality/testing.en.md"
 
 --8<-- "hr/quality/what-went-wrong.en.md"
 
 ### Product and people
+
+Explaining a technical system to the people who use it.
 
 --8<-- "hr/product/non-technical.en.md"
