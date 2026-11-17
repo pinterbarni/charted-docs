@@ -66,10 +66,6 @@ I lost only a single point in the evaluation of my thesis work, then defended it
 
 --8<-- "hr/quality/what-went-wrong.en.md"
 
-<!-- ### Product and people -->
-
-<!-- --8<-- "hr/product/user-focus.en.md"
+### Product and people
 
 --8<-- "hr/product/non-technical.en.md"
-
---8<-- "hr/product/ai.en.md" -->
