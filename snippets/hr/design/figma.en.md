@@ -18,7 +18,7 @@
     
     **Where to look**
 
-    - [The Figma file]([FIGMA_URL](https://www.figma.com/design/sFTCUcwvNQdkRjdSX7uy2h/Charted?node-id=257-2&t=2rPa36xI73memWaq-1)): the original design, open to view.
+    - [The Figma file](https://www.figma.com/design/sFTCUcwvNQdkRjdSX7uy2h/Charted?node-id=257-2&t=2rPa36xI73memWaq-1): the original design, open to view
     - [UI and UX design](../developer-guide/design/ui-ux.md): from sketches to components, in depth.
 
     **Why it matters:** designing wire-frames, then design first meant the UX became more coherent, it was easier to write down the design system and by this, to change the design later.  
