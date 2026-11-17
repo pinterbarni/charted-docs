@@ -40,11 +40,13 @@ I lost only a single point in the evaluation of my thesis work, then defended it
 
 --8<-- "hr/diagrams/plantuml.en.md"
 
-<!-- ### Backend and security -->
+### Backend and security
 
-<!-- --8<-- "hr/backend/endpoints.en.md"
+--8<-- "hr/backend/endpoints.en.md"
 
---8<-- "hr/backend/security.en.md" -->
+--8<-- "hr/backend/security.en.md"
+
+--8<-- "hr/backend/stakeholder-rights.en.md"
 
 <!-- ### Shipping and operations -->
 
