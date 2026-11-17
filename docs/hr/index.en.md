@@ -48,15 +48,17 @@ I lost only a single point in the evaluation of my thesis work, then defended it
 
 --8<-- "hr/backend/stakeholder-rights.en.md"
 
-<!-- ### Shipping and operations -->
+### Shipping and operations
 
-<!-- --8<-- "hr/operations/production.en.md"
+--8<-- "hr/operations/production.en.md"
 
 --8<-- "hr/operations/versioning.en.md"
 
 --8<-- "hr/operations/environments.en.md"
 
---8<-- "hr/operations/docs-as-code.en.md" -->
+--8<-- "hr/operations/docs-as-code.en.md"
+
+--8<-- "hr/operations/docker.en.md"
 
 <!-- ### Quality -->
 
