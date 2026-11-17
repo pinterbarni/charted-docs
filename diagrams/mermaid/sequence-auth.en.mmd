@@ -1,0 +1,20 @@
+sequenceDiagram
+    participant App as Mobile App
+    participant KC as Keycloak
+    participant BFF as NestJS BFF
+    participant DB as PostgreSQL
+
+    Note over App,DB: 1. Authentication
+    App->>KC: 1. Authorization code request (PKCE)
+    KC-->>App: 2. Authorization code
+    App->>KC: 3. Token exchange (code + code_verifier)
+    KC-->>App: 4. access_token + refresh_token
+
+    Note over App,DB: 2. API request
+    App->>BFF: 5. API request (Bearer access_token)
+    BFF->>KC: 6. JWKS request (public key, cached)
+    KC-->>BFF: 7. Public key, cached by the BFF
+    BFF->>BFF: 8. Signature and expiry check
+    BFF->>DB: 9. Business logic
+    DB-->>BFF: 10. Result
+    BFF-->>App: 11. JSON response
