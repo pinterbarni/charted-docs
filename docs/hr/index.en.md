@@ -24,15 +24,13 @@ I lost only a single point in the evaluation of my thesis work, then defended it
 
 ## I want to know…
 
-TODO
+### Design and thinking
 
-<!-- ### Design and thinking -->
-
-<!-- --8<-- "hr/design/complex-thinking.en.md"
+--8<-- "hr/design/complex-thinking.en.md"
 
 --8<-- "hr/design/figma.en.md"
 
---8<-- "hr/design/maintainable-code.en.md" -->
+--8<-- "hr/design/maintainable-code.en.md"
 
 <!-- ### Diagrams -->
 
