@@ -64,6 +64,12 @@ The questions you may have are grouped by topic below. Each one opens to a short
 
     Explaining a technical system to the people who use it.
 
+-   :material-robot-outline:{ .lg .middle } **[AI](#ai)**
+
+    ---
+
+    Where AI was used, and how it was kept in check.
+
 </div>
 
 ### Design and thinking
@@ -123,3 +129,11 @@ How the app was tested, and what went wrong.
 Explaining a technical system to the people who use it.
 
 --8<-- "hr/product/non-technical.en.md"
+
+### AI
+
+Where AI was used, and how it was kept in check.
+
+--8<-- "hr/ai/responsible.en.md"
+
+--8<-- "hr/ai/development.en.md"
